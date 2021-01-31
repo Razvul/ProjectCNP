@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonCNP\CommonCNP.csproj">
+      <Project>{de6fde4d-77f3-442f-a124-710bd2967ac6}</Project>
+      <Name>CommonCNP</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

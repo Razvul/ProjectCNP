@@ -13,5 +13,11 @@ namespace CommonCNP
             var result = int.TryParse(a, out int cifra);
             return result;
         }
+
+        public static string Hello(string name)
+        {
+            return $"Hello {name}";
+        }
+
     }
 }
