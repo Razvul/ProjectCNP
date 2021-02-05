@@ -10,7 +10,8 @@ namespace CommonCNP
     {
         private Address adresa;
         private CNP _cnp;
-        private string nume;
+        private string _nume;
+        private string _prenume;
 
     }
 }

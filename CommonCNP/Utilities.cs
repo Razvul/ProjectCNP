@@ -18,5 +18,34 @@ namespace CommonCNP
         {
             return $"Hello {name}";
         }
+
+        public static int Zile(string luna)
+        {
+            int result = 0;
+            switch (luna.ToLower())
+            {
+                case "ianuarie":
+                case "martie":
+                case "mai":
+                case "iulie":
+                case "august":
+                case "octombrie":
+                case "decembrie":
+                    result = 31;
+                    break;
+                case "aprilie":
+                case "iunie":
+                case "septembrie":
+                case "noiembrie":
+                    result = 30;
+                    break;
+                case "februarie":
+                    result = 28;
+                    break;
+                default:
+                    break;
+            }
+            return result;
+        }
     }
 }

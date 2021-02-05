@@ -11,7 +11,7 @@ namespace ConsoleCNP
     {
         static void Main()
         {
-
+            
             Console.WriteLine(Utilities.Hello("Andrei"));
             Console.ReadKey();
         }
