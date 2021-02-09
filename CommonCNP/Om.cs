@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace CommonCNP
 {
-    class Om
+    public class Om
     {
         private Address adresa;
         private CNP _cnp;
         private string _nume;
         private string _prenume;
+        private string _sex;
 
     }
 }

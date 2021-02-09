@@ -71,7 +71,7 @@ namespace WinFormCNP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(571, 290);
             this.Controls.Add(this.button_Adresa);
             this.Controls.Add(this.button_Name);
             this.Controls.Add(this.button_CNP);

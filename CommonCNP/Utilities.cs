@@ -47,5 +47,24 @@ namespace CommonCNP
             }
             return result;
         }
+
+        public static string GetSex(int numar)
+        {
+            string result = "";
+            switch(numar)
+            {
+                case 1:
+                case 5:
+                    result = "masculin";
+                    break;
+                case 2:
+                case 6:
+                    result = "feminin";
+                    break;
+                default:
+                    break;
+            }
+            return result;
+        }
     }
 }

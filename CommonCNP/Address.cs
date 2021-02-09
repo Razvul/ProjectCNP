@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace CommonCNP
 {
-    class Address
+    public class Address
     {
-        private string _oras;
-        private string _strada;
+        public string Oras { get; set; }
+        public string Strada { get; set; }
+        public int Numar { get; set; }
+        public int Bloc { get; set; }
+        public int Scara { get; set; }
+        public int Etaj { get; set; }
+        public int Apartament { get; set; }
+        public string Localitate { get; set; }
+        public string Judet { get; set; }
+        public int CodPostal { get; set; }
 
     }
 }

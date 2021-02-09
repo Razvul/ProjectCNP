@@ -16,5 +16,15 @@ namespace WinFormCNP
         {
             InitializeComponent();
         }
+
+        private void textBox_Nume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (char.IsLetter(e.KeyChar)|| e.KeyChar == (char)Keys.Back);
+        }
+
+        private void textBox_Prenume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
     }
 }
