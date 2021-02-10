@@ -52,6 +52,8 @@ namespace WinFormCNP
         private void comboBox_Luni_SelectedValueChanged(object sender, EventArgs e)
         {
             // salveaza ziua selectionata = 31
+
+
             comboBox_Zile.Items.Clear();
 
             for (int i = 1; i <= CommonCNP.Utilities.Zile(comboBox_Luni.Text); i++)
