@@ -350,3 +350,7 @@ MigrationBackup/
 .ionide/
 
 *.cache
+
+WinFormCNP/obj/
+
+CommonCNP/obj/
