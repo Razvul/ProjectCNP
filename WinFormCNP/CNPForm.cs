@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +51,7 @@ namespace WinFormCNP
 
         private void comboBox_Luni_SelectedValueChanged(object sender, EventArgs e)
         {
+            // salveaza ziua selectionata = 31
             comboBox_Zile.Items.Clear();
 
             for (int i = 1; i <= CommonCNP.Utilities.Zile(comboBox_Luni.Text); i++)
@@ -58,6 +59,11 @@ namespace WinFormCNP
                 //if()
                 comboBox_Zile.Items.Add(i);
             }
+
+            // daca ziua selectionata > comboBox_Zile
+            // atunci 
+
+            // slelectex index comboBox_Zile trebuie sa fie 1
         }
 
         private void button_Clear_Click(object sender, EventArgs e)
