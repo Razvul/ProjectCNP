@@ -40,6 +40,8 @@ namespace WinFormCNP
             this.label_CNP = new System.Windows.Forms.Label();
             this.label_CNP_Result = new System.Windows.Forms.Label();
             this.button_Clear = new System.Windows.Forms.Button();
+            this.label_Sex = new System.Windows.Forms.Label();
+            this.comboBox_Sex = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // comboBox_Judete
@@ -139,11 +141,30 @@ namespace WinFormCNP
             this.button_Clear.UseVisualStyleBackColor = true;
             this.button_Clear.Click += new System.EventHandler(this.button_Clear_Click);
             // 
+            // label_Sex
+            // 
+            this.label_Sex.AutoSize = true;
+            this.label_Sex.Location = new System.Drawing.Point(604, 45);
+            this.label_Sex.Name = "label_Sex";
+            this.label_Sex.Size = new System.Drawing.Size(25, 13);
+            this.label_Sex.TabIndex = 11;
+            this.label_Sex.Text = "Sex";
+            // 
+            // comboBox_Sex
+            // 
+            this.comboBox_Sex.FormattingEnabled = true;
+            this.comboBox_Sex.Location = new System.Drawing.Point(607, 101);
+            this.comboBox_Sex.Name = "comboBox_Sex";
+            this.comboBox_Sex.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Sex.TabIndex = 12;
+            // 
             // CNPForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 366);
+            this.ClientSize = new System.Drawing.Size(836, 376);
+            this.Controls.Add(this.comboBox_Sex);
+            this.Controls.Add(this.label_Sex);
             this.Controls.Add(this.button_Clear);
             this.Controls.Add(this.label_CNP_Result);
             this.Controls.Add(this.label_CNP);
@@ -176,6 +197,8 @@ namespace WinFormCNP
         private System.Windows.Forms.Label label_CNP;
         private System.Windows.Forms.Label label_CNP_Result;
         private System.Windows.Forms.Button button_Clear;
+        private System.Windows.Forms.Label label_Sex;
+        private System.Windows.Forms.ComboBox comboBox_Sex;
     }
 }
 

@@ -14,15 +14,17 @@ namespace WinFormCNP
     {
         public CNPForm()
         {
-            InitializeComponent();
-
-            comboBox_Luni.DataSource = Enum.GetValues(typeof(Luni));
-            comboBox_Judete.DataSource = Enum.GetValues(typeof(Judete));
-        }
+            InitializeComponent();        }
 
         private void CNPForm_Load(object sender, EventArgs e)
         {
             ClearLabels();
+
+            comboBox_Sex.Items.Add("Masculin");
+            comboBox_Sex.Items.Add("Feminin");
+
+            comboBox_Luni.DataSource = Enum.GetValues(typeof(Luni));
+            comboBox_Judete.DataSource = Enum.GetValues(typeof(Judete));
 
             for (int i = 1900; i <= DateTime.Now.Year; i++)
             {
@@ -53,14 +55,23 @@ namespace WinFormCNP
         {
             // salveaza ziua selectionata = 31
 
-
             comboBox_Zile.Items.Clear();
+            var a = sender as ComboBox;
 
             for (int i = 1; i <= CommonCNP.Utilities.Zile(comboBox_Luni.Text); i++)
             {
-                //if()
                 comboBox_Zile.Items.Add(i);
             }
+
+            comboBox_Zile.Text = string.Empty;
+            comboBox_Zile.SelectedText = "1";
+
+            //comboBox_Zile.SelectedValue.ToString();
+
+            //if (a > comboBox_Luni)
+            //{
+
+            //}
 
             // daca ziua selectionata > comboBox_Zile
             // atunci 
