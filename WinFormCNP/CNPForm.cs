@@ -53,30 +53,20 @@ namespace WinFormCNP
 
         private void comboBox_Luni_SelectedValueChanged(object sender, EventArgs e)
         {
-            // salveaza ziua selectionata = 31
+            var zi_selectata = comboBox_Zile.SelectedIndex + 1;
+            var zile_luna_selectata = CommonCNP.Utilities.Zile(comboBox_Luni.Text);
 
             comboBox_Zile.Items.Clear();
-            var a = sender as ComboBox;
 
-            for (int i = 1; i <= CommonCNP.Utilities.Zile(comboBox_Luni.Text); i++)
+            for (int i = 1; i <= zile_luna_selectata; i++)
             {
                 comboBox_Zile.Items.Add(i);
             }
 
-            comboBox_Zile.Text = string.Empty;
-            comboBox_Zile.SelectedText = "1";
-
-            //comboBox_Zile.SelectedValue.ToString();
-
-            //if (a > comboBox_Luni)
-            //{
-
-            //}
-
-            // daca ziua selectionata > comboBox_Zile
-            // atunci 
-
-            // slelectex index comboBox_Zile trebuie sa fie 1
+            if (zi_selectata > zile_luna_selectata)
+            {
+                comboBox_Zile.SelectedIndex = 0;
+            }
         }
 
         private void button_Clear_Click(object sender, EventArgs e)
