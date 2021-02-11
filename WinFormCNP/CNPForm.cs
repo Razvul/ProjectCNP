@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,15 +14,17 @@ namespace WinFormCNP
     {
         public CNPForm()
         {
-            InitializeComponent();
-
-            comboBox_Luni.DataSource = Enum.GetValues(typeof(Luni));
-            comboBox_Judete.DataSource = Enum.GetValues(typeof(Judete));
-        }
+            InitializeComponent();        }
 
         private void CNPForm_Load(object sender, EventArgs e)
         {
             ClearLabels();
+
+            comboBox_Sex.Items.Add("Masculin");
+            comboBox_Sex.Items.Add("Feminin");
+
+            comboBox_Luni.DataSource = Enum.GetValues(typeof(Luni));
+            comboBox_Judete.DataSource = Enum.GetValues(typeof(Judete));
 
             for (int i = 1900; i <= DateTime.Now.Year; i++)
             {
@@ -51,12 +53,19 @@ namespace WinFormCNP
 
         private void comboBox_Luni_SelectedValueChanged(object sender, EventArgs e)
         {
+            var zi_selectata = comboBox_Zile.SelectedIndex + 1;
+            var zile_luna_selectata = CommonCNP.Utilities.Zile(comboBox_Luni.Text);
+
             comboBox_Zile.Items.Clear();
 
-            for (int i = 1; i <= CommonCNP.Utilities.Zile(comboBox_Luni.Text); i++)
+            for (int i = 1; i <= zile_luna_selectata; i++)
             {
-                //if()
                 comboBox_Zile.Items.Add(i);
+            }
+
+            if (zi_selectata > zile_luna_selectata)
+            {
+                comboBox_Zile.SelectedIndex = 0;
             }
         }
 
