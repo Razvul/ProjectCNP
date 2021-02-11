@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="Address.cs" />
     <Compile Include="CNP.cs" />
-    <Compile Include="Om.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>
