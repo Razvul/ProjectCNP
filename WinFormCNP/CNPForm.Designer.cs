@@ -47,18 +47,20 @@ namespace WinFormCNP
             // comboBox_Judete
             // 
             this.comboBox_Judete.FormattingEnabled = true;
-            this.comboBox_Judete.Location = new System.Drawing.Point(12, 101);
+            this.comboBox_Judete.Location = new System.Drawing.Point(16, 124);
+            this.comboBox_Judete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox_Judete.Name = "comboBox_Judete";
-            this.comboBox_Judete.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Judete.Size = new System.Drawing.Size(160, 24);
             this.comboBox_Judete.TabIndex = 0;
             this.comboBox_Judete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Judete_KeyPress);
             // 
             // comboBox_Luni
             // 
             this.comboBox_Luni.FormattingEnabled = true;
-            this.comboBox_Luni.Location = new System.Drawing.Point(151, 101);
+            this.comboBox_Luni.Location = new System.Drawing.Point(201, 124);
+            this.comboBox_Luni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox_Luni.Name = "comboBox_Luni";
-            this.comboBox_Luni.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Luni.Size = new System.Drawing.Size(160, 24);
             this.comboBox_Luni.TabIndex = 1;
             this.comboBox_Luni.SelectedValueChanged += new System.EventHandler(this.comboBox_Luni_SelectedValueChanged);
             this.comboBox_Luni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Luni_KeyPress);
@@ -66,72 +68,80 @@ namespace WinFormCNP
             // comboBox_Zile
             // 
             this.comboBox_Zile.FormattingEnabled = true;
-            this.comboBox_Zile.Location = new System.Drawing.Point(296, 101);
+            this.comboBox_Zile.Location = new System.Drawing.Point(395, 124);
+            this.comboBox_Zile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox_Zile.Name = "comboBox_Zile";
-            this.comboBox_Zile.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Zile.Size = new System.Drawing.Size(160, 24);
             this.comboBox_Zile.TabIndex = 2;
             this.comboBox_Zile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Zile_KeyPress);
             // 
             // label_Judete
             // 
             this.label_Judete.AutoSize = true;
-            this.label_Judete.Location = new System.Drawing.Point(12, 45);
+            this.label_Judete.Location = new System.Drawing.Point(16, 55);
+            this.label_Judete.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Judete.Name = "label_Judete";
-            this.label_Judete.Size = new System.Drawing.Size(39, 13);
+            this.label_Judete.Size = new System.Drawing.Size(51, 17);
             this.label_Judete.TabIndex = 3;
             this.label_Judete.Text = "Judete";
             // 
             // label_Luni
             // 
             this.label_Luni.AutoSize = true;
-            this.label_Luni.Location = new System.Drawing.Point(148, 45);
+            this.label_Luni.Location = new System.Drawing.Point(197, 55);
+            this.label_Luni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Luni.Name = "label_Luni";
-            this.label_Luni.Size = new System.Drawing.Size(27, 13);
+            this.label_Luni.Size = new System.Drawing.Size(35, 17);
             this.label_Luni.TabIndex = 4;
             this.label_Luni.Text = "Luni";
             // 
             // label_Zile
             // 
             this.label_Zile.AutoSize = true;
-            this.label_Zile.Location = new System.Drawing.Point(293, 45);
+            this.label_Zile.Location = new System.Drawing.Point(391, 55);
+            this.label_Zile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Zile.Name = "label_Zile";
-            this.label_Zile.Size = new System.Drawing.Size(24, 13);
+            this.label_Zile.Size = new System.Drawing.Size(31, 17);
             this.label_Zile.TabIndex = 5;
             this.label_Zile.Text = "Zile";
             // 
             // label_An
             // 
             this.label_An.AutoSize = true;
-            this.label_An.Location = new System.Drawing.Point(448, 45);
+            this.label_An.Location = new System.Drawing.Point(597, 55);
+            this.label_An.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_An.Name = "label_An";
-            this.label_An.Size = new System.Drawing.Size(20, 13);
+            this.label_An.Size = new System.Drawing.Size(25, 17);
             this.label_An.TabIndex = 6;
             this.label_An.Text = "An";
             // 
             // comboBox_An
             // 
             this.comboBox_An.FormattingEnabled = true;
-            this.comboBox_An.Location = new System.Drawing.Point(451, 101);
+            this.comboBox_An.Location = new System.Drawing.Point(601, 124);
+            this.comboBox_An.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox_An.Name = "comboBox_An";
-            this.comboBox_An.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_An.Size = new System.Drawing.Size(160, 24);
             this.comboBox_An.TabIndex = 7;
             this.comboBox_An.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_An_KeyPress);
             // 
             // label_CNP
             // 
             this.label_CNP.AutoSize = true;
-            this.label_CNP.Location = new System.Drawing.Point(12, 243);
+            this.label_CNP.Location = new System.Drawing.Point(16, 299);
+            this.label_CNP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_CNP.Name = "label_CNP";
-            this.label_CNP.Size = new System.Drawing.Size(29, 13);
+            this.label_CNP.Size = new System.Drawing.Size(36, 17);
             this.label_CNP.TabIndex = 8;
             this.label_CNP.Text = "CNP";
             // 
             // label_CNP_Result
             // 
             this.label_CNP_Result.AutoSize = true;
-            this.label_CNP_Result.Location = new System.Drawing.Point(12, 287);
+            this.label_CNP_Result.Location = new System.Drawing.Point(16, 353);
+            this.label_CNP_Result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_CNP_Result.Name = "label_CNP_Result";
-            this.label_CNP_Result.Size = new System.Drawing.Size(62, 13);
+            this.label_CNP_Result.Size = new System.Drawing.Size(80, 17);
             this.label_CNP_Result.TabIndex = 9;
             this.label_CNP_Result.Text = "CNP Result";
             // 
@@ -139,9 +149,10 @@ namespace WinFormCNP
             // 
             this.button_Clear.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_Clear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_Clear.Location = new System.Drawing.Point(653, 277);
+            this.button_Clear.Location = new System.Drawing.Point(871, 341);
+            this.button_Clear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_Clear.Name = "button_Clear";
-            this.button_Clear.Size = new System.Drawing.Size(75, 23);
+            this.button_Clear.Size = new System.Drawing.Size(100, 28);
             this.button_Clear.TabIndex = 10;
             this.button_Clear.Text = "Clear";
             this.button_Clear.UseVisualStyleBackColor = false;
@@ -150,26 +161,28 @@ namespace WinFormCNP
             // label_Sex
             // 
             this.label_Sex.AutoSize = true;
-            this.label_Sex.Location = new System.Drawing.Point(604, 45);
+            this.label_Sex.Location = new System.Drawing.Point(805, 55);
+            this.label_Sex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Sex.Name = "label_Sex";
-            this.label_Sex.Size = new System.Drawing.Size(25, 13);
+            this.label_Sex.Size = new System.Drawing.Size(31, 17);
             this.label_Sex.TabIndex = 11;
             this.label_Sex.Text = "Sex";
             // 
             // comboBox_Sex
             // 
             this.comboBox_Sex.FormattingEnabled = true;
-            this.comboBox_Sex.Location = new System.Drawing.Point(607, 101);
+            this.comboBox_Sex.Location = new System.Drawing.Point(809, 124);
+            this.comboBox_Sex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox_Sex.Name = "comboBox_Sex";
-            this.comboBox_Sex.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Sex.Size = new System.Drawing.Size(160, 24);
             this.comboBox_Sex.TabIndex = 12;
             this.comboBox_Sex.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Sex_KeyPress);
             // 
             // CNPForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 376);
+            this.ClientSize = new System.Drawing.Size(1115, 463);
             this.Controls.Add(this.comboBox_Sex);
             this.Controls.Add(this.label_Sex);
             this.Controls.Add(this.button_Clear);
@@ -183,6 +196,7 @@ namespace WinFormCNP
             this.Controls.Add(this.comboBox_Zile);
             this.Controls.Add(this.comboBox_Luni);
             this.Controls.Add(this.comboBox_Judete);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CNPForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.CNPForm_Load);

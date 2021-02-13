@@ -8,8 +8,9 @@ namespace CommonCNP
 {
     public class Person
     {
-        public string Nume{ get; set; }
-        public string Prenume{ get; set; }
-        public string Sex{ get; set; }
+        public string Nume { get; set; }
+        public string Prenume { get; set; }
+        public Enums.Sex Sex { get; set; }
+        public double CNP { get; set; }
     }
 }
