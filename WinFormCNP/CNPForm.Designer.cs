@@ -51,6 +51,7 @@ namespace WinFormCNP
             this.comboBox_Judete.Name = "comboBox_Judete";
             this.comboBox_Judete.Size = new System.Drawing.Size(121, 21);
             this.comboBox_Judete.TabIndex = 0;
+            this.comboBox_Judete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Judete_KeyPress);
             // 
             // comboBox_Luni
             // 
@@ -60,6 +61,7 @@ namespace WinFormCNP
             this.comboBox_Luni.Size = new System.Drawing.Size(121, 21);
             this.comboBox_Luni.TabIndex = 1;
             this.comboBox_Luni.SelectedValueChanged += new System.EventHandler(this.comboBox_Luni_SelectedValueChanged);
+            this.comboBox_Luni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Luni_KeyPress);
             // 
             // comboBox_Zile
             // 
@@ -68,6 +70,7 @@ namespace WinFormCNP
             this.comboBox_Zile.Name = "comboBox_Zile";
             this.comboBox_Zile.Size = new System.Drawing.Size(121, 21);
             this.comboBox_Zile.TabIndex = 2;
+            this.comboBox_Zile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Zile_KeyPress);
             // 
             // label_Judete
             // 
@@ -112,6 +115,7 @@ namespace WinFormCNP
             this.comboBox_An.Name = "comboBox_An";
             this.comboBox_An.Size = new System.Drawing.Size(121, 21);
             this.comboBox_An.TabIndex = 7;
+            this.comboBox_An.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_An_KeyPress);
             // 
             // label_CNP
             // 
@@ -133,12 +137,14 @@ namespace WinFormCNP
             // 
             // button_Clear
             // 
-            this.button_Clear.Location = new System.Drawing.Point(496, 276);
+            this.button_Clear.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_Clear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_Clear.Location = new System.Drawing.Point(653, 277);
             this.button_Clear.Name = "button_Clear";
             this.button_Clear.Size = new System.Drawing.Size(75, 23);
             this.button_Clear.TabIndex = 10;
             this.button_Clear.Text = "Clear";
-            this.button_Clear.UseVisualStyleBackColor = true;
+            this.button_Clear.UseVisualStyleBackColor = false;
             this.button_Clear.Click += new System.EventHandler(this.button_Clear_Click);
             // 
             // label_Sex
@@ -157,6 +163,7 @@ namespace WinFormCNP
             this.comboBox_Sex.Name = "comboBox_Sex";
             this.comboBox_Sex.Size = new System.Drawing.Size(121, 21);
             this.comboBox_Sex.TabIndex = 12;
+            this.comboBox_Sex.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Sex_KeyPress);
             // 
             // CNPForm
             // 
