@@ -50,9 +50,11 @@ namespace WinFormCNP
             Harghita, Hunedoara, Ialomita, Iasi, Ilfov, Maramures, Mehedinti, Mures, Neamt, Olt, Prahova, SatuMare, Salaj, Sibiu, Suceava, Teleorman, Timis,
             Tulcea, Vaslui, Valcea, Vrancea, Bucuresti, Bucuresti1, Bucuresti2, Bucuresti3, Bucuresti4, Bucuresti5, Bucuresti6, Calarasi, Giurgiu
         }
+        
 
         private void comboBox_Luni_SelectedValueChanged(object sender, EventArgs e)
         {
+            //comboBox_Zile.Enabled = false;
             var zi_selectata = comboBox_Zile.SelectedIndex + 1;
             var zile_luna_selectata = CommonCNP.Utilities.Zile(comboBox_Luni.Text);
 
@@ -81,11 +83,36 @@ namespace WinFormCNP
             comboBox_Judete.Text = string.Empty;
             comboBox_Luni.Text = string.Empty;
             comboBox_Zile.Text = string.Empty;
+            comboBox_Sex.Text = string.Empty;
         }
 
         private void ClearLabels()
         {
             label_CNP_Result.Text = string.Empty;
+        }
+
+        private void comboBox_Judete_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBox_Luni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+        private void comboBox_Zile_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBox_An_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }
