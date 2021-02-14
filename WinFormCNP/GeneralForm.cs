@@ -22,7 +22,7 @@ namespace WinFormCNP
 
         private void button_CNP_Click(object sender, EventArgs e)
         {
-            var x = new CNPForm();
+            var x = new GenerateCNP();
             x.Show();
         }
 
@@ -47,7 +47,7 @@ namespace WinFormCNP
            
 
 
-            var x = new AddressForm(ListUsers.First());
+            var x = new Address(ListUsers.First());
             x.Show();
         }
 
@@ -67,7 +67,7 @@ namespace WinFormCNP
                     CNP = 1751205075564
                 },
 
-                Address = new Address
+                Address = new CommonCNP.Address
                 {
                     Oras = "Botosani",
                     Strada = "Strada Mare",
@@ -90,16 +90,16 @@ namespace WinFormCNP
                     CNP = 1751205075564
                 },
 
-                Address = new Address
+                Address = new CommonCNP.Address
                 {
                     Oras = "Botosani",
                     Strada = "Strada Mare",
-                    Numar = 12,
-                    Bloc = 34,
-                    Etaj = 2,
-                    Apartament = 4,
-                    Judet = "Botosani",
-                    CodPostal = 47512
+                    Numar = 31,
+                    Bloc = 9,
+                    Etaj = 4,
+                    Apartament = 16,
+                    Judet = "Bucuresti",
+                    CodPostal = 475120
                 }
             };
 
@@ -113,7 +113,7 @@ namespace WinFormCNP
                     CNP = 1751205075564
                 },
 
-                Address = new Address
+                Address = new CommonCNP.Address
                 {
                     Oras = "Botosani",
                     Strada = "Strada Mare",
