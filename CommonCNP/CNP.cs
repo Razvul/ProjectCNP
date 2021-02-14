@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonCNP
 {
-    public class CNP
+    public  class CNP
     {
         public string SEX { get; set; }
         public string AN { get; set; }
@@ -15,16 +15,6 @@ namespace CommonCNP
         public string JUDET { get; set; }
         public string NNN { get; set; }
         public string CC { get; set; }
-
-        public string GetCNP()
-        {
-            return $"{SEX}{AN}{LUNA}{ZI}{JUDET}{NNN}{CC}";
-        }
-
-        public string GetYearFromNumber(string an)
-        {
-            return an.Substring(2, 2);
-        }
 
         public static string GetLunaCNP(string luna)
         {
@@ -47,18 +37,5 @@ namespace CommonCNP
             return result;
         }
 
-        public static string GetZiCNP(string zi)
-        {
-            var numar = int.Parse(zi);
-
-            if (numar > 0 && numar < 10)
-            {
-                return $"0{zi}";
-            }
-            else
-            {
-                return zi;
-            }
-        }
     }
 }

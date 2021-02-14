@@ -14,9 +14,10 @@ namespace WinFormCNP
     {
         public GenerateCNP()
         {
-            InitializeComponent();        }
+            InitializeComponent();
+        }
 
-        private void CNPForm_Load(object sender, EventArgs e)
+            private void CNPForm_Load(object sender, EventArgs e)
         {
             ClearLabels();
 
@@ -50,11 +51,14 @@ namespace WinFormCNP
             Harghita, Hunedoara, Ialomita, Iasi, Ilfov, Maramures, Mehedinti, Mures, Neamt, Olt, Prahova, SatuMare, Salaj, Sibiu, Suceava, Teleorman, Timis,
             Tulcea, Vaslui, Valcea, Vrancea, Bucuresti, Bucuresti1, Bucuresti2, Bucuresti3, Bucuresti4, Bucuresti5, Bucuresti6, Calarasi, Giurgiu
         }
-        
+
+        public string GetCNP(string SEX, string AN, string LUNA, string ZI, string JUDET, string NNN, string CC)
+        {
+            return $"{SEX}{AN}{LUNA}{ZI}{JUDET}{NNN}{CC}";
+        }
 
         private void comboBox_Luni_SelectedValueChanged(object sender, EventArgs e)
         {
-            //comboBox_Zile.Enabled = false;
             var zi_selectata = comboBox_Zile.SelectedIndex + 1;
             var zile_luna_selectata = CommonCNP.Utilities.Zile(comboBox_Luni.Text);
 
@@ -113,6 +117,22 @@ namespace WinFormCNP
         private void comboBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void button_Generate_CNP_Click(object sender, EventArgs e)
+        {
+            var Om = new CommonCNP.CNP
+            {
+                SEX = CommonCNP.Utilities.GetSex(comboBox_Sex.Text, comboBox_An.Text),
+                AN = CommonCNP.Utilities.GetYear(comboBox_An.Text),
+                LUNA = CommonCNP.Utilities.GetMonth(comboBox_Luni.Text),
+                ZI = CommonCNP.Utilities.GetZi(comboBox_Zile.Text),
+                JUDET = CommonCNP.Utilities.GetJudet(comboBox_Judete.Text),
+                NNN = CommonCNP.Utilities.GetNNN(),
+            };
+            Om.CC = CommonCNP.Utilities.GetCC(Om.SEX,Om.AN,Om.LUNA,Om.ZI,Om.JUDET,Om.NNN);
+
+            label_CNP_Result.Text = GetCNP(Om.SEX,Om.AN,Om.LUNA,Om.ZI,Om.JUDET,Om.NNN,Om.CC);
         }
     }
 }
