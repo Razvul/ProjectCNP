@@ -93,13 +93,15 @@ namespace WinFormCNP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 384);
+            this.ClientSize = new System.Drawing.Size(530, 352);
             this.Controls.Add(this.label_Sex);
             this.Controls.Add(this.label_Prenume);
             this.Controls.Add(this.label_Nume);
             this.Controls.Add(this.textBox_Sex);
             this.Controls.Add(this.textBox_Prenume);
             this.Controls.Add(this.textBox_Nume);
+            this.MaximumSize = new System.Drawing.Size(750, 600);
+            this.MinimumSize = new System.Drawing.Size(400, 350);
             this.Name = "NameForm";
             this.Text = "NameForm";
             this.ResumeLayout(false);
