@@ -140,7 +140,7 @@ namespace WinFormCNP
             // 
             this.button_Clear.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_Clear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_Clear.Location = new System.Drawing.Point(653, 282);
+            this.button_Clear.Location = new System.Drawing.Point(611, 287);
             this.button_Clear.Name = "button_Clear";
             this.button_Clear.Size = new System.Drawing.Size(75, 23);
             this.button_Clear.TabIndex = 10;
@@ -180,7 +180,7 @@ namespace WinFormCNP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 376);
+            this.ClientSize = new System.Drawing.Size(759, 336);
             this.Controls.Add(this.button_Generate_CNP);
             this.Controls.Add(this.comboBox_Sex);
             this.Controls.Add(this.label_Sex);
@@ -195,8 +195,10 @@ namespace WinFormCNP
             this.Controls.Add(this.comboBox_Zile);
             this.Controls.Add(this.comboBox_Luni);
             this.Controls.Add(this.comboBox_Judete);
+            this.MaximumSize = new System.Drawing.Size(1000, 500);
+            this.MinimumSize = new System.Drawing.Size(775, 375);
             this.Name = "GenerateCNP";
-            this.Text = "Form1";
+            this.Text = "GenerateCNP";
             this.Load += new System.EventHandler(this.CNPForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
