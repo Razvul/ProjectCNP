@@ -38,10 +38,9 @@ namespace WinFormCNP
             // button_CNP
             // 
             this.button_CNP.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button_CNP.Location = new System.Drawing.Point(49, 65);
-            this.button_CNP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_CNP.Location = new System.Drawing.Point(37, 53);
             this.button_CNP.Name = "button_CNP";
-            this.button_CNP.Size = new System.Drawing.Size(100, 28);
+            this.button_CNP.Size = new System.Drawing.Size(75, 23);
             this.button_CNP.TabIndex = 0;
             this.button_CNP.Text = "CNP";
             this.button_CNP.UseVisualStyleBackColor = false;
@@ -50,10 +49,9 @@ namespace WinFormCNP
             // button_Name
             // 
             this.button_Name.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_Name.Location = new System.Drawing.Point(183, 65);
-            this.button_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_Name.Location = new System.Drawing.Point(137, 53);
             this.button_Name.Name = "button_Name";
-            this.button_Name.Size = new System.Drawing.Size(100, 28);
+            this.button_Name.Size = new System.Drawing.Size(75, 23);
             this.button_Name.TabIndex = 1;
             this.button_Name.Text = "Name";
             this.button_Name.UseVisualStyleBackColor = false;
@@ -62,10 +60,9 @@ namespace WinFormCNP
             // button_Adresa
             // 
             this.button_Adresa.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button_Adresa.Location = new System.Drawing.Point(308, 65);
-            this.button_Adresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_Adresa.Location = new System.Drawing.Point(231, 53);
             this.button_Adresa.Name = "button_Adresa";
-            this.button_Adresa.Size = new System.Drawing.Size(100, 28);
+            this.button_Adresa.Size = new System.Drawing.Size(75, 23);
             this.button_Adresa.TabIndex = 2;
             this.button_Adresa.Text = "Adresa";
             this.button_Adresa.UseVisualStyleBackColor = true;
@@ -74,22 +71,24 @@ namespace WinFormCNP
             // checkedListBox_users
             // 
             this.checkedListBox_users.FormattingEnabled = true;
-            this.checkedListBox_users.Location = new System.Drawing.Point(496, 108);
+            this.checkedListBox_users.Location = new System.Drawing.Point(372, 88);
+            this.checkedListBox_users.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkedListBox_users.Name = "checkedListBox_users";
-            this.checkedListBox_users.Size = new System.Drawing.Size(210, 191);
+            this.checkedListBox_users.Size = new System.Drawing.Size(158, 154);
             this.checkedListBox_users.TabIndex = 4;
             // 
             // GeneralForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 357);
+            this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.checkedListBox_users);
             this.Controls.Add(this.button_Adresa);
             this.Controls.Add(this.button_Name);
             this.Controls.Add(this.button_CNP);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(850, 550);
+            this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "GeneralForm";
             this.Text = "GeneralForm";
             this.ResumeLayout(false);
