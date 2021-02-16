@@ -17,7 +17,7 @@ namespace WinFormCNP
             InitializeComponent();
         }
 
-            private void CNPForm_Load(object sender, EventArgs e)
+        private void CNPForm_Load(object sender, EventArgs e)
         {
             ClearLabels();
 

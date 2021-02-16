@@ -103,7 +103,7 @@ namespace WinFormCNP
             this.MaximumSize = new System.Drawing.Size(750, 600);
             this.MinimumSize = new System.Drawing.Size(400, 350);
             this.Name = "NameForm";
-            this.Text = "NameForm";
+            this.Text = "Name";
             this.ResumeLayout(false);
             this.PerformLayout();
 
