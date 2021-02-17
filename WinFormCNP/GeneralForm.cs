@@ -39,19 +39,9 @@ namespace WinFormCNP
 
         private void button_Adresa_Click(object sender, EventArgs e)
         {
-            var usersCollection = listBox1.SelectedItem;
+            var SelectedUser = (User)listBox1.SelectedItem;
 
-            foreach(var item in ListUsers)
-            {
-
-            }
-
-            for (int i = 0; i > ListUsers.Count; i++)
-            {
-                
-            }
-
-            var x = new Address(ListUsers.First());
+            var x = new Address(SelectedUser);
             x.Show();
         }
 

@@ -19,12 +19,12 @@ namespace WinFormCNP
         {
             InitializeComponent();
             _user = user;
-            Populate();
         }
 
         private void Address_Load(object sender, EventArgs e)
         {
             ClearLabels();
+            Populate();
         }
         private void button_Clear_Click(object sender, EventArgs e)
         {
