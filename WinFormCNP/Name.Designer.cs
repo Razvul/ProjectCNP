@@ -1,7 +1,7 @@
 ﻿
 namespace WinFormCNP
 {
-    partial class NameForm
+    partial class Name
     {
         /// <summary>
         /// Required designer variable.
@@ -89,7 +89,7 @@ namespace WinFormCNP
             this.label_Sex.TabIndex = 5;
             this.label_Sex.Text = "Sex";
             // 
-            // NameForm
+            // Name
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,8 +102,8 @@ namespace WinFormCNP
             this.Controls.Add(this.textBox_Nume);
             this.MaximumSize = new System.Drawing.Size(750, 600);
             this.MinimumSize = new System.Drawing.Size(400, 350);
-            this.Name = "NameForm";
-            this.Text = "NameForm";
+            this.Name = "Name";
+            this.Text = "Name";
             this.ResumeLayout(false);
             this.PerformLayout();
 

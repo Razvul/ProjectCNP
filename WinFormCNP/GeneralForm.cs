@@ -20,6 +20,11 @@ namespace WinFormCNP
             PopulateListBox();
         }
 
+        private void GeneralForm_Load(object sender, EventArgs e)
+        {
+            listBox1.Items.Add(ListUsers);
+        }
+
         private void button_CNP_Click(object sender, EventArgs e)
         {
             var x = new GenerateCNP();
@@ -28,35 +33,22 @@ namespace WinFormCNP
 
         private void button_Name_Click(object sender, EventArgs e)
         {
-            var x = new NameForm();
+            var x = new Name();
             x.Show();
         }
 
         private void button_Adresa_Click(object sender, EventArgs e)
         {
-            var usersCollection = checkedListBox_users.CheckedItems;
+            var SelectedUser = (User)listBox1.SelectedItem;
 
-            foreach (var item in usersCollection)
-            {
-
-                var st = (User)item;
-                var sto = 2;
-            }
-
-
-           
-
-
-            var x = new Address(ListUsers.First());
+            var x = new Address(SelectedUser);
             x.Show();
         }
-
 
         List<User> ListUsers = new List<User>();
 
         private void GenerateMockData()
         {
-
             User user1 = new User
             {
                 Person = new Person
@@ -76,7 +68,7 @@ namespace WinFormCNP
                     Etaj = 2,
                     Apartament = 4,
                     Judet = "Botosani",
-                    CodPostal = 47512
+                    CodPostal = 475125
                 }
             };
 
@@ -87,18 +79,18 @@ namespace WinFormCNP
                     Nume = "Zamfir",
                     Prenume = "Rodica",
                     Sex = Enums.Sex.Feminin,
-                    CNP = 1751205075564
+                    CNP = 2610621120870
                 },
 
                 Address = new CommonCNP.Address
                 {
-                    Oras = "Botosani",
-                    Strada = "Strada Mare",
+                    Oras = "Cluj Napoca",
+                    Strada = "Strada Mihai Eminescu",
                     Numar = 31,
                     Bloc = 9,
-                    Etaj = 4,
+                    Etaj = 5,
                     Apartament = 16,
-                    Judet = "Bucuresti",
+                    Judet = "Cluj",
                     CodPostal = 475120
                 }
             };
@@ -109,20 +101,20 @@ namespace WinFormCNP
                 {
                     Nume = "Popescu",
                     Prenume = "Elena",
-                    Sex = Enums.Sex.Feminin,
-                    CNP = 1751205075564
+                    Sex = Enums.Sex.Masculin,
+                    CNP = 5000114179137
                 },
 
                 Address = new CommonCNP.Address
                 {
-                    Oras = "Botosani",
-                    Strada = "Strada Mare",
-                    Numar = 12,
-                    Bloc = 34,
-                    Etaj = 2,
-                    Apartament = 4,
-                    Judet = "Botosani",
-                    CodPostal = 47512
+                    Oras = "Galati",
+                    Strada = "Strada Stefan cel Mare",
+                    Numar = 2,
+                    Bloc = 15,
+                    Etaj = 3,
+                    Apartament = 7,
+                    Judet = "Galati",
+                    CodPostal = 475964
                 }
             };
 
@@ -135,8 +127,9 @@ namespace WinFormCNP
         {
             foreach (var user in ListUsers)
             {
-                //var item = $"{user.Person.Nume}, {user.Person.Prenume}";
-                checkedListBox_users.Items.Add(user);
+                var item = $"{user.Person.Nume}, {user.Person.Prenume}";
+                listBox1.Items.Add(user);
+                //listBox1_users.Items.Add(user);
             }
         }
     }

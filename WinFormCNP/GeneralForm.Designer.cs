@@ -32,7 +32,7 @@ namespace WinFormCNP
             this.button_CNP = new System.Windows.Forms.Button();
             this.button_Name = new System.Windows.Forms.Button();
             this.button_Adresa = new System.Windows.Forms.Button();
-            this.checkedListBox_users = new System.Windows.Forms.CheckedListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // button_CNP
@@ -60,7 +60,7 @@ namespace WinFormCNP
             // button_Adresa
             // 
             this.button_Adresa.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button_Adresa.Location = new System.Drawing.Point(231, 53);
+            this.button_Adresa.Location = new System.Drawing.Point(239, 53);
             this.button_Adresa.Name = "button_Adresa";
             this.button_Adresa.Size = new System.Drawing.Size(75, 23);
             this.button_Adresa.TabIndex = 2;
@@ -68,21 +68,20 @@ namespace WinFormCNP
             this.button_Adresa.UseVisualStyleBackColor = true;
             this.button_Adresa.Click += new System.EventHandler(this.button_Adresa_Click);
             // 
-            // checkedListBox_users
+            // listBox1
             // 
-            this.checkedListBox_users.FormattingEnabled = true;
-            this.checkedListBox_users.Location = new System.Drawing.Point(372, 88);
-            this.checkedListBox_users.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.checkedListBox_users.Name = "checkedListBox_users";
-            this.checkedListBox_users.Size = new System.Drawing.Size(158, 154);
-            this.checkedListBox_users.TabIndex = 4;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(387, 53);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 95);
+            this.listBox1.TabIndex = 3;
             // 
             // GeneralForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.checkedListBox_users);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button_Adresa);
             this.Controls.Add(this.button_Name);
             this.Controls.Add(this.button_CNP);
@@ -91,6 +90,7 @@ namespace WinFormCNP
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "GeneralForm";
             this.Text = "GeneralForm";
+            this.Load += new System.EventHandler(this.GeneralForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -100,6 +100,6 @@ namespace WinFormCNP
         private System.Windows.Forms.Button button_CNP;
         private System.Windows.Forms.Button button_Name;
         private System.Windows.Forms.Button button_Adresa;
-        private System.Windows.Forms.CheckedListBox checkedListBox_users;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
