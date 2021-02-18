@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -119,10 +120,15 @@ namespace WinFormCNP
 
         private void PopulateListBox()
         {
+            ArrayList authors = new ArrayList(); // declare arraylist
+
             foreach (var user in ListUsers)
             {
-                listBox_Users.Items.Add(user);
+                //listBox_Users.Items.Add(user);
+                authors.Add(user);  //filling arraylist
             }
+
+            listBox_Users.DataSource = authors;  // adding the whole list in the listbox
             listBox_Users.SelectedItem = ListUsers[0];
         }
     }

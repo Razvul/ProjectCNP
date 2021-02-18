@@ -69,6 +69,8 @@ namespace WinFormCNP
             this.textBox_Localitate = new System.Windows.Forms.TextBox();
             this.textBox_Judet = new System.Windows.Forms.TextBox();
             this.textBox_CodPostal = new System.Windows.Forms.TextBox();
+            this.button_Editeaza = new System.Windows.Forms.Button();
+            this.button_Salveaza = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_nume
@@ -421,11 +423,31 @@ namespace WinFormCNP
             this.textBox_CodPostal.TabIndex = 40;
             this.textBox_CodPostal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CodPostal_KeyPress);
             // 
+            // button_Editeaza
+            // 
+            this.button_Editeaza.Location = new System.Drawing.Point(149, 403);
+            this.button_Editeaza.Name = "button_Editeaza";
+            this.button_Editeaza.Size = new System.Drawing.Size(75, 23);
+            this.button_Editeaza.TabIndex = 41;
+            this.button_Editeaza.Text = "Editeaza";
+            this.button_Editeaza.UseVisualStyleBackColor = true;
+            // 
+            // button_Salveaza
+            // 
+            this.button_Salveaza.Location = new System.Drawing.Point(307, 403);
+            this.button_Salveaza.Name = "button_Salveaza";
+            this.button_Salveaza.Size = new System.Drawing.Size(75, 23);
+            this.button_Salveaza.TabIndex = 42;
+            this.button_Salveaza.Text = "Salveaza";
+            this.button_Salveaza.UseVisualStyleBackColor = true;
+            // 
             // Address
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.button_Salveaza);
+            this.Controls.Add(this.button_Editeaza);
             this.Controls.Add(this.textBox_CodPostal);
             this.Controls.Add(this.textBox_Judet);
             this.Controls.Add(this.textBox_Localitate);
@@ -517,5 +539,7 @@ namespace WinFormCNP
         private System.Windows.Forms.TextBox textBox_Localitate;
         private System.Windows.Forms.TextBox textBox_Judet;
         private System.Windows.Forms.TextBox textBox_CodPostal;
+        private System.Windows.Forms.Button button_Editeaza;
+        private System.Windows.Forms.Button button_Salveaza;
     }
 }
