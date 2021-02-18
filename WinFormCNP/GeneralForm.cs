@@ -22,9 +22,8 @@ namespace WinFormCNP
 
         private void GeneralForm_Load(object sender, EventArgs e)
         {
-            //listBox1.Items.Clear();
+            button_Adresa.Enabled = false;
         }
-
         private void button_CNP_Click(object sender, EventArgs e)
         {
             var x = new GenerateCNP();
@@ -49,7 +48,7 @@ namespace WinFormCNP
 
         private void GenerateMockData()
         {
-            User user1 = new User
+            var user1 = new User
             {
                 Person = new Person
                 {
