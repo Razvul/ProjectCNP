@@ -22,7 +22,7 @@ namespace WinFormCNP
 
         private void GeneralForm_Load(object sender, EventArgs e)
         {
-            listBox1.Items.Add(ListUsers);
+            //listBox1.Items.Clear();
         }
 
         private void button_CNP_Click(object sender, EventArgs e)

@@ -33,24 +33,25 @@ namespace WinFormCNP
 
         private void Populate()
         {
-            label_Nume_Result.Text = $"{_user.Person.Nume}";
-            label_Prenume_Result.Text = $"{_user.Person.Prenume}";
-            label_Sex_Result.Text = $"{_user.Person.Sex}";
-            label_Oras_Result.Text = $"{_user.Address.Oras}";
-            label_Strada_Result.Text = $"{_user.Address.Strada}";
-            label_Numar_Result.Text = $"{_user.Address.Numar}";
-            label_Bloc_Result.Text = $"{_user.Address.Bloc}";
-            label_Scara_Result.Text = $"{_user.Address.Scara}";
-            label_Etaj_Result.Text = $"{_user.Address.Etaj}";
-            label_Apartament_Result.Text = $"{_user.Address.Apartament}";
-            label_Localitate_Result.Text = $"{_user.Address.Localitate}";
-            label_Judet_Result.Text = $"{_user.Address.Judet}";
-            label_Cod_Postal_Result.Text = $"{_user.Address.CodPostal}";
+            textBox_Nume.Text = $"{_user.Person.Nume}";
+            textBox_Prenume.Text = $"{_user.Person.Prenume}";
+            textBox_Sex.Text = $"{_user.Person.Sex}";
+            textBox_Oras.Text = $"{_user.Address.Oras}";
+            textBox_Strada.Text = $"{_user.Address.Strada}";
+            textBox_Numar.Text = $"{_user.Address.Numar}";
+            textBox_Bloc.Text = $"{_user.Address.Bloc}";
+            textBox_Scara.Text = $"{_user.Address.Scara}";
+            textBox_Etaj.Text = $"{_user.Address.Etaj}";
+            textBox_Apartament.Text = $"{_user.Address.Apartament}";
+            textBox_Localitate.Text = $"{_user.Address.Localitate}";
+            textBox_Judet.Text = $"{_user.Address.Judet}";
+            textBox_CodPostal.Text = $"{_user.Address.CodPostal}";
         }
         
         private void Clear()
         {
             ClearLabels();
+            ClearTextbox();
         }
 
         private void ClearLabels()
@@ -69,5 +70,90 @@ namespace WinFormCNP
             label_Judet_Result.Text = string.Empty;
             label_Cod_Postal_Result.Text = string.Empty;
         }
+
+        private void ClearTextbox()
+        {
+            textBox_Nume.Text = string.Empty;
+            textBox_Prenume.Text = string.Empty;
+            textBox_Sex.Text = string.Empty;
+            textBox_Oras.Text = string.Empty;
+            textBox_Strada.Text = string.Empty;
+            textBox_Numar.Text = string.Empty;
+            textBox_Bloc.Text = string.Empty;
+            textBox_Scara.Text = string.Empty;
+            textBox_Etaj.Text = string.Empty;
+            textBox_Apartament.Text = string.Empty;
+            textBox_Localitate.Text = string.Empty;
+            textBox_Judet.Text = string.Empty;
+            textBox_CodPostal.Text = string.Empty;
+        }
+
+        #region TextBox
+
+        private void textBox_Nume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void textBox_Prenume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void textBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void textBox_Oras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void textBox_Strada_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void textBox_Numar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void textBox_Bloc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void textBox_Scara_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void textBox_Etaj_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void textBox_Apartament_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void textBox_Localitate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void textBox_Judet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void textBox_CodPostal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+        #endregion
     }
 }
