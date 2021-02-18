@@ -466,8 +466,8 @@ namespace WinFormCNP
             this.Controls.Add(this.label_Strada);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label_nume);
-            this.MaximumSize = new System.Drawing.Size(600, 500);
-            this.MinimumSize = new System.Drawing.Size(350, 300);
+            this.MaximumSize = new System.Drawing.Size(750, 600);
+            this.MinimumSize = new System.Drawing.Size(600, 500);
             this.Name = "Address";
             this.Text = "Address";
             this.Load += new System.EventHandler(this.Address_Load);

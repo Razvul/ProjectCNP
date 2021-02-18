@@ -127,9 +127,7 @@ namespace WinFormCNP
         {
             foreach (var user in ListUsers)
             {
-                var item = $"{user.Person.Nume}, {user.Person.Prenume}";
                 listBox1.Items.Add(user);
-                //listBox1_users.Items.Add(user);
             }
         }
     }
