@@ -19,11 +19,6 @@ namespace WinFormCNP
             GenerateMockData();
             PopulateListBox();
         }
-
-        private void GeneralForm_Load(object sender, EventArgs e)
-        {
-            button_Adresa.Enabled = false;
-        }
         private void button_CNP_Click(object sender, EventArgs e)
         {
             var x = new GenerateCNP();
@@ -38,7 +33,7 @@ namespace WinFormCNP
 
         private void button_Adresa_Click(object sender, EventArgs e)
         {
-            var SelectedUser = (User)listBox1.SelectedItem;
+            var SelectedUser = (User)listBox_Users.SelectedItem;
 
             var x = new Address(SelectedUser);
             x.Show();
@@ -126,8 +121,9 @@ namespace WinFormCNP
         {
             foreach (var user in ListUsers)
             {
-                listBox1.Items.Add(user);
+                listBox_Users.Items.Add(user);
             }
+            listBox_Users.SelectedItem = ListUsers[0];
         }
     }
 }
