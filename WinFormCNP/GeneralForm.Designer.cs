@@ -32,7 +32,7 @@ namespace WinFormCNP
             this.button_CNP = new System.Windows.Forms.Button();
             this.button_Name = new System.Windows.Forms.Button();
             this.button_Adresa = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox_Users = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // button_CNP
@@ -68,20 +68,22 @@ namespace WinFormCNP
             this.button_Adresa.UseVisualStyleBackColor = true;
             this.button_Adresa.Click += new System.EventHandler(this.button_Adresa_Click);
             // 
-            // listBox1
+            // listBox_Users
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(387, 53);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 3;
+            this.listBox_Users.BackColor = System.Drawing.SystemColors.Desktop;
+            this.listBox_Users.ForeColor = System.Drawing.SystemColors.Window;
+            this.listBox_Users.FormattingEnabled = true;
+            this.listBox_Users.Location = new System.Drawing.Point(387, 53);
+            this.listBox_Users.Name = "listBox_Users";
+            this.listBox_Users.Size = new System.Drawing.Size(120, 95);
+            this.listBox_Users.TabIndex = 3;
             // 
             // GeneralForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBox_Users);
             this.Controls.Add(this.button_Adresa);
             this.Controls.Add(this.button_Name);
             this.Controls.Add(this.button_CNP);
@@ -90,7 +92,6 @@ namespace WinFormCNP
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "GeneralForm";
             this.Text = "GeneralForm";
-            this.Load += new System.EventHandler(this.GeneralForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -100,6 +101,6 @@ namespace WinFormCNP
         private System.Windows.Forms.Button button_CNP;
         private System.Windows.Forms.Button button_Name;
         private System.Windows.Forms.Button button_Adresa;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox_Users;
     }
 }

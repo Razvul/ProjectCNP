@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,12 +20,6 @@ namespace WinFormCNP
             GenerateMockData();
             PopulateListBox();
         }
-
-        private void GeneralForm_Load(object sender, EventArgs e)
-        {
-            //listBox1.Items.Clear();
-        }
-
         private void button_CNP_Click(object sender, EventArgs e)
         {
             var x = new GenerateCNP();
@@ -39,7 +34,7 @@ namespace WinFormCNP
 
         private void button_Adresa_Click(object sender, EventArgs e)
         {
-            var SelectedUser = (User)listBox1.SelectedItem;
+            var SelectedUser = (User)listBox_Users.SelectedItem;
 
             var x = new Address(SelectedUser);
             x.Show();
@@ -49,7 +44,7 @@ namespace WinFormCNP
 
         private void GenerateMockData()
         {
-            User user1 = new User
+            var user1 = new User
             {
                 Person = new Person
                 {
@@ -125,10 +120,16 @@ namespace WinFormCNP
 
         private void PopulateListBox()
         {
+            ArrayList authors = new ArrayList(); // declare arraylist
+
             foreach (var user in ListUsers)
             {
-                listBox1.Items.Add(user);
+                //listBox_Users.Items.Add(user);
+                authors.Add(user);  //filling arraylist
             }
+
+            listBox_Users.DataSource = authors;  // adding the whole list in the listbox
+            listBox_Users.SelectedItem = ListUsers[0];
         }
     }
 }
