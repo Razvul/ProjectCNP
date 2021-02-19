@@ -25,11 +25,41 @@ namespace WinFormCNP
         {
             ClearLabels();
             Populate();
+
+            button_Salveaza.Enabled = false;
+
+            textBox_Nume.Enabled = false;
+            textBox_Prenume.Enabled = false;
+            textBox_Sex.Enabled = false;
+            textBox_Oras.Enabled = false;
+            textBox_Strada.Enabled = false;
+            textBox_Numar.Enabled = false;
+            textBox_Bloc.Enabled = false;
+            textBox_Scara.Enabled = false;
+            textBox_Etaj.Enabled = false;
+            textBox_Apartament.Enabled = false;
+            textBox_Judet.Enabled = false;
+            textBox_CodPostal.Enabled = false;
         }
+
+        private void button_Editeaza_Click(object sender, EventArgs e)
+        {
+            button_Salveaza.Enabled = true;
+            button_Editeaza.Enabled = false;
+        }
+
+        private void button_Salveaza_Click(object sender, EventArgs e)
+        {
+            button_Editeaza.Enabled = true;
+            button_Salveaza.Enabled = false;
+        }
+
         private void button_Clear_Click(object sender, EventArgs e)
         {
             Clear();
         }
+
+        
 
         private void Populate()
         {
@@ -43,7 +73,6 @@ namespace WinFormCNP
             textBox_Scara.Text = $"{_user.Address.Scara}";
             textBox_Etaj.Text = $"{_user.Address.Etaj}";
             textBox_Apartament.Text = $"{_user.Address.Apartament}";
-            textBox_Localitate.Text = $"{_user.Address.Localitate}";
             textBox_Judet.Text = $"{_user.Address.Judet}";
             textBox_CodPostal.Text = $"{_user.Address.CodPostal}";
         }
@@ -66,7 +95,6 @@ namespace WinFormCNP
             label_Scara_Result.Text = string.Empty;
             label_Etaj_Result.Text = string.Empty;
             label_Apartament_Result.Text = string.Empty;
-            label_Localitate_Result.Text = string.Empty;
             label_Judet_Result.Text = string.Empty;
             label_Cod_Postal_Result.Text = string.Empty;
         }
@@ -83,7 +111,6 @@ namespace WinFormCNP
             textBox_Scara.Text = string.Empty;
             textBox_Etaj.Text = string.Empty;
             textBox_Apartament.Text = string.Empty;
-            textBox_Localitate.Text = string.Empty;
             textBox_Judet.Text = string.Empty;
             textBox_CodPostal.Text = string.Empty;
         }
@@ -140,11 +167,6 @@ namespace WinFormCNP
             e.Handled = true;
         }
 
-        private void textBox_Localitate_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
         private void textBox_Judet_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -154,6 +176,9 @@ namespace WinFormCNP
         {
             e.Handled = true;
         }
+
         #endregion
+
+        
     }
 }

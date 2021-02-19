@@ -37,7 +37,6 @@ namespace WinFormCNP
             this.label_Scara = new System.Windows.Forms.Label();
             this.label_Etaj = new System.Windows.Forms.Label();
             this.label_Apartament = new System.Windows.Forms.Label();
-            this.label_Localitate = new System.Windows.Forms.Label();
             this.label_Judet = new System.Windows.Forms.Label();
             this.label_Cod_Postal = new System.Windows.Forms.Label();
             this.label_Nume_Result = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@ namespace WinFormCNP
             this.label_Scara_Result = new System.Windows.Forms.Label();
             this.label_Etaj_Result = new System.Windows.Forms.Label();
             this.label_Apartament_Result = new System.Windows.Forms.Label();
-            this.label_Localitate_Result = new System.Windows.Forms.Label();
             this.label_Judet_Result = new System.Windows.Forms.Label();
             this.label_Cod_Postal_Result = new System.Windows.Forms.Label();
             this.button_Clear = new System.Windows.Forms.Button();
@@ -66,7 +64,6 @@ namespace WinFormCNP
             this.textBox_Scara = new System.Windows.Forms.TextBox();
             this.textBox_Etaj = new System.Windows.Forms.TextBox();
             this.textBox_Apartament = new System.Windows.Forms.TextBox();
-            this.textBox_Localitate = new System.Windows.Forms.TextBox();
             this.textBox_Judet = new System.Windows.Forms.TextBox();
             this.textBox_CodPostal = new System.Windows.Forms.TextBox();
             this.button_Editeaza = new System.Windows.Forms.Button();
@@ -132,7 +129,7 @@ namespace WinFormCNP
             // label_Etaj
             // 
             this.label_Etaj.AutoSize = true;
-            this.label_Etaj.Location = new System.Drawing.Point(16, 227);
+            this.label_Etaj.Location = new System.Drawing.Point(16, 247);
             this.label_Etaj.Name = "label_Etaj";
             this.label_Etaj.Size = new System.Drawing.Size(25, 13);
             this.label_Etaj.TabIndex = 7;
@@ -141,20 +138,11 @@ namespace WinFormCNP
             // label_Apartament
             // 
             this.label_Apartament.AutoSize = true;
-            this.label_Apartament.Location = new System.Drawing.Point(16, 257);
+            this.label_Apartament.Location = new System.Drawing.Point(16, 292);
             this.label_Apartament.Name = "label_Apartament";
             this.label_Apartament.Size = new System.Drawing.Size(61, 13);
             this.label_Apartament.TabIndex = 8;
             this.label_Apartament.Text = "Apartament";
-            // 
-            // label_Localitate
-            // 
-            this.label_Localitate.AutoSize = true;
-            this.label_Localitate.Location = new System.Drawing.Point(16, 286);
-            this.label_Localitate.Name = "label_Localitate";
-            this.label_Localitate.Size = new System.Drawing.Size(53, 13);
-            this.label_Localitate.TabIndex = 9;
-            this.label_Localitate.Text = "Localitate";
             // 
             // label_Judet
             // 
@@ -231,7 +219,7 @@ namespace WinFormCNP
             // label_Etaj_Result
             // 
             this.label_Etaj_Result.AutoSize = true;
-            this.label_Etaj_Result.Location = new System.Drawing.Point(304, 227);
+            this.label_Etaj_Result.Location = new System.Drawing.Point(304, 247);
             this.label_Etaj_Result.Name = "label_Etaj_Result";
             this.label_Etaj_Result.Size = new System.Drawing.Size(58, 13);
             this.label_Etaj_Result.TabIndex = 18;
@@ -240,20 +228,11 @@ namespace WinFormCNP
             // label_Apartament_Result
             // 
             this.label_Apartament_Result.AutoSize = true;
-            this.label_Apartament_Result.Location = new System.Drawing.Point(304, 257);
+            this.label_Apartament_Result.Location = new System.Drawing.Point(304, 285);
             this.label_Apartament_Result.Name = "label_Apartament_Result";
             this.label_Apartament_Result.Size = new System.Drawing.Size(94, 13);
             this.label_Apartament_Result.TabIndex = 19;
             this.label_Apartament_Result.Text = "Apartament Result";
-            // 
-            // label_Localitate_Result
-            // 
-            this.label_Localitate_Result.AutoSize = true;
-            this.label_Localitate_Result.Location = new System.Drawing.Point(304, 286);
-            this.label_Localitate_Result.Name = "label_Localitate_Result";
-            this.label_Localitate_Result.Size = new System.Drawing.Size(86, 13);
-            this.label_Localitate_Result.TabIndex = 20;
-            this.label_Localitate_Result.Text = "Localitate Result";
             // 
             // label_Judet_Result
             // 
@@ -377,7 +356,7 @@ namespace WinFormCNP
             // 
             // textBox_Scara
             // 
-            this.textBox_Scara.Location = new System.Drawing.Point(149, 205);
+            this.textBox_Scara.Location = new System.Drawing.Point(149, 207);
             this.textBox_Scara.Name = "textBox_Scara";
             this.textBox_Scara.Size = new System.Drawing.Size(100, 20);
             this.textBox_Scara.TabIndex = 35;
@@ -385,7 +364,7 @@ namespace WinFormCNP
             // 
             // textBox_Etaj
             // 
-            this.textBox_Etaj.Location = new System.Drawing.Point(149, 227);
+            this.textBox_Etaj.Location = new System.Drawing.Point(149, 247);
             this.textBox_Etaj.Name = "textBox_Etaj";
             this.textBox_Etaj.Size = new System.Drawing.Size(100, 20);
             this.textBox_Etaj.TabIndex = 36;
@@ -393,19 +372,11 @@ namespace WinFormCNP
             // 
             // textBox_Apartament
             // 
-            this.textBox_Apartament.Location = new System.Drawing.Point(149, 257);
+            this.textBox_Apartament.Location = new System.Drawing.Point(149, 285);
             this.textBox_Apartament.Name = "textBox_Apartament";
             this.textBox_Apartament.Size = new System.Drawing.Size(100, 20);
             this.textBox_Apartament.TabIndex = 37;
             this.textBox_Apartament.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Apartament_KeyPress);
-            // 
-            // textBox_Localitate
-            // 
-            this.textBox_Localitate.Location = new System.Drawing.Point(149, 286);
-            this.textBox_Localitate.Name = "textBox_Localitate";
-            this.textBox_Localitate.Size = new System.Drawing.Size(100, 20);
-            this.textBox_Localitate.TabIndex = 38;
-            this.textBox_Localitate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Localitate_KeyPress);
             // 
             // textBox_Judet
             // 
@@ -431,6 +402,7 @@ namespace WinFormCNP
             this.button_Editeaza.TabIndex = 41;
             this.button_Editeaza.Text = "Editeaza";
             this.button_Editeaza.UseVisualStyleBackColor = true;
+            this.button_Editeaza.Click += new System.EventHandler(this.button_Editeaza_Click);
             // 
             // button_Salveaza
             // 
@@ -440,6 +412,7 @@ namespace WinFormCNP
             this.button_Salveaza.TabIndex = 42;
             this.button_Salveaza.Text = "Salveaza";
             this.button_Salveaza.UseVisualStyleBackColor = true;
+            this.button_Salveaza.Click += new System.EventHandler(this.button_Salveaza_Click);
             // 
             // Address
             // 
@@ -450,7 +423,6 @@ namespace WinFormCNP
             this.Controls.Add(this.button_Editeaza);
             this.Controls.Add(this.textBox_CodPostal);
             this.Controls.Add(this.textBox_Judet);
-            this.Controls.Add(this.textBox_Localitate);
             this.Controls.Add(this.textBox_Apartament);
             this.Controls.Add(this.textBox_Etaj);
             this.Controls.Add(this.textBox_Scara);
@@ -468,7 +440,6 @@ namespace WinFormCNP
             this.Controls.Add(this.button_Clear);
             this.Controls.Add(this.label_Cod_Postal_Result);
             this.Controls.Add(this.label_Judet_Result);
-            this.Controls.Add(this.label_Localitate_Result);
             this.Controls.Add(this.label_Apartament_Result);
             this.Controls.Add(this.label_Etaj_Result);
             this.Controls.Add(this.label_Scara_Result);
@@ -479,7 +450,6 @@ namespace WinFormCNP
             this.Controls.Add(this.label_Nume_Result);
             this.Controls.Add(this.label_Cod_Postal);
             this.Controls.Add(this.label_Judet);
-            this.Controls.Add(this.label_Localitate);
             this.Controls.Add(this.label_Apartament);
             this.Controls.Add(this.label_Etaj);
             this.Controls.Add(this.label_Scara);
@@ -507,7 +477,6 @@ namespace WinFormCNP
         private System.Windows.Forms.Label label_Scara;
         private System.Windows.Forms.Label label_Etaj;
         private System.Windows.Forms.Label label_Apartament;
-        private System.Windows.Forms.Label label_Localitate;
         private System.Windows.Forms.Label label_Judet;
         private System.Windows.Forms.Label label_Cod_Postal;
         private System.Windows.Forms.Label label_Nume_Result;
@@ -518,7 +487,6 @@ namespace WinFormCNP
         private System.Windows.Forms.Label label_Scara_Result;
         private System.Windows.Forms.Label label_Etaj_Result;
         private System.Windows.Forms.Label label_Apartament_Result;
-        private System.Windows.Forms.Label label_Localitate_Result;
         private System.Windows.Forms.Label label_Judet_Result;
         private System.Windows.Forms.Label label_Cod_Postal_Result;
         private System.Windows.Forms.Button button_Clear;
@@ -536,7 +504,6 @@ namespace WinFormCNP
         private System.Windows.Forms.TextBox textBox_Scara;
         private System.Windows.Forms.TextBox textBox_Etaj;
         private System.Windows.Forms.TextBox textBox_Apartament;
-        private System.Windows.Forms.TextBox textBox_Localitate;
         private System.Windows.Forms.TextBox textBox_Judet;
         private System.Windows.Forms.TextBox textBox_CodPostal;
         private System.Windows.Forms.Button button_Editeaza;
