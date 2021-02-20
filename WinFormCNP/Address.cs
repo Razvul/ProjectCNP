@@ -46,12 +46,38 @@ namespace WinFormCNP
         {
             button_Salveaza.Enabled = true;
             button_Editeaza.Enabled = false;
+
+            textBox_Nume.Enabled = true;
+            textBox_Prenume.Enabled = true;
+            textBox_Sex.Enabled = true;
+            textBox_Oras.Enabled = true;
+            textBox_Strada.Enabled = true;
+            textBox_Numar.Enabled = true;
+            textBox_Bloc.Enabled = true;
+            textBox_Scara.Enabled = true;
+            textBox_Etaj.Enabled = true;
+            textBox_Apartament.Enabled = true;
+            textBox_Judet.Enabled = true;
+            textBox_CodPostal.Enabled = true;
         }
 
         private void button_Salveaza_Click(object sender, EventArgs e)
         {
             button_Editeaza.Enabled = true;
             button_Salveaza.Enabled = false;
+
+            textBox_Nume.Enabled = false;
+            textBox_Prenume.Enabled = false;
+            textBox_Sex.Enabled = false;
+            textBox_Oras.Enabled = false;
+            textBox_Strada.Enabled = false;
+            textBox_Numar.Enabled = false;
+            textBox_Bloc.Enabled = false;
+            textBox_Scara.Enabled = false;
+            textBox_Etaj.Enabled = false;
+            textBox_Apartament.Enabled = false;
+            textBox_Judet.Enabled = false;
+            textBox_CodPostal.Enabled = false;
         }
 
         private void button_Clear_Click(object sender, EventArgs e)
