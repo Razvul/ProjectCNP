@@ -36,7 +36,7 @@ namespace WinFormCNP
         {
             var SelectedUser = (User)listBox_Users.SelectedItem;
 
-            var x = new Address(SelectedUser);
+            var x = new AddressForm(SelectedUser);
             x.Show();
         }
 
@@ -113,9 +113,22 @@ namespace WinFormCNP
                 }
             };
 
+
             ListUsers.Add(user1);
             ListUsers.Add(user2);
             ListUsers.Add(user3);
+
+            foreach (var user in ListUsers)
+            {
+                user.DisplayValue = $"{user.Person.Nume} {user.Person.Prenume}";
+            }
+        }
+
+        private void GetMockData()
+        {
+            // citeste fisierul salvat, pune datele intr-un array
+            // creaza un user 
+            // initializeaza user creat mai sus cu datele din array
         }
 
         private void PopulateListBox()
@@ -129,6 +142,8 @@ namespace WinFormCNP
             }
 
             listBox_Users.DataSource = authors;  // adding the whole list in the listbox
+            listBox_Users.DisplayMember = "DisplayValue";
+
             listBox_Users.SelectedItem = ListUsers[0];
         }
     }
