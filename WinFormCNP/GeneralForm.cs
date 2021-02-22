@@ -17,8 +17,9 @@ namespace WinFormCNP
         public GeneralForm()
         {
             InitializeComponent();
-            GenerateMockData();
-            PopulateListBox();
+            //GenerateMockData();
+            //PopulateListBox();
+            GetMockData();
         }
         private void button_CNP_Click(object sender, EventArgs e)
         {
@@ -113,7 +114,6 @@ namespace WinFormCNP
                 }
             };
 
-
             ListUsers.Add(user1);
             ListUsers.Add(user2);
             ListUsers.Add(user3);
@@ -124,11 +124,43 @@ namespace WinFormCNP
             }
         }
 
+        readonly string[] ListaObiecte = new string[12];
+
         private void GetMockData()
         {
-            // citeste fisierul salvat, pune datele intr-un array
-            // creaza un user 
+            // citeste fisierul salvat, pune datele intr-un array BIFAT
+            // creaza un user
             // initializeaza user creat mai sus cu datele din array
+
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\razvu\OneDrive\Desktop\Text\Razvan.txt");
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                ListaObiecte[i] = lines[i];
+            }
+
+            var user = new User
+            {
+                Person = new Person
+                {
+                    Nume = ListaObiecte[0],
+                    Prenume = ListaObiecte[1],
+                    Sex = ListaObiecte[2] == "Masculin" ? CommonCNP.Enums.Sex.Masculin : CommonCNP.Enums.Sex.Feminin,
+                },
+
+                Address = new Address
+                {
+                    Oras = ListaObiecte[3],
+                    Strada = ListaObiecte[4],
+                    Numar = int.Parse(ListaObiecte[5]),
+                    Bloc = int.Parse(ListaObiecte[6]),
+                    Scara = int.Parse(ListaObiecte[7]),
+                    Etaj = int.Parse(ListaObiecte[8]),
+                    Apartament = int.Parse(ListaObiecte[9]),
+                    Judet = ListaObiecte[10],
+                    CodPostal = int.Parse(ListaObiecte[11])
+                }
+            };
         }
 
         private void PopulateListBox()
