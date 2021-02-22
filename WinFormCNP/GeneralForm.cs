@@ -148,7 +148,7 @@ namespace WinFormCNP
             // creaza un user
             // initializeaza user creat mai sus cu datele din array
 
-            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\razvu\OneDrive\Desktop\Text\Razvan.txt");
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\razvu\source\repos\ProjectCNP\Text\Razvan.txt");
 
             for (int i = 0; i < lines.Length; i++)
             {
@@ -177,7 +177,11 @@ namespace WinFormCNP
                 }
             };
 
+            user.DisplayValue = $"{user.Person.Nume} {user.Person.Prenume}";
+            listBox_Users.DisplayMember = "DisplayValue";
+
             listBox_Users.Items.Add(user);
+            listBox_Users.SelectedItem = user;
         }
     }
 }
