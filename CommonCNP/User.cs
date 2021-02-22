@@ -8,6 +8,7 @@ namespace CommonCNP
 {
     public class User
     {
+        public string DisplayValue { get; set; }
         public Person Person { get; set; }
         public Address Address { get; set; }
     }
