@@ -135,6 +135,5 @@ namespace WinFormCNP
             textBox_Judet.Enabled = enabled;
             textBox_CodPostal.Enabled = enabled;
         }
-
     }
 }
