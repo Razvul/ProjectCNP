@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CommonCNP;
+using System.IO;
 
 namespace WinFormCNP
 {
@@ -148,7 +149,9 @@ namespace WinFormCNP
             // creaza un user
             // initializeaza user creat mai sus cu datele din array
 
-            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\razvu\source\repos\ProjectCNP\Text\Razvan.txt");
+            var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+
+            string[] lines = File.ReadAllLines($@"{x}\DataBase\Razvan.txt");
 
             for (int i = 0; i < lines.Length; i++)
             {

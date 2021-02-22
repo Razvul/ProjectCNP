@@ -41,7 +41,8 @@ namespace WinFormCNP
 
         private void button_Salveaza_Click(object sender, EventArgs e)
         {
-            var path = @"C:\Users\razvu\source\repos\ProjectCNP\Text\Razvan.txt";
+            var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            var path = $@"{x}\DataBase\Razvan.txt";
 
             string[] text =
             {
