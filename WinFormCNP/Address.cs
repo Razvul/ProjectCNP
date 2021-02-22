@@ -41,7 +41,8 @@ namespace WinFormCNP
 
         private void button_Salveaza_Click(object sender, EventArgs e)
         {
-            var path = @"C:\Users\razvu\OneDrive\Desktop\Text\Razvan.txt";
+            var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            var path = $@"{x}\DataBase\Razvan.txt";
 
             string[] text =
             {
@@ -80,12 +81,6 @@ namespace WinFormCNP
             textBox_Apartament.Text = $"{_user.Address.Apartament}";
             textBox_Judet.Text = $"{_user.Address.Judet}";
             textBox_CodPostal.Text = $"{_user.Address.CodPostal}";
-        }
-        
-        private void Clear()
-        {
-            ClearLabels();
-            ClearTextbox();
         }
 
         private void ClearLabels()
