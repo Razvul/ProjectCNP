@@ -55,16 +55,16 @@ namespace WinFormCNP
                     CNP = 1751205075564
                 },
 
-                Address = new CommonCNP.Address
+                Address = new Address
                 {
                     Oras = "Botosani",
                     Strada = "Strada Mare",
-                    Numar = 12,
-                    Bloc = 34,
-                    Etaj = 2,
-                    Apartament = 4,
+                    Numar = "12",
+                    Bloc = "34",
+                    Etaj = "2",
+                    Apartament = "4",
                     Judet = "Botosani",
-                    CodPostal = 475125
+                    CodPostal = "475125"
                 }
             };
 
@@ -82,12 +82,12 @@ namespace WinFormCNP
                 {
                     Oras = "Cluj Napoca",
                     Strada = "Strada Mihai Eminescu",
-                    Numar = 31,
-                    Bloc = 9,
-                    Etaj = 5,
-                    Apartament = 16,
+                    Numar = "31",
+                    Bloc = "9",
+                    Etaj = "5",
+                    Apartament = "16",
                     Judet = "Cluj",
-                    CodPostal = 475120
+                    CodPostal = "475120"
                 }
             };
 
@@ -105,12 +105,12 @@ namespace WinFormCNP
                 {
                     Oras = "Galati",
                     Strada = "Strada Stefan cel Mare",
-                    Numar = 2,
-                    Bloc = 15,
-                    Etaj = 3,
-                    Apartament = 7,
+                    Numar = "2",
+                    Bloc = "15",
+                    Etaj = "3",
+                    Apartament = "7",
                     Judet = "Galati",
-                    CodPostal = 475964
+                    CodPostal = "475964"
                 }
             };
 
@@ -122,6 +122,22 @@ namespace WinFormCNP
             {
                 user.DisplayValue = $"{user.Person.Nume} {user.Person.Prenume}";
             }
+        }
+
+        private void PopulateListBox()
+        {
+            ArrayList authors = new ArrayList(); // declare arraylist
+
+            foreach (var user in ListUsers)
+            {
+                //listBox_Users.Items.Add(user);
+                authors.Add(user);  //filling arraylist
+            }
+
+            listBox_Users.DataSource = authors;  // adding the whole list in the listbox
+            listBox_Users.DisplayMember = "DisplayValue";
+
+            listBox_Users.SelectedItem = ListUsers[0];
         }
 
         readonly string[] ListaObiecte = new string[12];
@@ -145,38 +161,23 @@ namespace WinFormCNP
                 {
                     Nume = ListaObiecte[0],
                     Prenume = ListaObiecte[1],
-                    Sex = ListaObiecte[2] == "Masculin" ? CommonCNP.Enums.Sex.Masculin : CommonCNP.Enums.Sex.Feminin,
+                    Sex = ListaObiecte[2] == "Masculin" ? Enums.Sex.Masculin : Enums.Sex.Feminin,
                 },
-
                 Address = new Address
                 {
                     Oras = ListaObiecte[3],
                     Strada = ListaObiecte[4],
-                    Numar = int.Parse(ListaObiecte[5]),
-                    Bloc = int.Parse(ListaObiecte[6]),
-                    Scara = int.Parse(ListaObiecte[7]),
-                    Etaj = int.Parse(ListaObiecte[8]),
-                    Apartament = int.Parse(ListaObiecte[9]),
+                    Numar = ListaObiecte[5],
+                    Bloc = ListaObiecte[6],
+                    Scara = ListaObiecte[7],
+                    Etaj = ListaObiecte[8],
+                    Apartament = ListaObiecte[9],
                     Judet = ListaObiecte[10],
-                    CodPostal = int.Parse(ListaObiecte[11])
+                    CodPostal = ListaObiecte[11]
                 }
             };
-        }
 
-        private void PopulateListBox()
-        {
-            ArrayList authors = new ArrayList(); // declare arraylist
-
-            foreach (var user in ListUsers)
-            {
-                //listBox_Users.Items.Add(user);
-                authors.Add(user);  //filling arraylist
-            }
-
-            listBox_Users.DataSource = authors;  // adding the whole list in the listbox
-            listBox_Users.DisplayMember = "DisplayValue";
-
-            listBox_Users.SelectedItem = ListUsers[0];
+            listBox_Users.Items.Add(user);
         }
     }
 }
