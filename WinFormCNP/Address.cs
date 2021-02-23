@@ -122,6 +122,7 @@ namespace WinFormCNP
             textBox_Nume.Enabled = enabled;
             textBox_Prenume.Enabled = enabled;
             textBox_Sex.Enabled = enabled;
+            textBox_CNP.Enabled = enabled;
             textBox_Oras.Enabled = enabled;
             textBox_Strada.Enabled = enabled;
             textBox_Numar.Enabled = enabled;

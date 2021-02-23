@@ -178,7 +178,7 @@ namespace WinFormCNP
             // label_Verifica_CNP
             // 
             this.label_Verifica_CNP.AutoSize = true;
-            this.label_Verifica_CNP.Location = new System.Drawing.Point(285, 290);
+            this.label_Verifica_CNP.Location = new System.Drawing.Point(285, 287);
             this.label_Verifica_CNP.Name = "label_Verifica_CNP";
             this.label_Verifica_CNP.Size = new System.Drawing.Size(67, 13);
             this.label_Verifica_CNP.TabIndex = 15;
