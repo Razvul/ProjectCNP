@@ -28,13 +28,7 @@ namespace WinFormCNP
             x.Show();
         }
 
-        private void button_Name_Click(object sender, EventArgs e)
-        {
-            var x = new Name();
-            x.Show();
-        }
-
-        private void button_Adresa_Click(object sender, EventArgs e)
+        private void button_Detalii_Click(object sender, EventArgs e)
         {
             var SelectedUser = (User)listBox_Users.SelectedItem;
 
