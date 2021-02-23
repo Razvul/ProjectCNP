@@ -11,6 +11,6 @@ namespace CommonCNP
         public string Nume { get; set; }
         public string Prenume { get; set; }
         public Enums.Sex Sex { get; set; }
-        public string CNP { get; set; }
+        public double CNP { get; set; }
     }
 }

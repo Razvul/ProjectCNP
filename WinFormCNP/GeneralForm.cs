@@ -47,19 +47,19 @@ namespace WinFormCNP
                     Nume = "Basescu",
                     Prenume = "Traian",
                     Sex = Enums.Sex.Masculin,
-                    CNP = "1751205075564"
+                    CNP = 1751205075564
                 },
 
                 Address = new Address
                 {
                     Oras = "Botosani",
                     Strada = "Strada Mare",
-                    Numar = "12",
+                    Numar = 12,
                     Bloc = "34",
-                    Etaj = "2",
-                    Apartament = "4",
+                    Etaj = 2,
+                    Apartament = 4,
                     Judet = "Botosani",
-                    CodPostal = "475125"
+                    CodPostal = 475125
                 }
             };
 
@@ -70,19 +70,19 @@ namespace WinFormCNP
                     Nume = "Zamfir",
                     Prenume = "Rodica",
                     Sex = Enums.Sex.Feminin,
-                    CNP = "2610621120870"
+                    CNP = 610621120870
                 },
 
                 Address = new CommonCNP.Address
                 {
                     Oras = "Cluj Napoca",
                     Strada = "Strada Mihai Eminescu",
-                    Numar = "31",
+                    Numar = 31,
                     Bloc = "9",
-                    Etaj = "5",
-                    Apartament = "16",
+                    Etaj = 5,
+                    Apartament = 16,
                     Judet = "Cluj",
-                    CodPostal = "475120"
+                    CodPostal = 475120
                 }
             };
 
@@ -93,19 +93,19 @@ namespace WinFormCNP
                     Nume = "Popescu",
                     Prenume = "Elena",
                     Sex = Enums.Sex.Masculin,
-                    CNP = "5000114179137"
+                    CNP = 5000114179137
                 },
 
                 Address = new CommonCNP.Address
                 {
                     Oras = "Galati",
                     Strada = "Strada Stefan cel Mare",
-                    Numar = "2",
+                    Numar = 2,
                     Bloc = "15",
-                    Etaj = "3",
-                    Apartament = "7",
+                    Etaj = 3,
+                    Apartament = 7,
                     Judet = "Galati",
-                    CodPostal = "475964"
+                    CodPostal = 475964
                 }
             };
 
@@ -159,19 +159,19 @@ namespace WinFormCNP
                     Nume = ListaObiecte[0],
                     Prenume = ListaObiecte[1],
                     Sex = ListaObiecte[2] == "Masculin" ? Enums.Sex.Masculin : Enums.Sex.Feminin,
-                    CNP = ListaObiecte[3]
+                    CNP = double.Parse(ListaObiecte[3])
                 },
                 Address = new Address
                 {
                     Oras = ListaObiecte[4],
                     Strada = ListaObiecte[5],
-                    Numar = ListaObiecte[6],
+                    Numar = double.Parse(ListaObiecte[6]),
                     Bloc = ListaObiecte[7],
                     Scara = ListaObiecte[8],
-                    Etaj = ListaObiecte[9],
-                    Apartament = ListaObiecte[10],
+                    Etaj = double.Parse(ListaObiecte[9]),
+                    Apartament = double.Parse(ListaObiecte[10]),
                     Judet = ListaObiecte[11],
-                    CodPostal = ListaObiecte[12]
+                    CodPostal = double.Parse(ListaObiecte[12])
                 }
             };
 

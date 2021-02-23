@@ -130,7 +130,7 @@ namespace WinFormCNP
             // label_Etaj
             // 
             this.label_Etaj.AutoSize = true;
-            this.label_Etaj.Location = new System.Drawing.Point(16, 282);
+            this.label_Etaj.Location = new System.Drawing.Point(16, 271);
             this.label_Etaj.Name = "label_Etaj";
             this.label_Etaj.Size = new System.Drawing.Size(25, 13);
             this.label_Etaj.TabIndex = 7;
