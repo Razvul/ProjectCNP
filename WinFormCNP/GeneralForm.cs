@@ -47,7 +47,7 @@ namespace WinFormCNP
                     Nume = "Basescu",
                     Prenume = "Traian",
                     Sex = Enums.Sex.Masculin,
-                    CNP = 1751205075564
+                    CNP = "1751205075564"
                 },
 
                 Address = new Address
@@ -70,7 +70,7 @@ namespace WinFormCNP
                     Nume = "Zamfir",
                     Prenume = "Rodica",
                     Sex = Enums.Sex.Feminin,
-                    CNP = 2610621120870
+                    CNP = "2610621120870"
                 },
 
                 Address = new CommonCNP.Address
@@ -93,7 +93,7 @@ namespace WinFormCNP
                     Nume = "Popescu",
                     Prenume = "Elena",
                     Sex = Enums.Sex.Masculin,
-                    CNP = 5000114179137
+                    CNP = "5000114179137"
                 },
 
                 Address = new CommonCNP.Address
@@ -159,18 +159,19 @@ namespace WinFormCNP
                     Nume = ListaObiecte[0],
                     Prenume = ListaObiecte[1],
                     Sex = ListaObiecte[2] == "Masculin" ? Enums.Sex.Masculin : Enums.Sex.Feminin,
+                    CNP = ListaObiecte[3]
                 },
                 Address = new Address
                 {
-                    Oras = ListaObiecte[3],
-                    Strada = ListaObiecte[4],
-                    Numar = ListaObiecte[5],
-                    Bloc = ListaObiecte[6],
-                    Scara = ListaObiecte[7],
-                    Etaj = ListaObiecte[8],
-                    Apartament = ListaObiecte[9],
-                    Judet = ListaObiecte[10],
-                    CodPostal = ListaObiecte[11]
+                    Oras = ListaObiecte[4],
+                    Strada = ListaObiecte[5],
+                    Numar = ListaObiecte[6],
+                    Bloc = ListaObiecte[7],
+                    Scara = ListaObiecte[8],
+                    Etaj = ListaObiecte[9],
+                    Apartament = ListaObiecte[10],
+                    Judet = ListaObiecte[11],
+                    CodPostal = ListaObiecte[12]
                 }
             };
 

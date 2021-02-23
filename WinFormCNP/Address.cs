@@ -49,6 +49,7 @@ namespace WinFormCNP
                 textBox_Nume.Text,
                 textBox_Prenume.Text,
                 textBox_Sex.Text,
+                textBox_CNP.Text,
                 textBox_Oras.Text,
                 textBox_Strada.Text,
                 textBox_Numar.Text,
@@ -72,6 +73,7 @@ namespace WinFormCNP
             textBox_Nume.Text = $"{_user.Person.Nume}";
             textBox_Prenume.Text = $"{_user.Person.Prenume}";
             textBox_Sex.Text = $"{_user.Person.Sex}";
+            textBox_CNP.Text = $"{_user.Person.CNP}";
             textBox_Oras.Text = $"{_user.Address.Oras}";
             textBox_Strada.Text = $"{_user.Address.Strada}";
             textBox_Numar.Text = $"{_user.Address.Numar}";
