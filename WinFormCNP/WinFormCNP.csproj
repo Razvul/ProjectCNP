@@ -64,12 +64,6 @@
     <Compile Include="GeneralForm.Designer.cs">
       <DependentUpon>GeneralForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Name.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Name.Designer.cs">
-      <DependentUpon>Name.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Address.resx">
@@ -80,9 +74,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralForm.resx">
       <DependentUpon>GeneralForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Name.resx">
-      <DependentUpon>Name.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
