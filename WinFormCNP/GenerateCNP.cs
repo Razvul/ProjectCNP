@@ -78,12 +78,6 @@ namespace WinFormCNP
             }
         }
 
-        private void button_Clear_Click(object sender, EventArgs e)
-        {
-            ClearComboBox();
-            ClearLabels();
-        }
-
         private void ClearComboBox()
         {
             comboBox_An.Text = string.Empty;
