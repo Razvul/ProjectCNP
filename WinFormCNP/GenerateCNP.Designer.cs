@@ -42,6 +42,9 @@ namespace WinFormCNP
             this.label_Sex = new System.Windows.Forms.Label();
             this.comboBox_Sex = new System.Windows.Forms.ComboBox();
             this.button_Generate_CNP = new System.Windows.Forms.Button();
+            this.button_Verifica = new System.Windows.Forms.Button();
+            this.label_Verifica_CNP = new System.Windows.Forms.Label();
+            this.textBox_VerificaCNP = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // comboBox_Judete
@@ -155,7 +158,7 @@ namespace WinFormCNP
             // 
             // button_Generate_CNP
             // 
-            this.button_Generate_CNP.Location = new System.Drawing.Point(151, 282);
+            this.button_Generate_CNP.Location = new System.Drawing.Point(151, 287);
             this.button_Generate_CNP.Name = "button_Generate_CNP";
             this.button_Generate_CNP.Size = new System.Drawing.Size(75, 23);
             this.button_Generate_CNP.TabIndex = 13;
@@ -163,11 +166,41 @@ namespace WinFormCNP
             this.button_Generate_CNP.UseVisualStyleBackColor = true;
             this.button_Generate_CNP.Click += new System.EventHandler(this.button_Generate_CNP_Click);
             // 
+            // button_Verifica
+            // 
+            this.button_Verifica.Location = new System.Drawing.Point(565, 287);
+            this.button_Verifica.Name = "button_Verifica";
+            this.button_Verifica.Size = new System.Drawing.Size(75, 23);
+            this.button_Verifica.TabIndex = 14;
+            this.button_Verifica.Text = "Verifica";
+            this.button_Verifica.UseVisualStyleBackColor = true;
+            // 
+            // label_Verifica_CNP
+            // 
+            this.label_Verifica_CNP.AutoSize = true;
+            this.label_Verifica_CNP.Location = new System.Drawing.Point(285, 290);
+            this.label_Verifica_CNP.Name = "label_Verifica_CNP";
+            this.label_Verifica_CNP.Size = new System.Drawing.Size(67, 13);
+            this.label_Verifica_CNP.TabIndex = 15;
+            this.label_Verifica_CNP.Text = "Verifica CNP";
+            // 
+            // textBox_VerificaCNP
+            // 
+            this.textBox_VerificaCNP.Location = new System.Drawing.Point(425, 287);
+            this.textBox_VerificaCNP.MaxLength = 13;
+            this.textBox_VerificaCNP.Name = "textBox_VerificaCNP";
+            this.textBox_VerificaCNP.Size = new System.Drawing.Size(100, 20);
+            this.textBox_VerificaCNP.TabIndex = 16;
+            this.textBox_VerificaCNP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_VerificaCNP_KeyPress);
+            // 
             // GenerateCNP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 336);
+            this.Controls.Add(this.textBox_VerificaCNP);
+            this.Controls.Add(this.label_Verifica_CNP);
+            this.Controls.Add(this.button_Verifica);
             this.Controls.Add(this.button_Generate_CNP);
             this.Controls.Add(this.comboBox_Sex);
             this.Controls.Add(this.label_Sex);
@@ -206,6 +239,9 @@ namespace WinFormCNP
         private System.Windows.Forms.Label label_Sex;
         private System.Windows.Forms.ComboBox comboBox_Sex;
         private System.Windows.Forms.Button button_Generate_CNP;
+        private System.Windows.Forms.Button button_Verifica;
+        private System.Windows.Forms.Label label_Verifica_CNP;
+        private System.Windows.Forms.TextBox textBox_VerificaCNP;
     }
 }
 
