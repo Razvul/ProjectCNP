@@ -135,7 +135,8 @@ namespace WinFormCNP
             listBox_Users.SelectedItem = ListUsers[0];
         }
 
-        readonly string[] ListaObiecte = new string[12];
+        //readonly string[] ListaObiecte = new string[13];
+        readonly List<string> ListaObiecte = new List<string>();
 
         private void GetMockData()
         {
@@ -149,7 +150,8 @@ namespace WinFormCNP
 
             for (int i = 0; i < lines.Length; i++)
             {
-                ListaObiecte[i] = lines[i];
+                ListaObiecte.Add(lines[i]);
+                //ListaObiecte[i] = lines[i];
             }
 
             var user = new User
@@ -158,7 +160,7 @@ namespace WinFormCNP
                 {
                     Nume = ListaObiecte[0],
                     Prenume = ListaObiecte[1],
-                    Sex = ListaObiecte[2] == "Masculin" ? Enums.Sex.Masculin : Enums.Sex.Feminin,
+                    Sex = ListaObiecte[2] == "Masculin".ToLower() ? Enums.Sex.Masculin : Enums.Sex.Feminin,
                     CNP = double.Parse(ListaObiecte[3])
                 },
                 Address = new Address

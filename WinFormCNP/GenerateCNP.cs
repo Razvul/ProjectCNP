@@ -131,5 +131,13 @@ namespace WinFormCNP
 
             label_CNP_Result.Text = GetCNP(Om.SEX,Om.AN,Om.LUNA,Om.ZI,Om.JUDET,Om.NNN,Om.CC);
         }
+
+        private void textBox_VerificaCNP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
