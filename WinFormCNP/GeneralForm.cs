@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CommonCNP;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace WinFormCNP
 {
@@ -136,13 +137,10 @@ namespace WinFormCNP
         }
 
         //readonly string[] ListaObiecte = new string[13];
-        readonly List<string> ListaObiecte = new List<string>();
 
-        private void GetMockData()
+        private void GetMockData1()
         {
-            // citeste fisierul salvat, pune datele intr-un array BIFAT
-            // creaza un user
-            // initializeaza user creat mai sus cu datele din array
+            List<string> ListaObiecte = new List<string>();
 
             var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
 
@@ -151,7 +149,6 @@ namespace WinFormCNP
             for (int i = 0; i < lines.Length; i++)
             {
                 ListaObiecte.Add(lines[i]);
-                //ListaObiecte[i] = lines[i];
             }
 
             var user = new User
@@ -182,6 +179,28 @@ namespace WinFormCNP
 
             listBox_Users.Items.Add(user);
             listBox_Users.SelectedItem = user;
+        }
+
+        private void GetMockData()
+        {
+            List<string> ListaObiecte = new List<string>();
+
+            var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+
+            var path = $@"{x}\DataBase\Razvan1.txt";
+            User user1;
+
+            using (StreamReader sr = new StreamReader(path))
+            {
+                string y = sr.ReadToEnd();
+                user1 = JsonConvert.DeserializeObject<User>(y);
+            }
+
+            user1.DisplayValue = $"{user1.Person.Nume} {user1.Person.Prenume}";
+            listBox_Users.DisplayMember = "DisplayValue";
+
+            listBox_Users.Items.Add(user1);
+            listBox_Users.SelectedItem = user1;
         }
     }
 }

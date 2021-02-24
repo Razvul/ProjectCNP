@@ -1,0 +1,1 @@
+{"DisplayValue":"Agafitei Razvan","Person":{"Nume":"Agafitei","Prenume":"Razvan","Sex":1,"CNP":1930729070022.0},"Address":{"Oras":"Botosani","Strada":"Calea Nationala","Numar":90.0,"Bloc":"F1","Scara":"A","Etaj":1.0,"Apartament":2.0,"Localitate":null,"Judet":"Botosani","CodPostal":135459.0}}

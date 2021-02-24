@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CommonCNP;
+using Newtonsoft.Json;
 
 namespace WinFormCNP
 {
@@ -39,7 +40,7 @@ namespace WinFormCNP
             TextBoxEnabled(true);
         }
 
-        private void button_Salveaza_Click(object sender, EventArgs e)
+        private void button_Salveaza1_Click(object sender, EventArgs e)
         {
             var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
             var path = $@"{x}\DataBase\Razvan.txt";
@@ -61,6 +62,26 @@ namespace WinFormCNP
                 textBox_CodPostal.Text
             };
             File.WriteAllLines(path, text);
+
+            button_Editeaza.Enabled = true;
+            button_Salveaza.Enabled = false;
+
+            TextBoxEnabled(false);
+        }
+
+        private void button_Salveaza_Click(object sender, EventArgs e)
+        {
+            var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            var path = $@"{x}\DataBase\Razvan1.txt";
+
+
+            _user.Address.Apartament = double.Parse(textBox_Apartament.Text);
+
+            var text = JsonConvert.SerializeObject(_user);
+
+            
+            
+            File.WriteAllText(path, text);
 
             button_Editeaza.Enabled = true;
             button_Salveaza.Enabled = false;
