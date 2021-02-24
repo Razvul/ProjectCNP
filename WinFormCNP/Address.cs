@@ -25,7 +25,6 @@ namespace WinFormCNP
 
         private void Address_Load(object sender, EventArgs e)
         {
-            ClearLabels();
             Populate();
 
             button_Salveaza.Enabled = false;
@@ -74,12 +73,9 @@ namespace WinFormCNP
             var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
             var path = $@"{x}\DataBase\Razvan1.txt";
 
-
-            _user.Address.Apartament = double.Parse(textBox_Apartament.Text);
+            _user.Address.Apartament = int.Parse(textBox_Apartament.Text);
 
             var text = JsonConvert.SerializeObject(_user);
-
-            
             
             File.WriteAllText(path, text);
 
@@ -104,22 +100,6 @@ namespace WinFormCNP
             textBox_Apartament.Text = $"{_user.Address.Apartament}";
             textBox_Judet.Text = $"{_user.Address.Judet}";
             textBox_CodPostal.Text = $"{_user.Address.CodPostal}";
-        }
-
-        private void ClearLabels()
-        {
-            label_Nume_Result.Text = string.Empty;
-            label_Prenume_Result.Text = string.Empty;
-            label_Sex_Result.Text = string.Empty;
-            label_Oras_Result.Text = string.Empty;
-            label_Strada_Result.Text = string.Empty;
-            label_Numar_Result.Text = string.Empty;
-            label_Bloc_Result.Text = string.Empty;
-            label_Scara_Result.Text = string.Empty;
-            label_Etaj_Result.Text = string.Empty;
-            label_Apartament_Result.Text = string.Empty;
-            label_Judet_Result.Text = string.Empty;
-            label_Cod_Postal_Result.Text = string.Empty;
         }
 
         private void ClearTextbox()
@@ -154,5 +134,76 @@ namespace WinFormCNP
             textBox_Judet.Enabled = enabled;
             textBox_CodPostal.Enabled = enabled;
         }
+
+        #region Textbox
+        private void textBox_Nume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void textBox_Prenume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void textBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void textBox_CNP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox_Oras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void textBox_Strada_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+        private void textBox_Numar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox_Etaj_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox_Apartament_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox_CodPostal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox_Judet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+        #endregion
     }
 }

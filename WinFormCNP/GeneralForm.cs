@@ -158,19 +158,19 @@ namespace WinFormCNP
                     Nume = ListaObiecte[0],
                     Prenume = ListaObiecte[1],
                     Sex = ListaObiecte[2] == "Masculin".ToLower() ? Enums.Sex.Masculin : Enums.Sex.Feminin,
-                    CNP = double.Parse(ListaObiecte[3])
+                    CNP = int.Parse(ListaObiecte[3])
                 },
                 Address = new Address
                 {
                     Oras = ListaObiecte[4],
                     Strada = ListaObiecte[5],
-                    Numar = double.Parse(ListaObiecte[6]),
+                    Numar = int.Parse(ListaObiecte[6]),
                     Bloc = ListaObiecte[7],
                     Scara = ListaObiecte[8],
-                    Etaj = double.Parse(ListaObiecte[9]),
-                    Apartament = double.Parse(ListaObiecte[10]),
+                    Etaj = int.Parse(ListaObiecte[9]),
+                    Apartament = int.Parse(ListaObiecte[10]),
                     Judet = ListaObiecte[11],
-                    CodPostal = double.Parse(ListaObiecte[12])
+                    CodPostal = int.Parse(ListaObiecte[12])
                 }
             };
 

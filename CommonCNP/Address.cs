@@ -10,14 +10,13 @@ namespace CommonCNP
     {
         public string Oras { get; set; }
         public string Strada { get; set; }
-        public double Numar { get; set; }
+        public int Numar { get; set; }
         public string Bloc { get; set; }
         public string Scara { get; set; }
-        public double Etaj { get; set; }
-        public double Apartament { get; set; }
-        public string Localitate { get; set; }
+        public int Etaj { get; set; }
+        public int Apartament { get; set; }
         public string Judet { get; set; }
-        public double CodPostal { get; set; }
+        public int CodPostal { get; set; }
 
     }
 }

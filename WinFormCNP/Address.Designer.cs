@@ -39,20 +39,8 @@ namespace WinFormCNP
             this.label_Apartament = new System.Windows.Forms.Label();
             this.label_Judet = new System.Windows.Forms.Label();
             this.label_Cod_Postal = new System.Windows.Forms.Label();
-            this.label_Nume_Result = new System.Windows.Forms.Label();
-            this.label_Oras_Result = new System.Windows.Forms.Label();
-            this.label_Strada_Result = new System.Windows.Forms.Label();
-            this.label_Numar_Result = new System.Windows.Forms.Label();
-            this.label_Bloc_Result = new System.Windows.Forms.Label();
-            this.label_Scara_Result = new System.Windows.Forms.Label();
-            this.label_Etaj_Result = new System.Windows.Forms.Label();
-            this.label_Apartament_Result = new System.Windows.Forms.Label();
-            this.label_Judet_Result = new System.Windows.Forms.Label();
-            this.label_Cod_Postal_Result = new System.Windows.Forms.Label();
             this.label_Prenume = new System.Windows.Forms.Label();
-            this.label_Prenume_Result = new System.Windows.Forms.Label();
             this.label_Sex = new System.Windows.Forms.Label();
-            this.label_Sex_Result = new System.Windows.Forms.Label();
             this.textBox_Nume = new System.Windows.Forms.TextBox();
             this.textBox_Prenume = new System.Windows.Forms.TextBox();
             this.textBox_Sex = new System.Windows.Forms.TextBox();
@@ -163,96 +151,6 @@ namespace WinFormCNP
             this.label_Cod_Postal.TabIndex = 11;
             this.label_Cod_Postal.Text = "Cod Postal";
             // 
-            // label_Nume_Result
-            // 
-            this.label_Nume_Result.AutoSize = true;
-            this.label_Nume_Result.Location = new System.Drawing.Point(304, 23);
-            this.label_Nume_Result.Name = "label_Nume_Result";
-            this.label_Nume_Result.Size = new System.Drawing.Size(68, 13);
-            this.label_Nume_Result.TabIndex = 12;
-            this.label_Nume_Result.Text = "Nume Result";
-            // 
-            // label_Oras_Result
-            // 
-            this.label_Oras_Result.AutoSize = true;
-            this.label_Oras_Result.Location = new System.Drawing.Point(304, 140);
-            this.label_Oras_Result.Name = "label_Oras_Result";
-            this.label_Oras_Result.Size = new System.Drawing.Size(57, 13);
-            this.label_Oras_Result.TabIndex = 13;
-            this.label_Oras_Result.Text = "Oras result";
-            // 
-            // label_Strada_Result
-            // 
-            this.label_Strada_Result.AutoSize = true;
-            this.label_Strada_Result.Location = new System.Drawing.Point(304, 166);
-            this.label_Strada_Result.Name = "label_Strada_Result";
-            this.label_Strada_Result.Size = new System.Drawing.Size(71, 13);
-            this.label_Strada_Result.TabIndex = 14;
-            this.label_Strada_Result.Text = "Strada Result";
-            // 
-            // label_Numar_Result
-            // 
-            this.label_Numar_Result.AutoSize = true;
-            this.label_Numar_Result.Location = new System.Drawing.Point(304, 191);
-            this.label_Numar_Result.Name = "label_Numar_Result";
-            this.label_Numar_Result.Size = new System.Drawing.Size(71, 13);
-            this.label_Numar_Result.TabIndex = 15;
-            this.label_Numar_Result.Text = "Numar Result";
-            // 
-            // label_Bloc_Result
-            // 
-            this.label_Bloc_Result.AutoSize = true;
-            this.label_Bloc_Result.Location = new System.Drawing.Point(304, 219);
-            this.label_Bloc_Result.Name = "label_Bloc_Result";
-            this.label_Bloc_Result.Size = new System.Drawing.Size(61, 13);
-            this.label_Bloc_Result.TabIndex = 16;
-            this.label_Bloc_Result.Text = "Bloc Result";
-            // 
-            // label_Scara_Result
-            // 
-            this.label_Scara_Result.AutoSize = true;
-            this.label_Scara_Result.Location = new System.Drawing.Point(304, 243);
-            this.label_Scara_Result.Name = "label_Scara_Result";
-            this.label_Scara_Result.Size = new System.Drawing.Size(68, 13);
-            this.label_Scara_Result.TabIndex = 17;
-            this.label_Scara_Result.Text = "Scara Result";
-            // 
-            // label_Etaj_Result
-            // 
-            this.label_Etaj_Result.AutoSize = true;
-            this.label_Etaj_Result.Location = new System.Drawing.Point(304, 271);
-            this.label_Etaj_Result.Name = "label_Etaj_Result";
-            this.label_Etaj_Result.Size = new System.Drawing.Size(58, 13);
-            this.label_Etaj_Result.TabIndex = 18;
-            this.label_Etaj_Result.Text = "Etaj Result";
-            // 
-            // label_Apartament_Result
-            // 
-            this.label_Apartament_Result.AutoSize = true;
-            this.label_Apartament_Result.Location = new System.Drawing.Point(304, 301);
-            this.label_Apartament_Result.Name = "label_Apartament_Result";
-            this.label_Apartament_Result.Size = new System.Drawing.Size(94, 13);
-            this.label_Apartament_Result.TabIndex = 19;
-            this.label_Apartament_Result.Text = "Apartament Result";
-            // 
-            // label_Judet_Result
-            // 
-            this.label_Judet_Result.AutoSize = true;
-            this.label_Judet_Result.Location = new System.Drawing.Point(304, 335);
-            this.label_Judet_Result.Name = "label_Judet_Result";
-            this.label_Judet_Result.Size = new System.Drawing.Size(66, 13);
-            this.label_Judet_Result.TabIndex = 21;
-            this.label_Judet_Result.Text = "Judet Result";
-            // 
-            // label_Cod_Postal_Result
-            // 
-            this.label_Cod_Postal_Result.AutoSize = true;
-            this.label_Cod_Postal_Result.Location = new System.Drawing.Point(304, 365);
-            this.label_Cod_Postal_Result.Name = "label_Cod_Postal_Result";
-            this.label_Cod_Postal_Result.Size = new System.Drawing.Size(91, 13);
-            this.label_Cod_Postal_Result.TabIndex = 22;
-            this.label_Cod_Postal_Result.Text = "Cod Postal Result";
-            // 
             // label_Prenume
             // 
             this.label_Prenume.AutoSize = true;
@@ -262,32 +160,14 @@ namespace WinFormCNP
             this.label_Prenume.TabIndex = 24;
             this.label_Prenume.Text = "Prenume";
             // 
-            // label_Prenume_Result
-            // 
-            this.label_Prenume_Result.AutoSize = true;
-            this.label_Prenume_Result.Location = new System.Drawing.Point(304, 50);
-            this.label_Prenume_Result.Name = "label_Prenume_Result";
-            this.label_Prenume_Result.Size = new System.Drawing.Size(82, 13);
-            this.label_Prenume_Result.TabIndex = 25;
-            this.label_Prenume_Result.Text = "Prenume Result";
-            // 
             // label_Sex
             // 
             this.label_Sex.AutoSize = true;
-            this.label_Sex.Location = new System.Drawing.Point(16, 73);
+            this.label_Sex.Location = new System.Drawing.Point(16, 83);
             this.label_Sex.Name = "label_Sex";
             this.label_Sex.Size = new System.Drawing.Size(25, 13);
             this.label_Sex.TabIndex = 26;
             this.label_Sex.Text = "Sex";
-            // 
-            // label_Sex_Result
-            // 
-            this.label_Sex_Result.AutoSize = true;
-            this.label_Sex_Result.Location = new System.Drawing.Point(304, 73);
-            this.label_Sex_Result.Name = "label_Sex_Result";
-            this.label_Sex_Result.Size = new System.Drawing.Size(58, 13);
-            this.label_Sex_Result.TabIndex = 27;
-            this.label_Sex_Result.Text = "Sex Result";
             // 
             // textBox_Nume
             // 
@@ -295,6 +175,7 @@ namespace WinFormCNP
             this.textBox_Nume.Name = "textBox_Nume";
             this.textBox_Nume.Size = new System.Drawing.Size(100, 20);
             this.textBox_Nume.TabIndex = 28;
+            this.textBox_Nume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nume_KeyPress);
             // 
             // textBox_Prenume
             // 
@@ -302,6 +183,7 @@ namespace WinFormCNP
             this.textBox_Prenume.Name = "textBox_Prenume";
             this.textBox_Prenume.Size = new System.Drawing.Size(100, 20);
             this.textBox_Prenume.TabIndex = 29;
+            this.textBox_Prenume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Prenume_KeyPress);
             // 
             // textBox_Sex
             // 
@@ -309,6 +191,7 @@ namespace WinFormCNP
             this.textBox_Sex.Name = "textBox_Sex";
             this.textBox_Sex.Size = new System.Drawing.Size(100, 20);
             this.textBox_Sex.TabIndex = 30;
+            this.textBox_Sex.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Sex_KeyPress);
             // 
             // textBox_Oras
             // 
@@ -316,6 +199,7 @@ namespace WinFormCNP
             this.textBox_Oras.Name = "textBox_Oras";
             this.textBox_Oras.Size = new System.Drawing.Size(100, 20);
             this.textBox_Oras.TabIndex = 31;
+            this.textBox_Oras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Oras_KeyPress);
             // 
             // textBox_Strada
             // 
@@ -323,17 +207,21 @@ namespace WinFormCNP
             this.textBox_Strada.Name = "textBox_Strada";
             this.textBox_Strada.Size = new System.Drawing.Size(100, 20);
             this.textBox_Strada.TabIndex = 32;
+            this.textBox_Strada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Strada_KeyPress);
             // 
             // textBox_Numar
             // 
             this.textBox_Numar.Location = new System.Drawing.Point(149, 192);
+            this.textBox_Numar.MaxLength = 3;
             this.textBox_Numar.Name = "textBox_Numar";
             this.textBox_Numar.Size = new System.Drawing.Size(100, 20);
             this.textBox_Numar.TabIndex = 33;
+            this.textBox_Numar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Numar_KeyPress);
             // 
             // textBox_Bloc
             // 
             this.textBox_Bloc.Location = new System.Drawing.Point(149, 219);
+            this.textBox_Bloc.MaxLength = 3;
             this.textBox_Bloc.Name = "textBox_Bloc";
             this.textBox_Bloc.Size = new System.Drawing.Size(100, 20);
             this.textBox_Bloc.TabIndex = 34;
@@ -341,6 +229,7 @@ namespace WinFormCNP
             // textBox_Scara
             // 
             this.textBox_Scara.Location = new System.Drawing.Point(149, 245);
+            this.textBox_Scara.MaxLength = 3;
             this.textBox_Scara.Name = "textBox_Scara";
             this.textBox_Scara.Size = new System.Drawing.Size(100, 20);
             this.textBox_Scara.TabIndex = 35;
@@ -348,16 +237,20 @@ namespace WinFormCNP
             // textBox_Etaj
             // 
             this.textBox_Etaj.Location = new System.Drawing.Point(149, 271);
+            this.textBox_Etaj.MaxLength = 2;
             this.textBox_Etaj.Name = "textBox_Etaj";
             this.textBox_Etaj.Size = new System.Drawing.Size(100, 20);
             this.textBox_Etaj.TabIndex = 36;
+            this.textBox_Etaj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Etaj_KeyPress);
             // 
             // textBox_Apartament
             // 
             this.textBox_Apartament.Location = new System.Drawing.Point(149, 301);
+            this.textBox_Apartament.MaxLength = 2;
             this.textBox_Apartament.Name = "textBox_Apartament";
             this.textBox_Apartament.Size = new System.Drawing.Size(100, 20);
             this.textBox_Apartament.TabIndex = 37;
+            this.textBox_Apartament.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Apartament_KeyPress);
             // 
             // textBox_Judet
             // 
@@ -365,13 +258,16 @@ namespace WinFormCNP
             this.textBox_Judet.Name = "textBox_Judet";
             this.textBox_Judet.Size = new System.Drawing.Size(100, 20);
             this.textBox_Judet.TabIndex = 39;
+            this.textBox_Judet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Judet_KeyPress);
             // 
             // textBox_CodPostal
             // 
             this.textBox_CodPostal.Location = new System.Drawing.Point(149, 362);
+            this.textBox_CodPostal.MaxLength = 6;
             this.textBox_CodPostal.Name = "textBox_CodPostal";
             this.textBox_CodPostal.Size = new System.Drawing.Size(100, 20);
             this.textBox_CodPostal.TabIndex = 40;
+            this.textBox_CodPostal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CodPostal_KeyPress);
             // 
             // button_Editeaza
             // 
@@ -405,9 +301,11 @@ namespace WinFormCNP
             // textBox_CNP
             // 
             this.textBox_CNP.Location = new System.Drawing.Point(149, 108);
+            this.textBox_CNP.MaxLength = 13;
             this.textBox_CNP.Name = "textBox_CNP";
             this.textBox_CNP.Size = new System.Drawing.Size(100, 20);
             this.textBox_CNP.TabIndex = 44;
+            this.textBox_CNP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CNP_KeyPress);
             // 
             // AddressForm
             // 
@@ -430,20 +328,8 @@ namespace WinFormCNP
             this.Controls.Add(this.textBox_Sex);
             this.Controls.Add(this.textBox_Prenume);
             this.Controls.Add(this.textBox_Nume);
-            this.Controls.Add(this.label_Sex_Result);
             this.Controls.Add(this.label_Sex);
-            this.Controls.Add(this.label_Prenume_Result);
             this.Controls.Add(this.label_Prenume);
-            this.Controls.Add(this.label_Cod_Postal_Result);
-            this.Controls.Add(this.label_Judet_Result);
-            this.Controls.Add(this.label_Apartament_Result);
-            this.Controls.Add(this.label_Etaj_Result);
-            this.Controls.Add(this.label_Scara_Result);
-            this.Controls.Add(this.label_Bloc_Result);
-            this.Controls.Add(this.label_Numar_Result);
-            this.Controls.Add(this.label_Strada_Result);
-            this.Controls.Add(this.label_Oras_Result);
-            this.Controls.Add(this.label_Nume_Result);
             this.Controls.Add(this.label_Cod_Postal);
             this.Controls.Add(this.label_Judet);
             this.Controls.Add(this.label_Apartament);
@@ -475,20 +361,8 @@ namespace WinFormCNP
         private System.Windows.Forms.Label label_Apartament;
         private System.Windows.Forms.Label label_Judet;
         private System.Windows.Forms.Label label_Cod_Postal;
-        private System.Windows.Forms.Label label_Nume_Result;
-        private System.Windows.Forms.Label label_Oras_Result;
-        private System.Windows.Forms.Label label_Strada_Result;
-        private System.Windows.Forms.Label label_Numar_Result;
-        private System.Windows.Forms.Label label_Bloc_Result;
-        private System.Windows.Forms.Label label_Scara_Result;
-        private System.Windows.Forms.Label label_Etaj_Result;
-        private System.Windows.Forms.Label label_Apartament_Result;
-        private System.Windows.Forms.Label label_Judet_Result;
-        private System.Windows.Forms.Label label_Cod_Postal_Result;
         private System.Windows.Forms.Label label_Prenume;
-        private System.Windows.Forms.Label label_Prenume_Result;
         private System.Windows.Forms.Label label_Sex;
-        private System.Windows.Forms.Label label_Sex_Result;
         private System.Windows.Forms.TextBox textBox_Nume;
         private System.Windows.Forms.TextBox textBox_Prenume;
         private System.Windows.Forms.TextBox textBox_Sex;
