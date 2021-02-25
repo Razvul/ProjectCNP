@@ -174,6 +174,7 @@ namespace WinFormCNP
             this.button_Verifica.TabIndex = 14;
             this.button_Verifica.Text = "Verifica";
             this.button_Verifica.UseVisualStyleBackColor = true;
+            this.button_Verifica.Click += new System.EventHandler(this.button_Verifica_Click);
             // 
             // label_Verifica_CNP
             // 

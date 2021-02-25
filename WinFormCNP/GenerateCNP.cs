@@ -90,8 +90,10 @@ namespace WinFormCNP
         private void ClearLabels()
         {
             label_CNP_Result.Text = string.Empty;
+            label_Verifica_CNP.Text = string.Empty;
         }
 
+        #region ComboBox
         private void comboBox_Judete_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -115,6 +117,15 @@ namespace WinFormCNP
         {
             e.Handled = true;
         }
+        #endregion
+
+        private void textBox_VerificaCNP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
 
         private void button_Generate_CNP_Click(object sender, EventArgs e)
         {
@@ -132,11 +143,15 @@ namespace WinFormCNP
             label_CNP_Result.Text = GetCNP(Om.SEX,Om.AN,Om.LUNA,Om.ZI,Om.JUDET,Om.NNN,Om.CC);
         }
 
-        private void textBox_VerificaCNP_KeyPress(object sender, KeyPressEventArgs e)
+        private void button_Verifica_Click(object sender, EventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if(CommonCNP.CNP.VerificaCNP(textBox_VerificaCNP.Text))
             {
-                e.Handled = true;
+                label_Verifica_CNP.Text = "CNP valid";
+            }
+            else
+            {
+                label_Verifica_CNP.Text = "CNP gresit";
             }
         }
     }
