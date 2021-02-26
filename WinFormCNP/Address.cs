@@ -73,7 +73,19 @@ namespace WinFormCNP
             var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
             var path = $@"{x}\DataBase\Razvan1.txt";
 
+            _user.Person.Nume = textBox_Nume.Text;
+            _user.Person.Prenume = textBox_Prenume.Text;
+            //_user.Person.Sex = textBox_Sex.Text;
+            _user.Person.CNP = long.Parse(textBox_CNP.Text);
+            _user.Address.Oras = textBox_Oras.Text;
+            _user.Address.Strada = textBox_Strada.Text;
+            _user.Address.Numar = int.Parse(textBox_Numar.Text);
+            _user.Address.Bloc = textBox_Bloc.Text;
+            _user.Address.Scara = textBox_Scara.Text;
+            _user.Address.Etaj = int.Parse(textBox_Etaj.Text);
             _user.Address.Apartament = int.Parse(textBox_Apartament.Text);
+            _user.Address.Judet = textBox_Judet.Text;
+            _user.Address.CodPostal = int.Parse(textBox_CodPostal.Text);
 
             var text = JsonConvert.SerializeObject(_user);
             
