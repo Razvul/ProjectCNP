@@ -181,7 +181,7 @@ namespace WinFormCNP
             listBox_Users.SelectedItem = user;
         }
 
-        private void GetMockData()
+        private void GetMockData2()
         {
             List<string> ListaObiecte = new List<string>();
 
@@ -201,6 +201,29 @@ namespace WinFormCNP
 
             listBox_Users.Items.Add(user1);
             listBox_Users.SelectedItem = user1;
+        }
+
+        private void GetMockData()
+        {
+            var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+
+            var path = $@"{x}\DataBase\BIO.json";
+            List<User> userList = new List<User>();
+
+            using (StreamReader sr = new StreamReader(path))
+            {
+                string y = sr.ReadToEnd();
+                userList = JsonConvert.DeserializeObject<List<User>>(y);
+            }
+
+            foreach (var user in userList)
+            {
+                listBox_Users.Items.Add(user);
+                user.DisplayValue = $"{user.Person.Nume} {user.Person.Prenume}";
+            }
+            listBox_Users.DisplayMember = "DisplayValue";
+
+            listBox_Users.SelectedItem = listBox_Users.Items[0];
         }
     }
 }

@@ -41,7 +41,7 @@ namespace WinFormCNP
         private void button_Salveaza_Click(object sender, EventArgs e)
         {
             var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-            var path = $@"{x}\DataBase\BIO.json";
+            var path = $@"{x}\DataBase\BIO1.json";
 
             _user.Person.Nume = textBox_Nume.Text;
             _user.Person.Prenume = textBox_Prenume.Text;
