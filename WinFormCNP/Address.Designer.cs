@@ -57,6 +57,7 @@ namespace WinFormCNP
             this.button_Salveaza = new System.Windows.Forms.Button();
             this.label_CNP = new System.Windows.Forms.Label();
             this.textBox_CNP = new System.Windows.Forms.TextBox();
+            this.comboBox_Sex = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label_nume
@@ -187,7 +188,7 @@ namespace WinFormCNP
             // 
             // textBox_Sex
             // 
-            this.textBox_Sex.Location = new System.Drawing.Point(149, 76);
+            this.textBox_Sex.Location = new System.Drawing.Point(388, 83);
             this.textBox_Sex.Name = "textBox_Sex";
             this.textBox_Sex.Size = new System.Drawing.Size(100, 20);
             this.textBox_Sex.TabIndex = 30;
@@ -307,11 +308,20 @@ namespace WinFormCNP
             this.textBox_CNP.TabIndex = 44;
             this.textBox_CNP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CNP_KeyPress);
             // 
+            // comboBox_Sex
+            // 
+            this.comboBox_Sex.FormattingEnabled = true;
+            this.comboBox_Sex.Location = new System.Drawing.Point(149, 75);
+            this.comboBox_Sex.Name = "comboBox_Sex";
+            this.comboBox_Sex.Size = new System.Drawing.Size(100, 21);
+            this.comboBox_Sex.TabIndex = 45;
+            // 
             // AddressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.comboBox_Sex);
             this.Controls.Add(this.textBox_CNP);
             this.Controls.Add(this.label_CNP);
             this.Controls.Add(this.button_Salveaza);
@@ -379,5 +389,6 @@ namespace WinFormCNP
         private System.Windows.Forms.Button button_Salveaza;
         private System.Windows.Forms.Label label_CNP;
         private System.Windows.Forms.TextBox textBox_CNP;
+        private System.Windows.Forms.ComboBox comboBox_Sex;
     }
 }
