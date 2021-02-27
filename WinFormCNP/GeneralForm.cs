@@ -187,7 +187,7 @@ namespace WinFormCNP
 
             var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
 
-            var path = $@"{x}\DataBase\Razvan1.txt";
+            var path = $@"{x}\DataBase\BIO.json";
             User user1;
 
             using (StreamReader sr = new StreamReader(path))

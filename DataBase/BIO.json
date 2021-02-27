@@ -1,0 +1,20 @@
+{
+    "DisplayValue": "Agafitei-Ciocan Razvan",
+    "Person": {
+        "Nume": "Agafitei-Ciocan",
+        "Prenume": "Razvan",
+        "Sex": "Masculin",
+        "CNP": 1930729070022
+    },
+    "Address": {
+        "Oras": "Cluj-Napoca",
+        "Strada": "Calea Nationala",
+        "Numar": 90,
+        "Bloc": "F1",
+        "Scara": "A",
+        "Etaj": 1,
+        "Apartament": 5,
+        "Judet": "Bistrita-Nasaut",
+        "CodPostal": 135459
+    }
+}

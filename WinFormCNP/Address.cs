@@ -26,7 +26,6 @@ namespace WinFormCNP
         private void Address_Load(object sender, EventArgs e)
         {
             Populate();
-
             button_Salveaza.Enabled = false;
             TextBoxEnabled(false);
         }
@@ -39,41 +38,24 @@ namespace WinFormCNP
             TextBoxEnabled(true);
         }
 
-        private void button_Salveaza1_Click(object sender, EventArgs e)
-        {
-            var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-            var path = $@"{x}\DataBase\Razvan.txt";
-
-            string[] text =
-            {
-                textBox_Nume.Text,
-                textBox_Prenume.Text,
-                textBox_Sex.Text,
-                textBox_CNP.Text,
-                textBox_Oras.Text,
-                textBox_Strada.Text,
-                textBox_Numar.Text,
-                textBox_Bloc.Text,
-                textBox_Scara.Text,
-                textBox_Etaj.Text,
-                textBox_Apartament.Text,
-                textBox_Judet.Text,
-                textBox_CodPostal.Text
-            };
-            File.WriteAllLines(path, text);
-
-            button_Editeaza.Enabled = true;
-            button_Salveaza.Enabled = false;
-
-            TextBoxEnabled(false);
-        }
-
         private void button_Salveaza_Click(object sender, EventArgs e)
         {
             var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-            var path = $@"{x}\DataBase\Razvan1.txt";
+            var path = $@"{x}\DataBase\BIO.json";
 
+            _user.Person.Nume = textBox_Nume.Text;
+            _user.Person.Prenume = textBox_Prenume.Text;
+            _user.Person.Sex = comboBox_Sex.SelectedIndex == 0 ? Enums.Sex.Masculin : Enums.Sex.Feminin;
+            _user.Person.CNP = long.Parse(textBox_CNP.Text);
+            _user.Address.Oras = textBox_Oras.Text;
+            _user.Address.Strada = textBox_Strada.Text;
+            _user.Address.Numar = int.Parse(textBox_Numar.Text);
+            _user.Address.Bloc = textBox_Bloc.Text;
+            _user.Address.Scara = textBox_Scara.Text;
+            _user.Address.Etaj = int.Parse(textBox_Etaj.Text);
             _user.Address.Apartament = int.Parse(textBox_Apartament.Text);
+            _user.Address.Judet = textBox_Judet.Text;
+            _user.Address.CodPostal = int.Parse(textBox_CodPostal.Text);
 
             var text = JsonConvert.SerializeObject(_user);
             
@@ -87,9 +69,19 @@ namespace WinFormCNP
 
         private void Populate()
         {
+            comboBox_Sex.DataSource = Enum.GetValues(typeof(Enums.Sex));
+
+            if (_user.Person.Sex == Enums.Sex.Masculin)
+            {
+                comboBox_Sex.SelectedIndex = 0;
+            }
+            else
+            {
+                comboBox_Sex.SelectedIndex = 1;
+            }
+
             textBox_Nume.Text = $"{_user.Person.Nume}";
             textBox_Prenume.Text = $"{_user.Person.Prenume}";
-            textBox_Sex.Text = $"{_user.Person.Sex}";
             textBox_CNP.Text = $"{_user.Person.CNP}";
             textBox_Oras.Text = $"{_user.Address.Oras}";
             textBox_Strada.Text = $"{_user.Address.Strada}";
@@ -100,22 +92,6 @@ namespace WinFormCNP
             textBox_Apartament.Text = $"{_user.Address.Apartament}";
             textBox_Judet.Text = $"{_user.Address.Judet}";
             textBox_CodPostal.Text = $"{_user.Address.CodPostal}";
-        }
-
-        private void ClearTextbox()
-        {
-            textBox_Nume.Text = string.Empty;
-            textBox_Prenume.Text = string.Empty;
-            textBox_Sex.Text = string.Empty;
-            textBox_Oras.Text = string.Empty;
-            textBox_Strada.Text = string.Empty;
-            textBox_Numar.Text = string.Empty;
-            textBox_Bloc.Text = string.Empty;
-            textBox_Scara.Text = string.Empty;
-            textBox_Etaj.Text = string.Empty;
-            textBox_Apartament.Text = string.Empty;
-            textBox_Judet.Text = string.Empty;
-            textBox_CodPostal.Text = string.Empty;
         }
 
         private void TextBoxEnabled(bool enabled)
@@ -138,12 +114,20 @@ namespace WinFormCNP
         #region Textbox
         private void textBox_Nume_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            if (Char.IsControl(e.KeyChar) != true && Char.IsNumber(e.KeyChar) == true)
+            {
+                e.Handled = true;
+            }
+            //e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
         private void textBox_Prenume_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            if (Char.IsControl(e.KeyChar) != true && Char.IsNumber(e.KeyChar) == true)
+            {
+                e.Handled = true;
+            }
+            //e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
         private void textBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
@@ -153,24 +137,32 @@ namespace WinFormCNP
 
         private void textBox_CNP_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
-        }
+        }// && (e.KeyChar != '.')
 
         private void textBox_Oras_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            if (Char.IsControl(e.KeyChar) != true && Char.IsNumber(e.KeyChar) == true)
+            {
+                e.Handled = true;
+            }
+            //e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
         private void textBox_Strada_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            if (Char.IsControl(e.KeyChar) != true && Char.IsNumber(e.KeyChar) == true)
+            {
+                e.Handled = true;
+            }
+            //e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
         private void textBox_Numar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -178,7 +170,7 @@ namespace WinFormCNP
 
         private void textBox_Etaj_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -186,7 +178,7 @@ namespace WinFormCNP
 
         private void textBox_Apartament_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -194,7 +186,7 @@ namespace WinFormCNP
 
         private void textBox_CodPostal_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -202,7 +194,11 @@ namespace WinFormCNP
 
         private void textBox_Judet_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            if (Char.IsControl(e.KeyChar) != true && Char.IsNumber(e.KeyChar) == true)
+            {
+                e.Handled = true;
+            }
+            //e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
         #endregion
     }
