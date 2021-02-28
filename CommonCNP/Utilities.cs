@@ -336,7 +336,7 @@ namespace CommonCNP
             for (int i = 0; i < constanta.Length; i++)
             {
                 var cifra = int.Parse(temp.Substring(i, 1));
-                suma = suma + cifra + constanta[i];
+                suma += cifra * constanta[i];
             }
 
             if (suma % 11 == 10)
