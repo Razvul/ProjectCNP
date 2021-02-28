@@ -221,8 +221,8 @@ namespace WinFormCNP
                 listBox_Users.Items.Add(user);
                 user.DisplayValue = $"{user.Person.Nume} {user.Person.Prenume}";
             }
-            listBox_Users.DisplayMember = "DisplayValue";
 
+            listBox_Users.DisplayMember = "DisplayValue";
             listBox_Users.SelectedItem = listBox_Users.Items[0];
         }
     }

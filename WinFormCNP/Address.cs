@@ -98,7 +98,7 @@ namespace WinFormCNP
         {
             textBox_Nume.Enabled = enabled;
             textBox_Prenume.Enabled = enabled;
-            textBox_Sex.Enabled = enabled;
+            comboBox_Sex.Enabled = enabled;
             textBox_CNP.Enabled = enabled;
             textBox_Oras.Enabled = enabled;
             textBox_Strada.Enabled = enabled;
@@ -201,5 +201,10 @@ namespace WinFormCNP
             //e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
         #endregion
+
+        private void comboBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

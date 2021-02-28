@@ -43,7 +43,6 @@ namespace WinFormCNP
             this.label_Sex = new System.Windows.Forms.Label();
             this.textBox_Nume = new System.Windows.Forms.TextBox();
             this.textBox_Prenume = new System.Windows.Forms.TextBox();
-            this.textBox_Sex = new System.Windows.Forms.TextBox();
             this.textBox_Oras = new System.Windows.Forms.TextBox();
             this.textBox_Strada = new System.Windows.Forms.TextBox();
             this.textBox_Numar = new System.Windows.Forms.TextBox();
@@ -186,14 +185,6 @@ namespace WinFormCNP
             this.textBox_Prenume.TabIndex = 29;
             this.textBox_Prenume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Prenume_KeyPress);
             // 
-            // textBox_Sex
-            // 
-            this.textBox_Sex.Location = new System.Drawing.Point(388, 83);
-            this.textBox_Sex.Name = "textBox_Sex";
-            this.textBox_Sex.Size = new System.Drawing.Size(100, 20);
-            this.textBox_Sex.TabIndex = 30;
-            this.textBox_Sex.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Sex_KeyPress);
-            // 
             // textBox_Oras
             // 
             this.textBox_Oras.Location = new System.Drawing.Point(149, 140);
@@ -315,6 +306,7 @@ namespace WinFormCNP
             this.comboBox_Sex.Name = "comboBox_Sex";
             this.comboBox_Sex.Size = new System.Drawing.Size(100, 21);
             this.comboBox_Sex.TabIndex = 45;
+            this.comboBox_Sex.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Sex_KeyPress);
             // 
             // AddressForm
             // 
@@ -335,7 +327,6 @@ namespace WinFormCNP
             this.Controls.Add(this.textBox_Numar);
             this.Controls.Add(this.textBox_Strada);
             this.Controls.Add(this.textBox_Oras);
-            this.Controls.Add(this.textBox_Sex);
             this.Controls.Add(this.textBox_Prenume);
             this.Controls.Add(this.textBox_Nume);
             this.Controls.Add(this.label_Sex);
@@ -375,7 +366,6 @@ namespace WinFormCNP
         private System.Windows.Forms.Label label_Sex;
         private System.Windows.Forms.TextBox textBox_Nume;
         private System.Windows.Forms.TextBox textBox_Prenume;
-        private System.Windows.Forms.TextBox textBox_Sex;
         private System.Windows.Forms.TextBox textBox_Oras;
         private System.Windows.Forms.TextBox textBox_Strada;
         private System.Windows.Forms.TextBox textBox_Numar;
