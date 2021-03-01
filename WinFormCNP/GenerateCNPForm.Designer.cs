@@ -1,7 +1,7 @@
 ﻿
 namespace WinFormCNP
 {
-    partial class GenerateCNP
+    partial class GenerateCNPForm
     {
         /// <summary>
         /// Required designer variable.
