@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonCNP
 {
-    public class Address
+    public class AddressClass
     {
         public string Oras { get; set; }
         public string Strada { get; set; }
