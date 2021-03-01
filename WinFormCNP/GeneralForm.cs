@@ -25,7 +25,7 @@ namespace WinFormCNP
         }
         private void button_CNP_Click(object sender, EventArgs e)
         {
-            var x = new GenerateCNPForm();
+            var x = new GenerateCNP();
             x.Show();
         }
 

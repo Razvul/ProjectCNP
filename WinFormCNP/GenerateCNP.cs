@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinFormCNP
 {
-    public partial class GenerateCNPForm : Form
+    public partial class GenerateCNP : Form
     {
-        public GenerateCNPForm()
+        public GenerateCNP()
         {
             InitializeComponent();
         }
