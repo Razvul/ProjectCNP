@@ -51,7 +51,7 @@ namespace WinFormCNP
                     CNP = 1751205075564
                 },
 
-                Address = new Address
+                Address = new AddressClass
                 {
                     Oras = "Botosani",
                     Strada = "Strada Mare",
@@ -74,7 +74,7 @@ namespace WinFormCNP
                     CNP = 610621120870
                 },
 
-                Address = new CommonCNP.Address
+                Address = new CommonCNP.AddressClass
                 {
                     Oras = "Cluj Napoca",
                     Strada = "Strada Mihai Eminescu",
@@ -97,7 +97,7 @@ namespace WinFormCNP
                     CNP = 5000114179137
                 },
 
-                Address = new CommonCNP.Address
+                Address = new CommonCNP.AddressClass
                 {
                     Oras = "Galati",
                     Strada = "Strada Stefan cel Mare",
@@ -160,7 +160,7 @@ namespace WinFormCNP
                     Sex = ListaObiecte[2] == "Masculin".ToLower() ? Enums.Sex.Masculin : Enums.Sex.Feminin,
                     CNP = int.Parse(ListaObiecte[3])
                 },
-                Address = new Address
+                Address = new AddressClass
                 {
                     Oras = ListaObiecte[4],
                     Strada = ListaObiecte[5],

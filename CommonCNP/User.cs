@@ -10,6 +10,6 @@ namespace CommonCNP
     {
         public string DisplayValue { get; set; }
         public Person Person { get; set; }
-        public Address Address { get; set; }
+        public AddressClass Address { get; set; }
     }
 }

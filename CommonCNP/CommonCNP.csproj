@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
+    <Compile Include="AddressClass.cs" />
     <Compile Include="CNP.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Person.cs" />
