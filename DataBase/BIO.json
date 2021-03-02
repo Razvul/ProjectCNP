@@ -1,5 +1,6 @@
 [
     {
+        "Id": "e526fed6-2501-48e1-bd8d-10bab920b627",
         "DisplayValue": "Agafitei Razvan",
         "Person": {
             "Nume": "Agafitei",
@@ -20,6 +21,7 @@
         }
     },
     {
+        "Id": "c15cf309-3470-471d-806b-ba4e2c31e33f",
         "DisplayValue": "Agafitei-Negru Razvan",
         "Person": {
             "Nume": "Agafitei-Negru",
