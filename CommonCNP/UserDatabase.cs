@@ -6,8 +6,19 @@ using System.Threading.Tasks;
 
 namespace CommonCNP
 {
-    class UserDatabase
+    public class UserDatabase
     {
+        private static readonly UserDatabase _instance = new UserDatabase();
+
+        private UserDatabase()
+        {
+
+        }
+
+        public static UserDatabase GetUserData()
+        {
+            return _instance;
+        }
 
         private void AddUser()
         {
