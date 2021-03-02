@@ -11,17 +11,22 @@ namespace CommonCNP
 {
     public class UserDatabase
     {
-        private static readonly UserDatabase _instance = new UserDatabase();
         private List<User> _userDatabase = new List<User>();
+        
+        #region Singleton
+        private static readonly UserDatabase _instance = new UserDatabase();
+
         private UserDatabase()
         {
             LoadDatabase();
         }
 
-        public static UserDatabase GetUserData()
+        public static UserDatabase GetInstance()
         {
             return _instance;
         }
+        #endregion
+
         private void LoadDatabase()
         {
             var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
@@ -30,9 +35,7 @@ namespace CommonCNP
             using (StreamReader sr = new StreamReader(path))
             {
                 string y = sr.ReadToEnd();
-
-                var userList = new List<User>();
-                userList = JsonConvert.DeserializeObject<List<User>>(y);
+                _userDatabase = JsonConvert.DeserializeObject<List<User>>(y);
             }
         }
 
@@ -56,9 +59,9 @@ namespace CommonCNP
 
         }
 
-        private void GetUserList()
+        public List<User> GetUserList()
         {
-
+            return _userDatabase;
         }
     }
 }
