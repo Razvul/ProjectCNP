@@ -43,6 +43,7 @@ namespace WinFormCNP
             var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
             var path = $@"{x}\DataBase\BIO1.json";
 
+            _user.Id = textBox_ID.Text;
             _user.Person.Nume = textBox_Nume.Text;
             _user.Person.Prenume = textBox_Prenume.Text;
             _user.Person.Sex = comboBox_Sex.SelectedIndex == 0 ? Enums.Sex.Masculin : Enums.Sex.Feminin;
@@ -80,6 +81,7 @@ namespace WinFormCNP
                 comboBox_Sex.SelectedIndex = 1;
             }
 
+            textBox_ID.Text = $"{_user.Id}";
             textBox_Nume.Text = $"{_user.Person.Nume}";
             textBox_Prenume.Text = $"{_user.Person.Prenume}";
             textBox_CNP.Text = $"{_user.Person.CNP}";
@@ -96,6 +98,7 @@ namespace WinFormCNP
 
         private void TextBoxEnabled(bool enabled)
         {
+            textBox_ID.Enabled = enabled;
             textBox_Nume.Enabled = enabled;
             textBox_Prenume.Enabled = enabled;
             comboBox_Sex.Enabled = enabled;
