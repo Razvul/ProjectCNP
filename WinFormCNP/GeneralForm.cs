@@ -190,11 +190,11 @@ namespace WinFormCNP
             var path = $@"{x}\DataBase\BIO.json";
             User user1;
 
-            using (StreamReader sr = new StreamReader(path))
+            using (StreamReader sr = new StreamReader(path)) //deschide fisierul
             {
                 string y = sr.ReadToEnd();
                 user1 = JsonConvert.DeserializeObject<User>(y);
-            }
+            } //inchide fisierul
 
             user1.DisplayValue = $"{user1.Person.Nume} {user1.Person.Prenume}";
             listBox_Users.DisplayMember = "DisplayValue";
