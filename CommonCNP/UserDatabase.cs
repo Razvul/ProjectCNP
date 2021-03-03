@@ -39,9 +39,9 @@ namespace CommonCNP
             }
         }
 
-        private void AddUser()
+        private void AddUser(User user)
         {
-
+            _userDatabase.Add(user);
         }
 
         private void DeleteUser(string id)
@@ -53,6 +53,7 @@ namespace CommonCNP
         private void UpdateUser(User user)
         {
             var x = _userDatabase.Single(d => d == user);
+            //_userDatabase.
             user.Person.Nume = "Altul";
         }
 
