@@ -44,9 +44,10 @@ namespace CommonCNP
 
         }
 
-        private void DeleteUser()
+        private void DeleteUser(string id)
         {
-
+            var x = _userDatabase.Single(d => d.Id == id);
+            _userDatabase.Remove(x);
         }
 
         private void UpdateUser()
