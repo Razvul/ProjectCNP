@@ -62,6 +62,11 @@ namespace CommonCNP
             return _userDatabase.SingleOrDefault(diha => diha.Id == id);
         }
 
+        private void SaveDatabase()
+        {
+
+        }
+
         public List<User> GetUserList()
         {
             return _userDatabase;
