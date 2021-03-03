@@ -54,9 +54,9 @@ namespace CommonCNP
 
         }
 
-        private void GetUser()
+        private User GetUser(string id)
         {
-
+            return _userDatabase.SingleOrDefault(diha => diha.Id == id);
         }
 
         public List<User> GetUserList()
