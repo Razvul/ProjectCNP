@@ -50,9 +50,10 @@ namespace CommonCNP
             _userDatabase.Remove(x);
         }
 
-        private void UpdateUser()
+        private void UpdateUser(User user)
         {
-
+            var x = _userDatabase.Single(d => d == user);
+            user.Person.Nume = "Altul";
         }
 
         private User GetUser(string id)
