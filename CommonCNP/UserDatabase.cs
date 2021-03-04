@@ -39,27 +39,37 @@ namespace CommonCNP
             }
         }
 
-        private void AddUser(User user)
+        public void AddUser(User user)
         {
             _userDatabase.Add(user);
         }
 
-        private void DeleteUser(string id)
+        public void DeleteUser(string id)
         {
             var x = _userDatabase.Single(d => d.Id == id);
             _userDatabase.Remove(x);
         }
 
-        private void UpdateUser(User user)
+        public void UpdateUser(User user)
         {
-            var x = _userDatabase.Single(d => d == user);
-            //_userDatabase.
-            user.Person.Nume = "Altul";
+            var x = _userDatabase.FirstOrDefault(obj => obj.Person.Nume == user.Person.Nume);
+            if (x != null)
+            {
+                x.Person.Prenume = user.Person.Prenume;
+            }
+            //_userDatabase.Single(d => d == user);
+            //_userDatabase
+            //user.Person.Nume = "Altul";
         }
 
-        private User GetUser(string id)
+        public User GetUser(string id)
         {
             return _userDatabase.SingleOrDefault(diha => diha.Id == id);
+        }
+
+        public void SaveDatabase()
+        {
+
         }
 
         public List<User> GetUserList()
