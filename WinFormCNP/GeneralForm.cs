@@ -33,7 +33,7 @@ namespace WinFormCNP
         {
             var SelectedUser = (User)listBox_Users.SelectedItem;
 
-            var x = new AddressForm(SelectedUser);
+            var x = new UserDetails(SelectedUser);
             x.Show();
         }
 

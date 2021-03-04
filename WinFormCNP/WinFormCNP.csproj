@@ -49,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdressForm.cs">
+    <Compile Include="UserDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdressForm.Designer.cs">
-      <DependentUpon>AdressForm.cs</DependentUpon>
+    <Compile Include="UserDetails.Designer.cs">
+      <DependentUpon>UserDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="GenerateCNPForm.cs">
       <SubType>Form</SubType>
@@ -69,8 +69,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdressForm.resx">
-      <DependentUpon>AdressForm.cs</DependentUpon>
+    <EmbeddedResource Include="UserDetails.resx">
+      <DependentUpon>UserDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenerateCNPForm.resx">
       <DependentUpon>GenerateCNPForm.cs</DependentUpon>
