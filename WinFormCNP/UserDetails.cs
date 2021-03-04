@@ -13,11 +13,11 @@ using Newtonsoft.Json;
 
 namespace WinFormCNP
 {
-    public partial class AddressForm : Form
+    public partial class UserDetails : Form
     {
         private User _user;
 
-        public AddressForm(User user)
+        public UserDetails(User user)
         {
             InitializeComponent();
             _user = user;
