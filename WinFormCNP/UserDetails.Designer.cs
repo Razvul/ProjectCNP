@@ -1,7 +1,7 @@
 ﻿
 namespace WinFormCNP
 {
-    partial class AddressForm
+    partial class UserDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -326,7 +326,7 @@ namespace WinFormCNP
             this.textBox_ID.Size = new System.Drawing.Size(100, 20);
             this.textBox_ID.TabIndex = 47;
             // 
-            // AddressForm
+            // UserDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -363,8 +363,8 @@ namespace WinFormCNP
             this.Controls.Add(this.label_nume);
             this.MaximumSize = new System.Drawing.Size(750, 600);
             this.MinimumSize = new System.Drawing.Size(600, 500);
-            this.Name = "AddressForm";
-            this.Text = "AddressForm";
+            this.Name = "UserDetails";
+            this.Text = "UserDetails";
             this.Load += new System.EventHandler(this.Address_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
