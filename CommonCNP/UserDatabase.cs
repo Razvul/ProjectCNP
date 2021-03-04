@@ -30,7 +30,7 @@ namespace CommonCNP
         private void LoadDatabase()
         {
             var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-            var path = $@"{x}\DataBase\BIO.json";
+            var path = $@"{x}\DataBase\ProjectCNP.json";
 
             using (StreamReader sr = new StreamReader(path))
             {
@@ -39,8 +39,8 @@ namespace CommonCNP
             }
         }
 
-        public void AddUser(User user)
-        {
+        public void AddUser(User user)// sa returneze un boolean
+        {// try catch
             _userDatabase.Add(user);
         }
 
@@ -63,7 +63,12 @@ namespace CommonCNP
 
         public void SaveDatabase()
         {
+            var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            var path = $@"{x}\DataBase\ProjectCNP.json";
 
+            var text = JsonConvert.SerializeObject(_userDatabase);
+
+            File.WriteAllText(path, text);
         }
 
         public List<User> GetUserList()

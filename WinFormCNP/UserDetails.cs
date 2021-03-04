@@ -16,6 +16,7 @@ namespace WinFormCNP
     public partial class UserDetails : Form
     {
         private User _user;
+        private UserDatabase _userDatabase = UserDatabase.GetInstance();
 
         public UserDetails(User user)
         {
@@ -40,10 +41,6 @@ namespace WinFormCNP
 
         private void button_Salveaza_Click(object sender, EventArgs e)
         {
-            var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-            var path = $@"{x}\DataBase\ProjectCNP.json";
-
-            _user.Id = textBox_ID.Text;
             _user.Person.Nume = textBox_Nume.Text;
             _user.Person.Prenume = textBox_Prenume.Text;
             _user.Person.Sex = comboBox_Sex.SelectedIndex == 0 ? Enums.Sex.Masculin : Enums.Sex.Feminin;
@@ -58,10 +55,8 @@ namespace WinFormCNP
             _user.Address.Judet = textBox_Judet.Text;
             _user.Address.CodPostal = int.Parse(textBox_CodPostal.Text);
 
-            //var text = JsonConvert.SerializeObject(_user);
-            var text = JsonConvert.SerializeObject(UserDatabase.GetUserList());
-
-            File.WriteAllText(path, text);
+            _userDatabase.UpdateUser(_user);
+            _userDatabase.SaveDatabase();
 
             button_Editeaza.Enabled = true;
             button_Salveaza.Enabled = false;
