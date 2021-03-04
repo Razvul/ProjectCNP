@@ -52,14 +52,8 @@ namespace CommonCNP
 
         public void UpdateUser(User user)
         {
-            var x = _userDatabase.FirstOrDefault(obj => obj.Person.Nume == user.Person.Nume);
-            if (x != null)
-            {
-                x.Person.Prenume = user.Person.Prenume;
-            }
-            //_userDatabase.Single(d => d == user);
-            //_userDatabase
-            //user.Person.Nume = "Altul";
+            var index = _userDatabase.FindIndex(x => x.Id == user.Id);
+            _userDatabase[index] = user;
         }
 
         public User GetUser(string id)
