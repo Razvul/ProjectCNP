@@ -41,7 +41,7 @@ namespace WinFormCNP
         private void button_Salveaza_Click(object sender, EventArgs e)
         {
             var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-            var path = $@"{x}\DataBase\BIO1.json";
+            var path = $@"{x}\DataBase\ProjectCNP.json";
 
             _user.Id = textBox_ID.Text;
             _user.Person.Nume = textBox_Nume.Text;
@@ -58,8 +58,9 @@ namespace WinFormCNP
             _user.Address.Judet = textBox_Judet.Text;
             _user.Address.CodPostal = int.Parse(textBox_CodPostal.Text);
 
-            var text = JsonConvert.SerializeObject(_user);
-            
+            //var text = JsonConvert.SerializeObject(_user);
+            var text = JsonConvert.SerializeObject(UserDatabase.GetUserList());
+
             File.WriteAllText(path, text);
 
             button_Editeaza.Enabled = true;
