@@ -39,21 +39,60 @@ namespace CommonCNP
             }
         }
 
-        public void AddUser(User user)// sa returneze un boolean
-        {// try catch
-            _userDatabase.Add(user);
+        public bool AddUser(User user)// sa returneze un boolean
+        {
+            try
+            {
+                _userDatabase.Add(user);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
+            
         }
 
-        public void DeleteUser(string id)
+        public bool DeleteUser(string id)
         {
-            var x = _userDatabase.Single(d => d.Id == id);
-            _userDatabase.Remove(x);
+            try
+            {
+                var user = _userDatabase.SingleOrDefault(d => d.Id == id);
+                if (user == null)
+                {
+                    return false;
+                }
+
+                _userDatabase.Remove(user);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
 
-        public void UpdateUser(User user)
+        public bool UpdateUser(User user)
         {
-            var index = _userDatabase.FindIndex(x => x.Id == user.Id);
-            _userDatabase[index] = user;
+            try
+            {
+                var index = _userDatabase.FindIndex(x => x.Id == user.Id);
+
+                if (index < 0)
+                {
+                    return false;
+                }
+
+                _userDatabase[index] = user;
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
+            
         }
 
         public User GetUser(string id)

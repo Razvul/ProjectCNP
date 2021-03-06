@@ -27,43 +27,9 @@ namespace WinFormCNP
         private void Address_Load(object sender, EventArgs e)
         {
             Populate();
-            button_Salveaza.Enabled = false;
-            TextBoxEnabled(false);
             textBox_ID.Enabled = false;
         }
 
-        private void button_Editeaza_Click(object sender, EventArgs e)
-        {
-            button_Salveaza.Enabled = true;
-            button_Editeaza.Enabled = false;
-
-            TextBoxEnabled(true);
-        }
-
-        private void button_Salveaza_Click(object sender, EventArgs e)
-        {
-            _user.Person.Nume = textBox_Nume.Text;
-            _user.Person.Prenume = textBox_Prenume.Text;
-            _user.Person.Sex = comboBox_Sex.SelectedIndex == 0 ? Enums.Sex.Masculin : Enums.Sex.Feminin;
-            _user.Person.CNP = long.Parse(textBox_CNP.Text);
-            _user.Address.Oras = textBox_Oras.Text;
-            _user.Address.Strada = textBox_Strada.Text;
-            _user.Address.Numar = int.Parse(textBox_Numar.Text);
-            _user.Address.Bloc = textBox_Bloc.Text;
-            _user.Address.Scara = textBox_Scara.Text;
-            _user.Address.Etaj = int.Parse(textBox_Etaj.Text);
-            _user.Address.Apartament = int.Parse(textBox_Apartament.Text);
-            _user.Address.Judet = textBox_Judet.Text;
-            _user.Address.CodPostal = int.Parse(textBox_CodPostal.Text);
-
-            _userDatabase.UpdateUser(_user);
-            _userDatabase.SaveDatabase();
-
-            button_Editeaza.Enabled = true;
-            button_Salveaza.Enabled = false;
-
-            TextBoxEnabled(false);
-        }
 
         private void Populate()
         {
@@ -93,22 +59,66 @@ namespace WinFormCNP
             textBox_CodPostal.Text = $"{_user.Address.CodPostal}";
         }
 
-        private void TextBoxEnabled(bool enabled)
+
+
+
+        private void comboBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
         {
-            textBox_Nume.Enabled = enabled;
-            textBox_Prenume.Enabled = enabled;
-            comboBox_Sex.Enabled = enabled;
-            textBox_CNP.Enabled = enabled;
-            textBox_Oras.Enabled = enabled;
-            textBox_Strada.Enabled = enabled;
-            textBox_Numar.Enabled = enabled;
-            textBox_Bloc.Enabled = enabled;
-            textBox_Scara.Enabled = enabled;
-            textBox_Etaj.Enabled = enabled;
-            textBox_Apartament.Enabled = enabled;
-            textBox_Judet.Enabled = enabled;
-            textBox_CodPostal.Enabled = enabled;
+            e.Handled = true;
         }
+
+        #region Buttons
+
+
+
+
+        private void button_AddUser_Click(object sender, EventArgs e)
+        {
+           
+            var checkUser = _userDatabase.GetUser(_user.Id);
+
+            if (checkUser == null)
+            {
+                _userDatabase.AddUser(_user);
+                _userDatabase.SaveDatabase();
+                return;
+            }
+
+            MessageBox.Show("Userul exista in database");
+
+        }
+
+        private void button_UpdateUser_Click(object sender, EventArgs e)
+        {
+            return;
+
+            _user.Person.Nume = textBox_Nume.Text;
+            _user.Person.Prenume = textBox_Prenume.Text;
+            _user.Person.Sex = comboBox_Sex.SelectedIndex == 0 ? Enums.Sex.Masculin : Enums.Sex.Feminin;
+            _user.Person.CNP = long.Parse(textBox_CNP.Text);
+            _user.Address.Oras = textBox_Oras.Text;
+            _user.Address.Strada = textBox_Strada.Text;
+            _user.Address.Numar = int.Parse(textBox_Numar.Text);
+            _user.Address.Bloc = textBox_Bloc.Text;
+            _user.Address.Scara = textBox_Scara.Text;
+            _user.Address.Etaj = int.Parse(textBox_Etaj.Text);
+            _user.Address.Apartament = int.Parse(textBox_Apartament.Text);
+            _user.Address.Judet = textBox_Judet.Text;
+            _user.Address.CodPostal = int.Parse(textBox_CodPostal.Text);
+
+            _userDatabase.UpdateUser(_user);
+            _userDatabase.SaveDatabase();
+
+            button_AddUser.Enabled = true;
+            button_UpdateUser.Enabled = false;
+
+        }
+
+        private void button_DeleteUser_Click(object sender, EventArgs e)
+        {
+            return;
+        }
+        #endregion
 
         #region Textbox
         private void textBox_Nume_KeyPress(object sender, KeyPressEventArgs e)
@@ -201,9 +211,6 @@ namespace WinFormCNP
         }
         #endregion
 
-        private void comboBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
+
     }
 }
