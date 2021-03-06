@@ -32,6 +32,7 @@ namespace WinFormCNP
             this.button_CNP = new System.Windows.Forms.Button();
             this.button_Detalii = new System.Windows.Forms.Button();
             this.listBox_Users = new System.Windows.Forms.ListBox();
+            this.button_AddUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_CNP
@@ -66,11 +67,23 @@ namespace WinFormCNP
             this.listBox_Users.Size = new System.Drawing.Size(120, 95);
             this.listBox_Users.TabIndex = 3;
             // 
+            // button_AddUser
+            // 
+            this.button_AddUser.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.button_AddUser.Location = new System.Drawing.Point(227, 124);
+            this.button_AddUser.Name = "button_AddUser";
+            this.button_AddUser.Size = new System.Drawing.Size(75, 23);
+            this.button_AddUser.TabIndex = 4;
+            this.button_AddUser.Text = "AddUser";
+            this.button_AddUser.UseVisualStyleBackColor = true;
+            this.button_AddUser.Click += new System.EventHandler(this.button_AddUser_Click);
+            // 
             // GeneralForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.button_AddUser);
             this.Controls.Add(this.listBox_Users);
             this.Controls.Add(this.button_Detalii);
             this.Controls.Add(this.button_CNP);
@@ -88,5 +101,6 @@ namespace WinFormCNP
         private System.Windows.Forms.Button button_CNP;
         private System.Windows.Forms.Button button_Detalii;
         private System.Windows.Forms.ListBox listBox_Users;
+        private System.Windows.Forms.Button button_AddUser;
     }
 }

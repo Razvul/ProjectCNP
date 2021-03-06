@@ -48,5 +48,10 @@ namespace WinFormCNP
             listBox_Users.DisplayMember = "DisplayValue";
             listBox_Users.SelectedItem = listBox_Users.Items[0];
         }
+
+        private void button_AddUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
