@@ -29,6 +29,7 @@ namespace WinFormCNP
             Populate();
             button_Salveaza.Enabled = false;
             TextBoxEnabled(false);
+            textBox_ID.Enabled = false;
         }
 
         private void button_Editeaza_Click(object sender, EventArgs e)
@@ -94,7 +95,6 @@ namespace WinFormCNP
 
         private void TextBoxEnabled(bool enabled)
         {
-            textBox_ID.Enabled = enabled;
             textBox_Nume.Enabled = enabled;
             textBox_Prenume.Enabled = enabled;
             comboBox_Sex.Enabled = enabled;
