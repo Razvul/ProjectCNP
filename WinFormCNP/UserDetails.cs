@@ -30,7 +30,6 @@ namespace WinFormCNP
             textBox_ID.Enabled = false;
         }
 
-
         private void Populate()
         {
             comboBox_Sex.DataSource = Enum.GetValues(typeof(Enums.Sex));
@@ -59,39 +58,14 @@ namespace WinFormCNP
             textBox_CodPostal.Text = $"{_user.Address.CodPostal}";
         }
 
-
-
-
-        private void comboBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
         #region Buttons
-
-
-
-
         private void button_AddUser_Click(object sender, EventArgs e)
         {
-           
-            var checkUser = _userDatabase.GetUser(_user.Id);
-
-            if (checkUser == null)
-            {
-                _userDatabase.AddUser(_user);
-                _userDatabase.SaveDatabase();
-                return;
-            }
-
-            MessageBox.Show("Userul exista in database");
-
+            
         }
 
         private void button_UpdateUser_Click(object sender, EventArgs e)
         {
-            return;
-
             _user.Person.Nume = textBox_Nume.Text;
             _user.Person.Prenume = textBox_Prenume.Text;
             _user.Person.Sex = comboBox_Sex.SelectedIndex == 0 ? Enums.Sex.Masculin : Enums.Sex.Feminin;
@@ -111,12 +85,13 @@ namespace WinFormCNP
 
             button_AddUser.Enabled = true;
             button_UpdateUser.Enabled = false;
-
+            MessageBox.Show("Utilizatorul a fost salvat cu succes!");
         }
 
         private void button_DeleteUser_Click(object sender, EventArgs e)
         {
-            return;
+            _userDatabase.DeleteUser(_user.Id);
+            MessageBox.Show("Utilizatorul a fost sters cu succes!");
         }
         #endregion
 
@@ -139,9 +114,9 @@ namespace WinFormCNP
             //e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
-        private void textBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
+        private void comboBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = true;
         }
 
         private void textBox_CNP_KeyPress(object sender, KeyPressEventArgs e)
