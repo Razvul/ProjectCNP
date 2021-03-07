@@ -61,7 +61,18 @@ namespace WinFormCNP
         #region Buttons
         private void button_AddUser_Click(object sender, EventArgs e)
         {
-            
+            var _user = new User();
+            var checkUser = _userDatabase.GetUser(_user.Id);
+
+            if (checkUser == null)
+            {
+                _userDatabase.AddUser(_user);
+                _userDatabase.SaveDatabase();
+                MessageBox.Show("Utilizatorul a fost adaugat cu succes!");
+                return;
+            }
+
+            MessageBox.Show("Utilizatorul exista in database");
         }
 
         private void button_UpdateUser_Click(object sender, EventArgs e)
@@ -90,8 +101,16 @@ namespace WinFormCNP
 
         private void button_DeleteUser_Click(object sender, EventArgs e)
         {
-            _userDatabase.DeleteUser(_user.Id);
-            MessageBox.Show("Utilizatorul a fost sters cu succes!");
+            try
+            {
+                _userDatabase.DeleteUser(_user.Id);
+                MessageBox.Show("Utilizatorul a fost sters cu succes!");
+            }
+            catch
+            {
+                MessageBox.Show("Utilizatorul nu a fost sters!");
+            }
+
         }
         #endregion
 
