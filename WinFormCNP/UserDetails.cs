@@ -104,6 +104,7 @@ namespace WinFormCNP
             try
             {
                 _userDatabase.DeleteUser(_user.Id);
+                _userDatabase.SaveDatabase();
                 MessageBox.Show("Utilizatorul a fost sters cu succes!");
             }
             catch
