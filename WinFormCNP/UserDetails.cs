@@ -80,8 +80,8 @@ namespace WinFormCNP
 
         private void PopulateNewUser()
         {
-            comboBox_Sex.DataSource = Enums.Sex.Masculin;
-            //comboBox_Sex.DataSource = Enum.GetValues(typeof(Enums.Sex));
+            comboBox_Sex.DataSource = Enum.GetValues(typeof(Enums.Sex));
+            comboBox_Sex.SelectedIndex = 0;
 
             //if (_user.Person.Sex == Enums.Sex.Masculin)
             //{
