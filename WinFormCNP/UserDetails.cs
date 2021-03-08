@@ -17,6 +17,7 @@ namespace WinFormCNP
     {
         private User _user;
         private UserDatabase _userDatabase = UserDatabase.GetInstance();
+        private bool _isNewUser = false;
 
         public UserDetails(User user)
         {
@@ -24,8 +25,19 @@ namespace WinFormCNP
             _user = user;
         }
 
+        public UserDetails()
+        {
+            InitializeComponent();
+
+        }
+
         private void Address_Load(object sender, EventArgs e)
         {
+            if(_isNewUser)
+            {
+                PopulateNewUser();
+            }
+
             Populate();
             textBox_ID.Enabled = false;
         }
@@ -58,6 +70,33 @@ namespace WinFormCNP
             textBox_CodPostal.Text = $"{_user.Address.CodPostal}";
         }
 
+        private void PopulateNewUser()
+        {
+            comboBox_Sex.DataSource = Enum.GetValues(typeof(Enums.Sex));
+
+            if (_user.Person.Sex == Enums.Sex.Masculin)
+            {
+                comboBox_Sex.SelectedIndex = 0;
+            }
+            else
+            {
+                comboBox_Sex.SelectedIndex = 1;
+            }
+
+            textBox_ID.Text = $"{_user.Id}";
+            textBox_Nume.Text = string.Empty;
+            textBox_Prenume.Text = string.Empty;
+            textBox_CNP.Text = string.Empty;
+            textBox_Oras.Text = string.Empty;
+            textBox_Strada.Text = string.Empty;
+            textBox_Numar.Text = string.Empty;
+            textBox_Bloc.Text = string.Empty;
+            textBox_Scara.Text = string.Empty;
+            textBox_Etaj.Text = string.Empty;
+            textBox_Apartament.Text = string.Empty;
+            textBox_Judet.Text = string.Empty;
+            textBox_CodPostal.Text = string.Empty;
+        }
         #region Buttons
         private void button_AddUser_Click(object sender, EventArgs e)
         {
