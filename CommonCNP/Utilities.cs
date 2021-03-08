@@ -347,10 +347,12 @@ namespace CommonCNP
             {
                 cifraControl = (suma % 11).ToString();
             }
-
-            //var result = $"{temp}{cifraControl}";
             return cifraControl;
         }
 
+        public static Guid GetNewId()
+        {
+            return Guid.NewGuid();
+        }
     }
 }

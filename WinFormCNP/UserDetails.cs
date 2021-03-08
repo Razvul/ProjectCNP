@@ -28,6 +28,7 @@ namespace WinFormCNP
 
         public UserDetails()
         {
+            _isNewUser = true;
             InitializeComponent();
             button_DeleteUser.Enabled = false;
             button_UpdateUser.Enabled = false;
@@ -39,7 +40,12 @@ namespace WinFormCNP
             {
                 PopulateNewUser();
             }
-
+            var user = new User()
+            {
+                Id = Utilities.GetNewId().ToString(),
+                Person = new Person(),
+                Address = new AddressClass()
+            };
             Populate();
             textBox_ID.Enabled = false;
         }
@@ -74,16 +80,17 @@ namespace WinFormCNP
 
         private void PopulateNewUser()
         {
-            comboBox_Sex.DataSource = Enum.GetValues(typeof(Enums.Sex));
+            comboBox_Sex.DataSource = Enums.Sex.Masculin;
+            //comboBox_Sex.DataSource = Enum.GetValues(typeof(Enums.Sex));
 
-            if (_user.Person.Sex == Enums.Sex.Masculin)
-            {
-                comboBox_Sex.SelectedIndex = 0;
-            }
-            else
-            {
-                comboBox_Sex.SelectedIndex = 1;
-            }
+            //if (_user.Person.Sex == Enums.Sex.Masculin)
+            //{
+            //    comboBox_Sex.SelectedIndex = 0;
+            //}
+            //else
+            //{
+            //    comboBox_Sex.SelectedIndex = 1;
+            //}
 
             textBox_ID.Text = $"{_user.Id}";
             textBox_Nume.Text = string.Empty;

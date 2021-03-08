@@ -49,7 +49,8 @@ namespace WinFormCNP
 
         private void button_AddUser_Click(object sender, EventArgs e)
         {
-            
+            var x = new UserDetails();
+            x.Show();
         }
     }
 }
