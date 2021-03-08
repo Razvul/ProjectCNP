@@ -116,10 +116,25 @@ namespace WinFormCNP
         #region Buttons
         private void button_AddUser_Click(object sender, EventArgs e)
         {
+            // inca nu iti este clar chestia cu elemente privat in clasa (adica _user)
+            // _folosesti _user doar cand trebuie sa modifici elementul general pentru al folosi in alte functii
+            // ATENTIE !!! nu trebuie sa faci niciodata _user = new User() pt ca il ascunzi!!!!
+
+            // aici facand "var _user" ascunzi "_user" general
             var _user = new User();
+
+            // de aici incolo daca folosesti "_user" no o sa fie niciodata "_user" general
+            // o sa fie user pe care l-ai definit tu mai sus ... 
+
+
+            // de exemplu aici "_user.Id" o sa fie null pentru ca nu este _user general ci _user de la linia 124
             var checkUser = _userDatabase.GetUser(_user.Id);
-            // _user.Id deja exista in acest moment in timp
-            if (checkUser == null)// si nu va intra niciodata in bucla asta
+
+
+
+
+            // _user.Id deja exista in acest moment in timp ---> nu este adevarat pt ca tu l-ai suprascris
+            if (checkUser == null)// si nu va intra niciodata in bucla asta ---> pune breakpoint pentru debug
             {
                 _userDatabase.AddUser(_user);
                 _userDatabase.SaveDatabase();
