@@ -134,23 +134,31 @@ namespace WinFormCNP
 
 
             // _user.Id deja exista in acest moment in timp ---> nu este adevarat pt ca tu l-ai suprascris
-            if (checkUser == null)// si nu va intra niciodata in bucla asta ---> pune breakpoint pentru debug
-            // _user.Id deja exista in acest moment in timp
-
-            foreach (var user in _userDatabase)
-            {
-                if(_user.Id==user.Id)
-                {
-
-                }
-            }
-            if (checkUser == null)// si nu va intra niciodata in bucla asta
+            if (checkUser == null)// si nu va intra niciodata in bucla asta  ---> pune breakpoint pentru debug
             {
                 _userDatabase.AddUser(_user);
                 _userDatabase.SaveDatabase();
                 MessageBox.Show("Utilizatorul a fost adaugat cu succes!");
                 return;
             }
+
+
+
+            // GRESIT ... nu poti faci un foreach in userdatabase ....
+            // iar nu ai facut build pana inainte sa paci push
+            // userdatabase nu este IEnumerable ca sa poti sa faci foreach 
+            //daca vrei sa faci un foreach trebuie sa faci _userDatabase.GetUserList()
+
+
+            //foreach (var user in _userDatabase)
+            //{
+            //    if(_user.Id==user.Id)
+            //    {
+
+            //    }
+            //}
+
+
 
             MessageBox.Show("Utilizatorul exista in database");
         }
