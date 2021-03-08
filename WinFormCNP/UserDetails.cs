@@ -119,6 +119,14 @@ namespace WinFormCNP
             var _user = new User();
             var checkUser = _userDatabase.GetUser(_user.Id);
             // _user.Id deja exista in acest moment in timp
+
+            foreach (var user in _userDatabase)
+            {
+                if(_user.Id==user.Id)
+                {
+
+                }
+            }
             if (checkUser == null)// si nu va intra niciodata in bucla asta
             {
                 _userDatabase.AddUser(_user);
