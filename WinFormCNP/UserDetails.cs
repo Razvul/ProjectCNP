@@ -23,12 +23,14 @@ namespace WinFormCNP
         {
             InitializeComponent();
             _user = user;
+            button_AddUser.Enabled = false;
         }
 
         public UserDetails()
         {
             InitializeComponent();
-
+            button_DeleteUser.Enabled = false;
+            button_UpdateUser.Enabled = false;
         }
 
         private void Address_Load(object sender, EventArgs e)
@@ -150,7 +152,6 @@ namespace WinFormCNP
             {
                 MessageBox.Show("Utilizatorul nu a fost sters!");
             }
-
         }
         #endregion
 
@@ -244,7 +245,5 @@ namespace WinFormCNP
             //e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
         #endregion
-
-
     }
 }
