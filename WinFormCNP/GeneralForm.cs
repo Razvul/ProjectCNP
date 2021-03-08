@@ -36,6 +36,12 @@ namespace WinFormCNP
             x.Show();
         }
 
+        private void button_AddUser_Click(object sender, EventArgs e)
+        {
+            var x = new UserDetails();
+            x.Show();
+        }
+
         private void Populate()
         {
             foreach (var user in _userDatabase.GetUserList())
@@ -45,12 +51,6 @@ namespace WinFormCNP
 
             listBox_Users.DisplayMember = "DisplayValue";
             listBox_Users.SelectedItem = listBox_Users.Items[0];
-        }
-
-        private void button_AddUser_Click(object sender, EventArgs e)
-        {
-            var x = new UserDetails();
-            x.Show();
         }
     }
 }
