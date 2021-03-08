@@ -36,16 +36,31 @@ namespace WinFormCNP
 
         private void Address_Load(object sender, EventArgs e)
         {
-            if(_isNewUser)
+
+            // aici trebuie sa pui un if else
+            // nu iti functioneaza in alt mod pentru ca faci p[opulate de 2 ori pe acelais obiect grafic 
+     
+
+            if (_isNewUser)
             {
+                // intra aici daca esti new user
                 PopulateNewUser();
             }
+
+            // programul continua aici
+
+            // aici nu trebuie sa creezi un nou user...
+            // in metodele Populate(); si PopulateNewUser(); folosesti "_user" ... aici de ce creezi var user?
+            // var user nu mai este valid in momentul cand iesi din functie 
+
             var user = new User()
             {
                 Id = Utilities.GetNewId().ToString(),
                 Person = new Person(),
                 Address = new AddressClass()
             };
+
+            // continua si aici --- deci faci inca o data populate 
             Populate();
             textBox_ID.Enabled = false;
         }
