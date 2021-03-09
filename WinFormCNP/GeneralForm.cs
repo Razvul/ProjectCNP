@@ -31,10 +31,14 @@ namespace WinFormCNP
 
         private void button_Detalii_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("CE faci?");
             var SelectedUser = (User)listBox_Users.SelectedItem;
-
             var x = new UserDetails(SelectedUser);
+            x.Show();
+        }
+
+        private void button_AddUser_Click(object sender, EventArgs e)
+        {
+            var x = new UserDetails();
             x.Show();
         }
 

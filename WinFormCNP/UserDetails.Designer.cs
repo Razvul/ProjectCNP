@@ -52,13 +52,14 @@ namespace WinFormCNP
             this.textBox_Apartament = new System.Windows.Forms.TextBox();
             this.textBox_Judet = new System.Windows.Forms.TextBox();
             this.textBox_CodPostal = new System.Windows.Forms.TextBox();
-            this.button_Editeaza = new System.Windows.Forms.Button();
-            this.button_Salveaza = new System.Windows.Forms.Button();
+            this.button_AddUser = new System.Windows.Forms.Button();
+            this.button_UpdateUser = new System.Windows.Forms.Button();
             this.label_CNP = new System.Windows.Forms.Label();
             this.textBox_CNP = new System.Windows.Forms.TextBox();
             this.comboBox_Sex = new System.Windows.Forms.ComboBox();
             this.label_Id = new System.Windows.Forms.Label();
             this.textBox_ID = new System.Windows.Forms.TextBox();
+            this.button_DeleteUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_nume
@@ -263,25 +264,25 @@ namespace WinFormCNP
             this.textBox_CodPostal.TabIndex = 40;
             this.textBox_CodPostal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CodPostal_KeyPress);
             // 
-            // button_Editeaza
+            // button_AddUser
             // 
-            this.button_Editeaza.Location = new System.Drawing.Point(144, 467);
-            this.button_Editeaza.Name = "button_Editeaza";
-            this.button_Editeaza.Size = new System.Drawing.Size(75, 23);
-            this.button_Editeaza.TabIndex = 41;
-            this.button_Editeaza.Text = "Editeaza";
-            this.button_Editeaza.UseVisualStyleBackColor = true;
-            this.button_Editeaza.Click += new System.EventHandler(this.button_Editeaza_Click);
+            this.button_AddUser.Location = new System.Drawing.Point(14, 468);
+            this.button_AddUser.Name = "button_AddUser";
+            this.button_AddUser.Size = new System.Drawing.Size(75, 23);
+            this.button_AddUser.TabIndex = 41;
+            this.button_AddUser.Text = "Add User";
+            this.button_AddUser.UseVisualStyleBackColor = true;
+            this.button_AddUser.Click += new System.EventHandler(this.button_AddUser_Click);
             // 
-            // button_Salveaza
+            // button_UpdateUser
             // 
-            this.button_Salveaza.Location = new System.Drawing.Point(304, 467);
-            this.button_Salveaza.Name = "button_Salveaza";
-            this.button_Salveaza.Size = new System.Drawing.Size(75, 23);
-            this.button_Salveaza.TabIndex = 42;
-            this.button_Salveaza.Text = "Salveaza";
-            this.button_Salveaza.UseVisualStyleBackColor = true;
-            this.button_Salveaza.Click += new System.EventHandler(this.button_Salveaza_Click);
+            this.button_UpdateUser.Location = new System.Drawing.Point(102, 468);
+            this.button_UpdateUser.Name = "button_UpdateUser";
+            this.button_UpdateUser.Size = new System.Drawing.Size(75, 23);
+            this.button_UpdateUser.TabIndex = 42;
+            this.button_UpdateUser.Text = "Update User";
+            this.button_UpdateUser.UseVisualStyleBackColor = true;
+            this.button_UpdateUser.Click += new System.EventHandler(this.button_UpdateUser_Click);
             // 
             // label_CNP
             // 
@@ -326,18 +327,30 @@ namespace WinFormCNP
             this.textBox_ID.Size = new System.Drawing.Size(100, 20);
             this.textBox_ID.TabIndex = 47;
             // 
+            // button_DeleteUser
+            // 
+            this.button_DeleteUser.Location = new System.Drawing.Point(191, 468);
+            this.button_DeleteUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_DeleteUser.Name = "button_DeleteUser";
+            this.button_DeleteUser.Size = new System.Drawing.Size(80, 23);
+            this.button_DeleteUser.TabIndex = 48;
+            this.button_DeleteUser.Text = "Delete User";
+            this.button_DeleteUser.UseVisualStyleBackColor = true;
+            this.button_DeleteUser.Click += new System.EventHandler(this.button_DeleteUser_Click);
+            // 
             // UserDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 561);
+            this.ClientSize = new System.Drawing.Size(584, 553);
+            this.Controls.Add(this.button_DeleteUser);
             this.Controls.Add(this.textBox_ID);
             this.Controls.Add(this.label_Id);
             this.Controls.Add(this.comboBox_Sex);
             this.Controls.Add(this.textBox_CNP);
             this.Controls.Add(this.label_CNP);
-            this.Controls.Add(this.button_Salveaza);
-            this.Controls.Add(this.button_Editeaza);
+            this.Controls.Add(this.button_UpdateUser);
+            this.Controls.Add(this.button_AddUser);
             this.Controls.Add(this.textBox_CodPostal);
             this.Controls.Add(this.textBox_Judet);
             this.Controls.Add(this.textBox_Apartament);
@@ -361,8 +374,8 @@ namespace WinFormCNP
             this.Controls.Add(this.label_Strada);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label_nume);
-            this.MaximumSize = new System.Drawing.Size(750, 600);
-            this.MinimumSize = new System.Drawing.Size(600, 500);
+            this.MaximumSize = new System.Drawing.Size(750, 599);
+            this.MinimumSize = new System.Drawing.Size(600, 499);
             this.Name = "UserDetails";
             this.Text = "UserDetails";
             this.Load += new System.EventHandler(this.Address_Load);
@@ -395,12 +408,13 @@ namespace WinFormCNP
         private System.Windows.Forms.TextBox textBox_Apartament;
         private System.Windows.Forms.TextBox textBox_Judet;
         private System.Windows.Forms.TextBox textBox_CodPostal;
-        private System.Windows.Forms.Button button_Editeaza;
-        private System.Windows.Forms.Button button_Salveaza;
+        private System.Windows.Forms.Button button_AddUser;
+        private System.Windows.Forms.Button button_UpdateUser;
         private System.Windows.Forms.Label label_CNP;
         private System.Windows.Forms.TextBox textBox_CNP;
         private System.Windows.Forms.ComboBox comboBox_Sex;
         private System.Windows.Forms.Label label_Id;
         private System.Windows.Forms.TextBox textBox_ID;
+        private System.Windows.Forms.Button button_DeleteUser;
     }
 }

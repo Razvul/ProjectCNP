@@ -17,51 +17,54 @@ namespace WinFormCNP
     {
         private User _user;
         private UserDatabase _userDatabase = UserDatabase.GetInstance();
+        private bool _isNewUser = false;
 
         public UserDetails(User user)
         {
             InitializeComponent();
             _user = user;
+            button_AddUser.Enabled = false;
+        }
+
+        public UserDetails()
+        {
+            _isNewUser = true;
+            InitializeComponent();
+            button_DeleteUser.Enabled = false;
+            button_UpdateUser.Enabled = false;
         }
 
         private void Address_Load(object sender, EventArgs e)
         {
-            Populate();
-            button_Salveaza.Enabled = false;
-            TextBoxEnabled(false);
-        }
+            // aici trebuie sa pui un if else
+            // nu iti functioneaza in alt mod pentru ca faci populate de 2 ori pe acelais obiect grafic
+            if (_isNewUser)
+            {
+                _user = new User()
+                {
+                    //Id = "fd4a6579-8c13-4841-b530-d475e98318f3",
+                    Id = Utilities.GetNewId().ToString(),
+                    Person = new Person(),
+                    Address = new AddressClass()
+                };
 
-        private void button_Editeaza_Click(object sender, EventArgs e)
-        {
-            button_Salveaza.Enabled = true;
-            button_Editeaza.Enabled = false;
+                // intra aici daca esti new user
+                PopulateNewUser();
+            }
+            else
+            {
+                // programul continua aici
 
-            TextBoxEnabled(true);
-        }
+                // aici nu trebuie sa creezi un nou user...
+                // in metodele Populate(); si PopulateNewUser(); folosesti "_user" ... aici de ce creezi var user?
+                // var user nu mai este valid in momentul cand iesi din functie 
 
-        private void button_Salveaza_Click(object sender, EventArgs e)
-        {
-            _user.Person.Nume = textBox_Nume.Text;
-            _user.Person.Prenume = textBox_Prenume.Text;
-            _user.Person.Sex = comboBox_Sex.SelectedIndex == 0 ? Enums.Sex.Masculin : Enums.Sex.Feminin;
-            _user.Person.CNP = long.Parse(textBox_CNP.Text);
-            _user.Address.Oras = textBox_Oras.Text;
-            _user.Address.Strada = textBox_Strada.Text;
-            _user.Address.Numar = int.Parse(textBox_Numar.Text);
-            _user.Address.Bloc = textBox_Bloc.Text;
-            _user.Address.Scara = textBox_Scara.Text;
-            _user.Address.Etaj = int.Parse(textBox_Etaj.Text);
-            _user.Address.Apartament = int.Parse(textBox_Apartament.Text);
-            _user.Address.Judet = textBox_Judet.Text;
-            _user.Address.CodPostal = int.Parse(textBox_CodPostal.Text);
+                
 
-            _userDatabase.UpdateUser(_user);
-            _userDatabase.SaveDatabase();
-
-            button_Editeaza.Enabled = true;
-            button_Salveaza.Enabled = false;
-
-            TextBoxEnabled(false);
+                // continua si aici --- deci faci inca o data populate 
+                Populate();
+            }
+            textBox_ID.Enabled = false;
         }
 
         private void Populate()
@@ -92,23 +95,83 @@ namespace WinFormCNP
             textBox_CodPostal.Text = $"{_user.Address.CodPostal}";
         }
 
-        private void TextBoxEnabled(bool enabled)
+        private void PopulateNewUser()
         {
-            textBox_ID.Enabled = enabled;
-            textBox_Nume.Enabled = enabled;
-            textBox_Prenume.Enabled = enabled;
-            comboBox_Sex.Enabled = enabled;
-            textBox_CNP.Enabled = enabled;
-            textBox_Oras.Enabled = enabled;
-            textBox_Strada.Enabled = enabled;
-            textBox_Numar.Enabled = enabled;
-            textBox_Bloc.Enabled = enabled;
-            textBox_Scara.Enabled = enabled;
-            textBox_Etaj.Enabled = enabled;
-            textBox_Apartament.Enabled = enabled;
-            textBox_Judet.Enabled = enabled;
-            textBox_CodPostal.Enabled = enabled;
+            comboBox_Sex.DataSource = Enum.GetValues(typeof(Enums.Sex));
+            comboBox_Sex.SelectedIndex = 0;
+
+            textBox_ID.Text = $"{_user.Id}";
+            textBox_Nume.Text = string.Empty;
+            textBox_Prenume.Text = string.Empty;
+            textBox_CNP.Text = string.Empty;
+            textBox_Oras.Text = string.Empty;
+            textBox_Strada.Text = string.Empty;
+            textBox_Numar.Text = string.Empty;
+            textBox_Bloc.Text = string.Empty;
+            textBox_Scara.Text = string.Empty;
+            textBox_Etaj.Text = string.Empty;
+            textBox_Apartament.Text = string.Empty;
+            textBox_Judet.Text = string.Empty;
+            textBox_CodPostal.Text = string.Empty;
         }
+        #region Buttons
+        private void button_AddUser_Click(object sender, EventArgs e)
+        {
+            // inca nu iti este clar chestia cu elemente privat in clasa (adica _user)
+            // _folosesti _user doar cand trebuie sa modifici elementul general pentru al folosi in alte functii
+            // ATENTIE !!! nu trebuie sa faci niciodata _user = new User() pt ca il ascunzi!!!!
+
+            // aici facand "var _user" ascunzi "_user" general
+
+            // de aici incolo daca folosesti "_user" no o sa fie niciodata "_user" general
+            // o sa fie user pe care l-ai definit tu mai sus ... 
+
+            // de exemplu aici "_user.Id" o sa fie null pentru ca nu este _user general ci _user de la linia 124
+            var checkUser = _userDatabase.GetUser(_user.Id);
+
+            // _user.Id deja exista in acest moment in timp ---> nu este adevarat pt ca tu l-ai suprascris
+            if(checkUser == null)// si nu va intra niciodata in bucla asta  ---> pune breakpoint pentru debug
+            {
+                GetUserFromForm();
+                _userDatabase.AddUser(_user);
+                _userDatabase.SaveDatabase();
+                MessageBox.Show("Utilizatorul a fost adaugat cu succes!");
+                return;
+            }
+
+            // GRESIT ... nu poti faci un foreach in userdatabase ....
+            // iar nu ai facut build pana inainte sa paci push
+            // userdatabase nu este IEnumerable ca sa poti sa faci foreach 
+            //daca vrei sa faci un foreach trebuie sa faci _userDatabase.GetUserList()
+            MessageBox.Show("Utilizatorul exista in database");
+        }
+
+        private void button_UpdateUser_Click(object sender, EventArgs e)
+        {
+            GetUserFromForm();
+
+            _userDatabase.UpdateUser(_user);
+            _userDatabase.SaveDatabase();
+
+            button_AddUser.Enabled = true;
+            button_UpdateUser.Enabled = false;
+            MessageBox.Show("Utilizatorul a fost salvat cu succes!");
+        }
+
+        private void button_DeleteUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _userDatabase.DeleteUser(_user.Id);
+                _userDatabase.SaveDatabase();
+                MessageBox.Show("Utilizatorul a fost sters cu succes!");
+            }
+            catch
+            {
+                MessageBox.Show("Utilizatorul nu a fost sters!");
+            }
+        }
+        #endregion
 
         #region Textbox
         private void textBox_Nume_KeyPress(object sender, KeyPressEventArgs e)
@@ -129,9 +192,9 @@ namespace WinFormCNP
             //e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
-        private void textBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
+        private void comboBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = true;
         }
 
         private void textBox_CNP_KeyPress(object sender, KeyPressEventArgs e)
@@ -201,9 +264,23 @@ namespace WinFormCNP
         }
         #endregion
 
-        private void comboBox_Sex_KeyPress(object sender, KeyPressEventArgs e)
+        private void GetUserFromForm()
         {
-            e.Handled = true;
+            _user.Person.Nume = textBox_Nume.Text;
+            _user.Person.Prenume = textBox_Prenume.Text;
+            _user.Person.Sex = comboBox_Sex.SelectedIndex == 0 ? Enums.Sex.Masculin : Enums.Sex.Feminin;
+            _user.Person.CNP = long.TryParse(textBox_CNP.Text, out long rezultat) ? rezultat : 0;
+            _user.Address.Oras = textBox_Oras.Text;
+            _user.Address.Strada = textBox_Strada.Text;
+            _user.Address.Numar = int.TryParse(textBox_Numar.Text, out int resultat) ? resultat : 0;
+            _user.Address.Bloc = textBox_Bloc.Text;
+            _user.Address.Scara = textBox_Scara.Text;
+            _user.Address.Etaj = int.TryParse(textBox_Etaj.Text, out int result) ? result : 0;
+            _user.Address.Apartament = int.TryParse(textBox_Apartament.Text, out int res) ? res : 0;
+            _user.Address.Judet = textBox_Judet.Text;
+            _user.Address.CodPostal = int.TryParse(textBox_CodPostal.Text, out int r) ? r : 0;
+
+            _user.DisplayValue = $"{_user.Person.Nume} {_user.Person.Prenume}";
         }
     }
 }
