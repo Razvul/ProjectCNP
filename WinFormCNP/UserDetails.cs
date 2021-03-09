@@ -42,6 +42,7 @@ namespace WinFormCNP
             {
                 _user = new User()
                 {
+                    //Id = "fd4a6579-8c13-4841-b530-d475e98318f3",
                     Id = Utilities.GetNewId().ToString(),
                     Person = new Person(),
                     Address = new AddressClass()
@@ -121,63 +122,33 @@ namespace WinFormCNP
             // ATENTIE !!! nu trebuie sa faci niciodata _user = new User() pt ca il ascunzi!!!!
 
             // aici facand "var _user" ascunzi "_user" general
-            var _user = new User();
 
             // de aici incolo daca folosesti "_user" no o sa fie niciodata "_user" general
             // o sa fie user pe care l-ai definit tu mai sus ... 
 
-
             // de exemplu aici "_user.Id" o sa fie null pentru ca nu este _user general ci _user de la linia 124
             var checkUser = _userDatabase.GetUser(_user.Id);
 
-
-
-
             // _user.Id deja exista in acest moment in timp ---> nu este adevarat pt ca tu l-ai suprascris
-            if (checkUser == null)// si nu va intra niciodata in bucla asta  ---> pune breakpoint pentru debug
+            if(checkUser == null)// si nu va intra niciodata in bucla asta  ---> pune breakpoint pentru debug
             {
+                GetUserFromForm();
                 _userDatabase.AddUser(_user);
                 _userDatabase.SaveDatabase();
                 MessageBox.Show("Utilizatorul a fost adaugat cu succes!");
                 return;
             }
 
-
-
             // GRESIT ... nu poti faci un foreach in userdatabase ....
             // iar nu ai facut build pana inainte sa paci push
             // userdatabase nu este IEnumerable ca sa poti sa faci foreach 
             //daca vrei sa faci un foreach trebuie sa faci _userDatabase.GetUserList()
-
-
-            //foreach (var user in _userDatabase)
-            //{
-            //    if(_user.Id==user.Id)
-            //    {
-
-            //    }
-            //}
-
-
-
             MessageBox.Show("Utilizatorul exista in database");
         }
 
         private void button_UpdateUser_Click(object sender, EventArgs e)
         {
-            _user.Person.Nume = textBox_Nume.Text;
-            _user.Person.Prenume = textBox_Prenume.Text;
-            _user.Person.Sex = comboBox_Sex.SelectedIndex == 0 ? Enums.Sex.Masculin : Enums.Sex.Feminin;
-            _user.Person.CNP = long.Parse(textBox_CNP.Text);
-            _user.Address.Oras = textBox_Oras.Text;
-            _user.Address.Strada = textBox_Strada.Text;
-            _user.Address.Numar = int.Parse(textBox_Numar.Text);
-            _user.Address.Bloc = textBox_Bloc.Text;
-            _user.Address.Scara = textBox_Scara.Text;
-            _user.Address.Etaj = int.Parse(textBox_Etaj.Text);
-            _user.Address.Apartament = int.Parse(textBox_Apartament.Text);
-            _user.Address.Judet = textBox_Judet.Text;
-            _user.Address.CodPostal = int.Parse(textBox_CodPostal.Text);
+            GetUserFromForm();
 
             _userDatabase.UpdateUser(_user);
             _userDatabase.SaveDatabase();
@@ -292,5 +263,24 @@ namespace WinFormCNP
             //e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
         #endregion
+
+        private void GetUserFromForm()
+        {
+            _user.Person.Nume = textBox_Nume.Text;
+            _user.Person.Prenume = textBox_Prenume.Text;
+            _user.Person.Sex = comboBox_Sex.SelectedIndex == 0 ? Enums.Sex.Masculin : Enums.Sex.Feminin;
+            _user.Person.CNP = long.TryParse(textBox_CNP.Text, out long rezultat) ? rezultat : 0;
+            _user.Address.Oras = textBox_Oras.Text;
+            _user.Address.Strada = textBox_Strada.Text;
+            _user.Address.Numar = int.TryParse(textBox_Numar.Text, out int resultat) ? resultat : 0;
+            _user.Address.Bloc = textBox_Bloc.Text;
+            _user.Address.Scara = textBox_Scara.Text;
+            _user.Address.Etaj = int.TryParse(textBox_Etaj.Text, out int result) ? result : 0;
+            _user.Address.Apartament = int.TryParse(textBox_Apartament.Text, out int res) ? res : 0;
+            _user.Address.Judet = textBox_Judet.Text;
+            _user.Address.CodPostal = int.TryParse(textBox_CodPostal.Text, out int r) ? r : 0;
+
+            _user.DisplayValue = $"{_user.Person.Nume} {_user.Person.Prenume}";
+        }
     }
 }
