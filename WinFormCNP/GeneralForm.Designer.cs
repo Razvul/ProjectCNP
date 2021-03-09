@@ -96,6 +96,7 @@ namespace WinFormCNP
             this.button_Cauta.TabIndex = 6;
             this.button_Cauta.Text = "Cauta";
             this.button_Cauta.UseVisualStyleBackColor = true;
+            this.button_Cauta.Click += new System.EventHandler(this.button_Cauta_Click);
             // 
             // GeneralForm
             // 

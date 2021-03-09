@@ -23,6 +23,8 @@ namespace WinFormCNP
             InitializeComponent();
             Populate();
         }
+
+        #region Butoane
         private void button_CNP_Click(object sender, EventArgs e)
         {
             var x = new GenerateCNPForm();
@@ -41,6 +43,12 @@ namespace WinFormCNP
             var x = new UserDetails();
             x.Show();
         }
+
+        private void button_Cauta_Click(object sender, EventArgs e)
+        {
+            _userDatabase.FindUser(textBox_Cauta.Text);
+        }
+        #endregion
 
         private void Populate()
         {

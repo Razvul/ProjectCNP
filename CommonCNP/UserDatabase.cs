@@ -96,6 +96,19 @@ namespace CommonCNP
             return _userDatabase.SingleOrDefault(d => d.Id == id);
         }
 
+        public bool FindUser(string nume)
+        {
+            var cuvant = _userDatabase.SingleOrDefault(d => d.Person.Nume == nume);
+            if (nume == cuvant.Person.Nume)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void SaveDatabase()
         {
             var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
