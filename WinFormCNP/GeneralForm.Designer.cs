@@ -33,6 +33,8 @@ namespace WinFormCNP
             this.button_Detalii = new System.Windows.Forms.Button();
             this.listBox_Users = new System.Windows.Forms.ListBox();
             this.button_AddUser = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button_Cauta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_CNP
@@ -78,11 +80,30 @@ namespace WinFormCNP
             this.button_AddUser.UseVisualStyleBackColor = true;
             this.button_AddUser.Click += new System.EventHandler(this.button_AddUser_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(75, 182);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
+            // 
+            // button_Cauta
+            // 
+            this.button_Cauta.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button_Cauta.Location = new System.Drawing.Point(227, 182);
+            this.button_Cauta.Name = "button_Cauta";
+            this.button_Cauta.Size = new System.Drawing.Size(75, 23);
+            this.button_Cauta.TabIndex = 6;
+            this.button_Cauta.Text = "Cauta";
+            this.button_Cauta.UseVisualStyleBackColor = true;
+            // 
             // GeneralForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.button_Cauta);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button_AddUser);
             this.Controls.Add(this.listBox_Users);
             this.Controls.Add(this.button_Detalii);
@@ -93,6 +114,7 @@ namespace WinFormCNP
             this.Name = "GeneralForm";
             this.Text = "GeneralForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -102,5 +124,7 @@ namespace WinFormCNP
         private System.Windows.Forms.Button button_Detalii;
         private System.Windows.Forms.ListBox listBox_Users;
         private System.Windows.Forms.Button button_AddUser;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button_Cauta;
     }
 }
