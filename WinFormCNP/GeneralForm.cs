@@ -46,7 +46,19 @@ namespace WinFormCNP
 
         private void button_Cauta_Click(object sender, EventArgs e)
         {
-            _userDatabase.FindUser(textBox_Cauta.Text);
+            var ListaNume =_userDatabase.FindUser(textBox_Cauta.Text);
+            listBox_Users.Items.Clear();
+
+            foreach (var user in ListaNume)
+            {
+                listBox_Users.Items.Add(user);
+            }
+
+            if(listBox_Users.Items.Count == 0)
+            {
+                MessageBox.Show($"Nu s-a gasit niciun utilizatoru cu numele {textBox_Cauta.Text}");
+            }
+            listBox_Users.DisplayMember = "DisplayValue";
         }
         #endregion
 
