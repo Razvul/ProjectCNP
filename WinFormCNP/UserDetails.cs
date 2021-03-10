@@ -73,16 +73,16 @@ namespace WinFormCNP
             textBox_ID.Text = $"{_user.Id}";
             textBox_Nume.Text = $"{_user.Person.Nume}";
             textBox_Prenume.Text = $"{_user.Person.Prenume}";
-            textBox_CNP.Text = $"{_user.Person.CNP}";
+            textBox_CNP.Text = $"{_user.Person.CNP}" == "0" ? "" : $"{_user.Person.CNP}";
             textBox_Oras.Text = $"{_user.Address.Oras}";
             textBox_Strada.Text = $"{_user.Address.Strada}";
-            textBox_Numar.Text = $"{_user.Address.Numar}";
+            textBox_Numar.Text = $"{_user.Address.Numar}" == "0" ? "" : $"{_user.Address.Numar}";
             textBox_Bloc.Text = $"{_user.Address.Bloc}";
             textBox_Scara.Text = $"{_user.Address.Scara}";
-            textBox_Etaj.Text = $"{_user.Address.Etaj}";
-            textBox_Apartament.Text = $"{_user.Address.Apartament}";
+            textBox_Etaj.Text = $"{_user.Address.Etaj}" == "0" ? "" : $"{_user.Address.Etaj}";
+            textBox_Apartament.Text = $"{_user.Address.Apartament}" == "0" ? "" : $"{_user.Address.Apartament}";
             textBox_Judet.Text = $"{_user.Address.Judet}";
-            textBox_CodPostal.Text = $"{_user.Address.CodPostal}";
+            textBox_CodPostal.Text = $"{_user.Address.CodPostal}" == "0" ? "" : $"{_user.Address.CodPostal}";
         }
 
         private void PopulateNewUser()
