@@ -96,6 +96,22 @@ namespace CommonCNP
             return _userDatabase.SingleOrDefault(d => d.Id == id);
         }
 
+        public List<User> FindUser(string nume)
+        {
+            //var cuvant = _userDatabase.SingleOrDefault(d => d.Person.Nume == nume);
+            var ListaCuAcelasiNume = new List<User>();
+
+            foreach (var user in _userDatabase)
+            {
+                if (user.Person.Nume.ToLower() == nume.ToLower() || user.Person.Prenume.ToLower() == nume.ToLower())
+                {
+                    ListaCuAcelasiNume.Add(user);
+                }
+            }
+
+            return ListaCuAcelasiNume;
+        }
+
         public void SaveDatabase()
         {
             var x = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;

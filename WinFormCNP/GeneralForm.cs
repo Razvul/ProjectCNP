@@ -23,6 +23,8 @@ namespace WinFormCNP
             InitializeComponent();
             Populate();
         }
+
+        #region Butoane
         private void button_CNP_Click(object sender, EventArgs e)
         {
             var x = new GenerateCNPForm();
@@ -41,6 +43,26 @@ namespace WinFormCNP
             var x = new UserDetails();
             x.Show();
         }
+
+        private void button_Cauta_Click(object sender, EventArgs e)
+        {
+            var ListaNume = _userDatabase.FindUser(textBox_Cauta.Text);
+
+            if (ListaNume.Count == 0)
+            {
+                MessageBox.Show($"Nu s-a gasit niciun utilizatoru cu numele {textBox_Cauta.Text}");
+            }
+            else
+            {
+                listBox_Users.Items.Clear();
+                foreach (var user in ListaNume)
+                {
+                    listBox_Users.Items.Add(user);
+                    listBox_Users.DisplayMember = "DisplayValue";
+                }
+            }
+        }
+        #endregion
 
         private void Populate()
         {
