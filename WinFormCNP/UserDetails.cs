@@ -160,16 +160,28 @@ namespace WinFormCNP
 
         private void button_DeleteUser_Click(object sender, EventArgs e)
         {
-            try
+            MessageBox.Show($"Sigur vrei sa stergi {_user.DisplayValue}", "Stergere utilizator", MessageBoxButtons.YesNo);
+
+            if (MessageBoxButtons.YesNo == )
             {
-                _userDatabase.DeleteUser(_user.Id);
-                _userDatabase.SaveDatabase();
-                MessageBox.Show("Utilizatorul a fost sters cu succes!");
+                try
+                {
+                    _userDatabase.DeleteUser(_user.Id);
+                    _userDatabase.SaveDatabase();
+                    MessageBox.Show("Utilizatorul a fost sters cu succes!");
+                }
+                catch
+                {
+                    MessageBox.Show("Utilizatorul nu a fost sters!");
+                }
             }
-            catch
+            else
             {
-                MessageBox.Show("Utilizatorul nu a fost sters!");
+                
             }
+
+            return;
+            
         }
         #endregion
 
