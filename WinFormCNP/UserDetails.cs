@@ -23,45 +23,35 @@ namespace WinFormCNP
         {
             InitializeComponent();
             _user = user;
-            button_AddUser.Enabled = false;
+            //button_AddUser.Enabled = false;
+            button_AddUser.Hide();
         }
 
         public UserDetails()
         {
             _isNewUser = true;
             InitializeComponent();
-            button_DeleteUser.Enabled = false;
-            button_UpdateUser.Enabled = false;
+            //button_DeleteUser.Enabled = false;
+            //button_UpdateUser.Enabled = false;
+            button_DeleteUser.Hide();
+            button_UpdateUser.Hide();
         }
 
         private void Address_Load(object sender, EventArgs e)
         {
-            // aici trebuie sa pui un if else
-            // nu iti functioneaza in alt mod pentru ca faci populate de 2 ori pe acelais obiect grafic
             if (_isNewUser)
             {
                 _user = new User()
                 {
-                    //Id = "fd4a6579-8c13-4841-b530-d475e98318f3",
                     Id = Utilities.GetNewId().ToString(),
                     Person = new Person(),
                     Address = new AddressClass()
                 };
 
-                // intra aici daca esti new user
                 PopulateNewUser();
             }
             else
             {
-                // programul continua aici
-
-                // aici nu trebuie sa creezi un nou user...
-                // in metodele Populate(); si PopulateNewUser(); folosesti "_user" ... aici de ce creezi var user?
-                // var user nu mai este valid in momentul cand iesi din functie 
-
-                
-
-                // continua si aici --- deci faci inca o data populate 
                 Populate();
             }
             textBox_ID.Enabled = false;
@@ -117,20 +107,9 @@ namespace WinFormCNP
         #region Buttons
         private void button_AddUser_Click(object sender, EventArgs e)
         {
-            // inca nu iti este clar chestia cu elemente privat in clasa (adica _user)
-            // _folosesti _user doar cand trebuie sa modifici elementul general pentru al folosi in alte functii
-            // ATENTIE !!! nu trebuie sa faci niciodata _user = new User() pt ca il ascunzi!!!!
-
-            // aici facand "var _user" ascunzi "_user" general
-
-            // de aici incolo daca folosesti "_user" no o sa fie niciodata "_user" general
-            // o sa fie user pe care l-ai definit tu mai sus ... 
-
-            // de exemplu aici "_user.Id" o sa fie null pentru ca nu este _user general ci _user de la linia 124
             var checkUser = _userDatabase.GetUser(_user.Id);
 
-            // _user.Id deja exista in acest moment in timp ---> nu este adevarat pt ca tu l-ai suprascris
-            if(checkUser == null)// si nu va intra niciodata in bucla asta  ---> pune breakpoint pentru debug
+            if(checkUser == null)
             {
                 GetUserFromForm();
                 _userDatabase.AddUser(_user);
@@ -138,11 +117,6 @@ namespace WinFormCNP
                 MessageBox.Show("Utilizatorul a fost adaugat cu succes!");
                 return;
             }
-
-            // GRESIT ... nu poti faci un foreach in userdatabase ....
-            // iar nu ai facut build pana inainte sa paci push
-            // userdatabase nu este IEnumerable ca sa poti sa faci foreach 
-            //daca vrei sa faci un foreach trebuie sa faci _userDatabase.GetUserList()
             MessageBox.Show("Utilizatorul exista in database");
         }
 
@@ -162,23 +136,23 @@ namespace WinFormCNP
         {
             MessageBox.Show($"Sigur vrei sa stergi {_user.DisplayValue}", "Stergere utilizator", MessageBoxButtons.YesNo);
 
-            if (MessageBoxButtons.YesNo == )
-            {
-                try
-                {
-                    _userDatabase.DeleteUser(_user.Id);
-                    _userDatabase.SaveDatabase();
-                    MessageBox.Show("Utilizatorul a fost sters cu succes!");
-                }
-                catch
-                {
-                    MessageBox.Show("Utilizatorul nu a fost sters!");
-                }
-            }
-            else
-            {
+            //if (MessageBoxButtons.YesNo == )
+            //{
+            //    try
+            //    {
+            //        _userDatabase.DeleteUser(_user.Id);
+            //        _userDatabase.SaveDatabase();
+            //        MessageBox.Show("Utilizatorul a fost sters cu succes!");
+            //    }
+            //    catch
+            //    {
+            //        MessageBox.Show("Utilizatorul nu a fost sters!");
+            //    }
+            //}
+            //else
+            //{
                 
-            }
+            //}
 
             return;
             
