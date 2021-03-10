@@ -35,6 +35,7 @@ namespace WinFormCNP
             this.button_AddUser = new System.Windows.Forms.Button();
             this.textBox_Cauta = new System.Windows.Forms.TextBox();
             this.button_Cauta = new System.Windows.Forms.Button();
+            this.button_Refresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_CNP
@@ -98,11 +99,23 @@ namespace WinFormCNP
             this.button_Cauta.UseVisualStyleBackColor = true;
             this.button_Cauta.Click += new System.EventHandler(this.button_Cauta_Click);
             // 
+            // button_Refresh
+            // 
+            this.button_Refresh.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_Refresh.Location = new System.Drawing.Point(387, 182);
+            this.button_Refresh.Name = "button_Refresh";
+            this.button_Refresh.Size = new System.Drawing.Size(75, 23);
+            this.button_Refresh.TabIndex = 7;
+            this.button_Refresh.Text = "Refresh";
+            this.button_Refresh.UseVisualStyleBackColor = true;
+            this.button_Refresh.Click += new System.EventHandler(this.button_Refresh_Click);
+            // 
             // GeneralForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.button_Refresh);
             this.Controls.Add(this.button_Cauta);
             this.Controls.Add(this.textBox_Cauta);
             this.Controls.Add(this.button_AddUser);
@@ -127,5 +140,6 @@ namespace WinFormCNP
         private System.Windows.Forms.Button button_AddUser;
         private System.Windows.Forms.TextBox textBox_Cauta;
         private System.Windows.Forms.Button button_Cauta;
+        private System.Windows.Forms.Button button_Refresh;
     }
 }

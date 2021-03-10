@@ -62,6 +62,12 @@ namespace WinFormCNP
                 }
             }
         }
+
+        private void button_Refresh_Click(object sender, EventArgs e)
+        {
+            listBox_Users.Items.Clear();
+            Populate();
+        }
         #endregion
 
         private void Populate()
@@ -73,6 +79,6 @@ namespace WinFormCNP
 
             listBox_Users.DisplayMember = "DisplayValue";
             listBox_Users.SelectedItem = listBox_Users.Items[0];
-        }
+        }        
     }
 }

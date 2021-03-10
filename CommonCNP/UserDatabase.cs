@@ -98,7 +98,6 @@ namespace CommonCNP
 
         public List<User> FindUser(string nume)
         {
-            //var cuvant = _userDatabase.SingleOrDefault(d => d.Person.Nume == nume);
             var ListaCuAcelasiNume = new List<User>();
 
             foreach (var user in _userDatabase)
