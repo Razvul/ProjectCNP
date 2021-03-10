@@ -107,29 +107,37 @@ namespace WinFormCNP
         #region Buttons
         private void button_AddUser_Click(object sender, EventArgs e)
         {
-            var checkUser = _userDatabase.GetUser(_user.Id);
-
-            if(checkUser == null)
+            if (_user.DisplayValue != null)
             {
-                GetUserFromForm();
-                _userDatabase.AddUser(_user);
-                _userDatabase.SaveDatabase();
-                MessageBox.Show("Utilizatorul a fost adaugat cu succes!");
+                var checkUser = _userDatabase.GetUser(_user.Id);
+
+                if (checkUser == null)
+                {
+                    GetUserFromForm();
+                    _userDatabase.AddUser(_user);
+                    _userDatabase.SaveDatabase();
+                    MessageBox.Show("Utilizatorul a fost adaugat cu succes!");
+                    return;
+                }
+                MessageBox.Show("Utilizatorul exista in database");
+            }
+            else
+            {
+                MessageBox.Show("N-ai scris numele complet!");
                 return;
             }
-            MessageBox.Show("Utilizatorul exista in database");
         }
 
         private void button_UpdateUser_Click(object sender, EventArgs e)
         {
-            GetUserFromForm();
+                GetUserFromForm();
 
-            _userDatabase.UpdateUser(_user);
-            _userDatabase.SaveDatabase();
+                _userDatabase.UpdateUser(_user);
+                _userDatabase.SaveDatabase();
 
-            button_AddUser.Enabled = true;
-            button_UpdateUser.Enabled = false;
-            MessageBox.Show("Utilizatorul a fost salvat cu succes!");
+                button_AddUser.Enabled = true;
+                button_UpdateUser.Enabled = false;
+                MessageBox.Show("Utilizatorul a fost salvat cu succes!");            
         }
 
         private void button_DeleteUser_Click(object sender, EventArgs e)
