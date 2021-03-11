@@ -117,6 +117,7 @@ namespace WinFormCNP
                     _userDatabase.AddUser(_user);
                     _userDatabase.SaveDatabase();
                     MessageBox.Show("Utilizatorul a fost adaugat cu succes!");
+                    this.Close();
                     return;
                 }
                 MessageBox.Show("Utilizatorul exista in database");
@@ -150,6 +151,7 @@ namespace WinFormCNP
                     _userDatabase.DeleteUser(_user.Id);
                     _userDatabase.SaveDatabase();
                     MessageBox.Show("Utilizatorul a fost sters cu succes!");
+                    this.Close();
                 }
                 catch
                 {
