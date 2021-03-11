@@ -68,9 +68,9 @@ namespace WinFormCNP
             this.label_nume.Location = new System.Drawing.Point(11, 64);
             this.label_nume.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_nume.Name = "label_nume";
-            this.label_nume.Size = new System.Drawing.Size(35, 13);
+            this.label_nume.Size = new System.Drawing.Size(39, 13);
             this.label_nume.TabIndex = 1;
-            this.label_nume.Text = "Nume";
+            this.label_nume.Text = "Nume*";
             // 
             // label2
             // 
@@ -159,9 +159,9 @@ namespace WinFormCNP
             this.label_Prenume.AutoSize = true;
             this.label_Prenume.Location = new System.Drawing.Point(11, 91);
             this.label_Prenume.Name = "label_Prenume";
-            this.label_Prenume.Size = new System.Drawing.Size(49, 13);
+            this.label_Prenume.Size = new System.Drawing.Size(53, 13);
             this.label_Prenume.TabIndex = 24;
-            this.label_Prenume.Text = "Prenume";
+            this.label_Prenume.Text = "Prenume*";
             // 
             // label_Sex
             // 
@@ -330,7 +330,7 @@ namespace WinFormCNP
             // button_DeleteUser
             // 
             this.button_DeleteUser.Location = new System.Drawing.Point(191, 468);
-            this.button_DeleteUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_DeleteUser.Margin = new System.Windows.Forms.Padding(2);
             this.button_DeleteUser.Name = "button_DeleteUser";
             this.button_DeleteUser.Size = new System.Drawing.Size(80, 23);
             this.button_DeleteUser.TabIndex = 48;

@@ -107,7 +107,7 @@ namespace WinFormCNP
         #region Buttons
         private void button_AddUser_Click(object sender, EventArgs e)
         {
-            if (_user.DisplayValue != null)
+            if (_user.Person.Nume == null && _user.Person.Prenume == null)
             {
                 var checkUser = _userDatabase.GetUser(_user.Id);
 
@@ -123,7 +123,7 @@ namespace WinFormCNP
             }
             else
             {
-                MessageBox.Show("N-ai scris numele complet!");
+                MessageBox.Show("N-ai completat spatiile pentru nume si prenume!");
                 return;
             }
         }
