@@ -136,8 +136,7 @@ namespace WinFormCNP
                 _userDatabase.SaveDatabase();
 
                 button_AddUser.Enabled = true;
-                button_UpdateUser.Enabled = false;
-                MessageBox.Show("Utilizatorul a fost salvat cu succes!");            
+                MessageBox.Show("Utilizatorul a fost salvat cu succes!");
         }
 
         private void button_DeleteUser_Click(object sender, EventArgs e)
