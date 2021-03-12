@@ -89,7 +89,6 @@ namespace WinFormCNP
 
         private void ClearLabels()
         {
-            label_CNP_Result.Text = string.Empty;
             label_Verifica_CNP.Text = string.Empty;
         }
 
@@ -140,7 +139,7 @@ namespace WinFormCNP
             };
             Om.CC = CommonCNP.Utilities.GetCC(Om.SEX,Om.AN,Om.LUNA,Om.ZI,Om.JUDET,Om.NNN);
 
-            label_CNP_Result.Text = GetCNP(Om.SEX,Om.AN,Om.LUNA,Om.ZI,Om.JUDET,Om.NNN,Om.CC);
+            textBox_CNP_Result.Text = GetCNP(Om.SEX, Om.AN, Om.LUNA, Om.ZI, Om.JUDET, Om.NNN, Om.CC);
         }
 
         private void button_Verifica_Click(object sender, EventArgs e)

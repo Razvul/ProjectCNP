@@ -38,13 +38,13 @@ namespace WinFormCNP
             this.label_An = new System.Windows.Forms.Label();
             this.comboBox_An = new System.Windows.Forms.ComboBox();
             this.label_CNP = new System.Windows.Forms.Label();
-            this.label_CNP_Result = new System.Windows.Forms.Label();
             this.label_Sex = new System.Windows.Forms.Label();
             this.comboBox_Sex = new System.Windows.Forms.ComboBox();
             this.button_Generate_CNP = new System.Windows.Forms.Button();
             this.button_Verifica = new System.Windows.Forms.Button();
             this.label_Verifica_CNP = new System.Windows.Forms.Label();
             this.textBox_VerificaCNP = new System.Windows.Forms.TextBox();
+            this.textBox_CNP_Result = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // comboBox_Judete
@@ -129,15 +129,6 @@ namespace WinFormCNP
             this.label_CNP.TabIndex = 8;
             this.label_CNP.Text = "CNP";
             // 
-            // label_CNP_Result
-            // 
-            this.label_CNP_Result.AutoSize = true;
-            this.label_CNP_Result.Location = new System.Drawing.Point(12, 287);
-            this.label_CNP_Result.Name = "label_CNP_Result";
-            this.label_CNP_Result.Size = new System.Drawing.Size(62, 13);
-            this.label_CNP_Result.TabIndex = 9;
-            this.label_CNP_Result.Text = "CNP Result";
-            // 
             // label_Sex
             // 
             this.label_Sex.AutoSize = true;
@@ -194,18 +185,25 @@ namespace WinFormCNP
             this.textBox_VerificaCNP.TabIndex = 16;
             this.textBox_VerificaCNP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_VerificaCNP_KeyPress);
             // 
-            // GenerateCNP
+            // textBox_CNP_Result
+            // 
+            this.textBox_CNP_Result.Location = new System.Drawing.Point(15, 290);
+            this.textBox_CNP_Result.Name = "textBox_CNP_Result";
+            this.textBox_CNP_Result.Size = new System.Drawing.Size(100, 20);
+            this.textBox_CNP_Result.TabIndex = 17;
+            // 
+            // GenerateCNPForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 336);
+            this.Controls.Add(this.textBox_CNP_Result);
             this.Controls.Add(this.textBox_VerificaCNP);
             this.Controls.Add(this.label_Verifica_CNP);
             this.Controls.Add(this.button_Verifica);
             this.Controls.Add(this.button_Generate_CNP);
             this.Controls.Add(this.comboBox_Sex);
             this.Controls.Add(this.label_Sex);
-            this.Controls.Add(this.label_CNP_Result);
             this.Controls.Add(this.label_CNP);
             this.Controls.Add(this.comboBox_An);
             this.Controls.Add(this.label_An);
@@ -217,7 +215,7 @@ namespace WinFormCNP
             this.Controls.Add(this.comboBox_Judete);
             this.MaximumSize = new System.Drawing.Size(1000, 500);
             this.MinimumSize = new System.Drawing.Size(775, 375);
-            this.Name = "GenerateCNP";
+            this.Name = "GenerateCNPForm";
             this.Text = "GenerateCNP";
             this.Load += new System.EventHandler(this.CNPForm_Load);
             this.ResumeLayout(false);
@@ -236,13 +234,13 @@ namespace WinFormCNP
         private System.Windows.Forms.Label label_An;
         private System.Windows.Forms.ComboBox comboBox_An;
         private System.Windows.Forms.Label label_CNP;
-        private System.Windows.Forms.Label label_CNP_Result;
         private System.Windows.Forms.Label label_Sex;
         private System.Windows.Forms.ComboBox comboBox_Sex;
         private System.Windows.Forms.Button button_Generate_CNP;
         private System.Windows.Forms.Button button_Verifica;
         private System.Windows.Forms.Label label_Verifica_CNP;
         private System.Windows.Forms.TextBox textBox_VerificaCNP;
+        private System.Windows.Forms.TextBox textBox_CNP_Result;
     }
 }
 

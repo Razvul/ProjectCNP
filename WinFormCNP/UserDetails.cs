@@ -107,7 +107,7 @@ namespace WinFormCNP
         #region Buttons
         private void button_AddUser_Click(object sender, EventArgs e)
         {
-            if (_user.Person.Nume == null && _user.Person.Prenume == null)
+            if (!string.IsNullOrEmpty(textBox_Nume.Text) && !string.IsNullOrEmpty(textBox_Prenume.Text))
             {
                 var checkUser = _userDatabase.GetUser(_user.Id);
 
@@ -120,11 +120,11 @@ namespace WinFormCNP
                     this.Close();
                     return;
                 }
-                MessageBox.Show("Utilizatorul exista in database");
+                MessageBox.Show("Utilizatorul exista in database"); 
             }
             else
             {
-                MessageBox.Show("N-ai completat spatiile pentru nume si prenume!");
+                MessageBox.Show("N-ai completat spatiile pentru Nume si Prenume!");
                 return;
             }
         }
