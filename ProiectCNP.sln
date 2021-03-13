@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCNP", "ConsoleCNP\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormCNP", "WinFormCNP\WinFormCNP.csproj", "{240F93EE-5188-41AE-87F8-EBF5CA7CEA47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCNP", "WpfCNP\WpfCNP.csproj", "{91CF486D-EACB-4ACD-AC84-6B558FE4F613}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{240F93EE-5188-41AE-87F8-EBF5CA7CEA47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{240F93EE-5188-41AE-87F8-EBF5CA7CEA47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{240F93EE-5188-41AE-87F8-EBF5CA7CEA47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91CF486D-EACB-4ACD-AC84-6B558FE4F613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91CF486D-EACB-4ACD-AC84-6B558FE4F613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91CF486D-EACB-4ACD-AC84-6B558FE4F613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91CF486D-EACB-4ACD-AC84-6B558FE4F613}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
