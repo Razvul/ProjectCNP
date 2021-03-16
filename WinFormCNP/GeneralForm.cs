@@ -66,7 +66,9 @@ namespace WinFormCNP
         private void button_Refresh_Click(object sender, EventArgs e)
         {
             listBox_Users.Items.Clear();
+            listBox_Users.Sorted = true;
             Populate();
+
         }
         #endregion
 
@@ -79,6 +81,7 @@ namespace WinFormCNP
 
             listBox_Users.DisplayMember = "DisplayValue";
             listBox_Users.SelectedItem = listBox_Users.Items[0];
-        }        
+            listBox_Users.Sorted = true;
+        }
     }
 }

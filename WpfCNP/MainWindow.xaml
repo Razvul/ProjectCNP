@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Button
+            x:Name="Buton1"
+            Grid.Column="1"
+            Content="Buton1"
+            Height="50"
+            Width="60"
+            HorizontalAlignment="Center">
+        </Button>
     </Grid>
 </Window>

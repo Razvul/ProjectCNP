@@ -75,7 +75,7 @@ namespace WinFormCNP
             this.button_AddUser.ForeColor = System.Drawing.SystemColors.GrayText;
             this.button_AddUser.Location = new System.Drawing.Point(227, 124);
             this.button_AddUser.Name = "button_AddUser";
-            this.button_AddUser.Size = new System.Drawing.Size(75, 23);
+            this.button_AddUser.Size = new System.Drawing.Size(117, 23);
             this.button_AddUser.TabIndex = 4;
             this.button_AddUser.Text = "AddUser";
             this.button_AddUser.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@ namespace WinFormCNP
             // 
             this.textBox_Cauta.Location = new System.Drawing.Point(75, 182);
             this.textBox_Cauta.Name = "textBox_Cauta";
-            this.textBox_Cauta.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Cauta.Size = new System.Drawing.Size(125, 20);
             this.textBox_Cauta.TabIndex = 5;
             // 
             // button_Cauta
@@ -93,7 +93,7 @@ namespace WinFormCNP
             this.button_Cauta.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button_Cauta.Location = new System.Drawing.Point(227, 182);
             this.button_Cauta.Name = "button_Cauta";
-            this.button_Cauta.Size = new System.Drawing.Size(75, 23);
+            this.button_Cauta.Size = new System.Drawing.Size(86, 42);
             this.button_Cauta.TabIndex = 6;
             this.button_Cauta.Text = "Cauta";
             this.button_Cauta.UseVisualStyleBackColor = true;
@@ -102,9 +102,9 @@ namespace WinFormCNP
             // button_Refresh
             // 
             this.button_Refresh.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_Refresh.Location = new System.Drawing.Point(387, 182);
+            this.button_Refresh.Location = new System.Drawing.Point(387, 165);
             this.button_Refresh.Name = "button_Refresh";
-            this.button_Refresh.Size = new System.Drawing.Size(75, 23);
+            this.button_Refresh.Size = new System.Drawing.Size(91, 40);
             this.button_Refresh.TabIndex = 7;
             this.button_Refresh.Text = "Refresh";
             this.button_Refresh.UseVisualStyleBackColor = true;
