@@ -32,7 +32,8 @@ namespace WpfCNP
 
         private void Buton_CNP_Click(object sender, RoutedEventArgs e)
         {
-
+            var x = new GenerateCNP();
+            x.Show();
         }
     }
 }
