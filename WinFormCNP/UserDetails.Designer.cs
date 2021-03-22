@@ -60,6 +60,7 @@ namespace WinFormCNP
             this.label_Id = new System.Windows.Forms.Label();
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.button_DeleteUser = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // label_nume
@@ -338,11 +339,21 @@ namespace WinFormCNP
             this.button_DeleteUser.UseVisualStyleBackColor = true;
             this.button_DeleteUser.Click += new System.EventHandler(this.button_DeleteUser_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(297, 64);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 49;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // UserDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 553);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button_DeleteUser);
             this.Controls.Add(this.textBox_ID);
             this.Controls.Add(this.label_Id);
@@ -416,5 +427,6 @@ namespace WinFormCNP
         private System.Windows.Forms.Label label_Id;
         private System.Windows.Forms.TextBox textBox_ID;
         private System.Windows.Forms.Button button_DeleteUser;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
