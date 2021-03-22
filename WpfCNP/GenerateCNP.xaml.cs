@@ -10,29 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CommonCNP;
-using Newtonsoft.Json;
 
 namespace WpfCNP
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for GenerateCNP.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GenerateCNP : Window
     {
-        private UserDatabase _userDatabase = UserDatabase.GetInstance();
-
-
-        public MainWindow()
+        public GenerateCNP()
         {
             InitializeComponent();
-        }
-
-        private void Buton_CNP_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
