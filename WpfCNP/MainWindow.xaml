@@ -20,7 +20,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Button
-            x:Name="Buton_Detalii" Content="Detalii" Width="74" Margin="17,29,0,22" Grid.Column="2"/>
+            x:Name="Buton_Detalii" Content="Detalii" Width="74" Margin="17,29,0,22" Grid.Column="2" Click="Buton_Detalii_Click"/>
         <Button 
             x:Name="Buton_CNP" Content="CNP" Grid.Column="1" Margin="29,29,22,0" VerticalAlignment="Top" Height="25" Click="Buton_CNP_Click"/>
         <Button

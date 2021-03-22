@@ -29,8 +29,8 @@
         <Button x:Name="Button_Creaza_CNP" Content="Creaza CNP" HorizontalAlignment="Left" Margin="112.286,327,0,0" VerticalAlignment="Top" Width="89" RenderTransformOrigin="0.225,0.6" Height="30" FontSize="14" Grid.Column="1"/>
         <Button x:Name="Button_Verifica_CNP" Content="Verifica CNP" HorizontalAlignment="Left" Margin="583.286,327,0,0" VerticalAlignment="Top" Width="89" RenderTransformOrigin="0.225,0.6" Height="30" FontSize="14" Grid.Column="1"/>
 
-        <TextBox x:Name="TextBox_Creaza_CNP" HorizontalAlignment="Left" Height="23" Margin="419.286,334,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontSize="16" Grid.Column="1"/>
-        <TextBox x:Name="TextBox_Verifica_CNP" HorizontalAlignment="Left" Height="23" Margin="32,334,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontSize="16" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextBox_Creaza_CNP" HorizontalAlignment="Left" Height="23" Margin="419.286,334,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="16" Grid.Column="1"/>
+        <TextBox x:Name="TextBox_Verifica_CNP" HorizontalAlignment="Left" Height="23" Margin="32,334,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="16" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

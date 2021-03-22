@@ -35,5 +35,11 @@ namespace WpfCNP
             var x = new GenerateCNP();
             x.Show();
         }
+
+        private void Buton_Detalii_Click(object sender, RoutedEventArgs e)
+        {
+            //var x = UserDetails();
+            //x.Show();
+        }
     }
 }
