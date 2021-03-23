@@ -135,7 +135,7 @@
             RenderTransformOrigin="0.225,0.6"
             Height="30"
             FontSize="14" 
-            Grid.Column="1"/>
+            Grid.Column="1" Click="Button_Creaza_CNP_Click"/>
         <Button 
             x:Name="Button_Verifica_CNP" 
             Content="Verifica CNP"
@@ -146,27 +146,25 @@
             RenderTransformOrigin="0.225,0.6" 
             Height="30" 
             FontSize="14" 
-            Grid.Column="1"/>
-        
+            Grid.Column="1" Click="Button_Verifica_CNP_Click"/>
+
         <TextBox 
             x:Name="TextBox_Creaza_CNP"
             HorizontalAlignment="Left"
             Height="23" 
-            Margin="419.286,334,0,0"
+            Margin="32,334,0,0"
             TextWrapping="Wrap"
             VerticalAlignment="Top"
             Width="120" 
-            FontSize="16"
-            Grid.Column="1"/>
+            FontSize="16" Grid.ColumnSpan="2"/>
         <TextBox
             x:Name="TextBox_Verifica_CNP" 
             HorizontalAlignment="Left"
             Height="23"
-            Margin="32,334,0,0" 
+            Margin="419,334,0,0" 
             TextWrapping="Wrap"
             VerticalAlignment="Top"
             Width="120" 
-            FontSize="16"
-            Grid.ColumnSpan="2"/>
+            FontSize="16" Grid.Column="1"/>
     </Grid>
 </Window>

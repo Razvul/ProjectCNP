@@ -40,7 +40,7 @@
             x:Name="Buton_AddUser"
             Grid.Column="2"
             Grid.Row="1"
-            Content="AddUser"
+            Content="Add User"
             Height="25"
             Margin="10"/>
         <Button
@@ -50,7 +50,7 @@
             Content="Cauta" 
             Height="25"
             Margin="10"
-            VerticalAlignment="Bottom"/>
+            VerticalAlignment="Center"/>
         <Button
             x:Name="Buton_Refresh" 
             Grid.Column="2"

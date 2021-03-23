@@ -36,27 +36,17 @@ namespace WpfCNP
             {
                 ComboBox_An.Items.Add(i);
             }
-
-
-
-
-
             ComboBox_Sex.SelectedIndex = 0;
             ComboBox_An.SelectedIndex = 0;
             ComboBox_Luni.SelectedIndex = 0;
-            ComboBox_Zile.SelectedIndex = 0; //hmm
+            ComboBox_Zile.SelectedIndex = 0;
             ComboBox_Judete.SelectedIndex = 0;
 
             for (int i = 1; i <= CommonCNP.Utilities.Zile(ComboBox_Luni.Text); i++)
             {
                 ComboBox_Zile.Items.Add(i);
             }
-
-
-
         }
-
-        int[] Zi = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 };
 
         enum Luni
         {
@@ -68,6 +58,11 @@ namespace WpfCNP
             Alba = 1, Arad, Arges, Bacau, Bihor, Bistrita, Botosani, Brasov, Braila, Buzau, Caras, Cluj, Constanta, Covasna, Dambovita, Dolj, Galati, Gorj,
             Harghita, Hunedoara, Ialomita, Iasi, Ilfov, Maramures, Mehedinti, Mures, Neamt, Olt, Prahova, SatuMare, Salaj, Sibiu, Suceava, Teleorman, Timis,
             Tulcea, Vaslui, Valcea, Vrancea, Bucuresti, Bucuresti1, Bucuresti2, Bucuresti3, Bucuresti4, Bucuresti5, Bucuresti6, Calarasi, Giurgiu
+        }
+
+        public string GetCNP(string SEX, string AN, string LUNA, string ZI, string JUDET, string NNN, string CC)
+        {
+            return $"{SEX}{AN}{LUNA}{ZI}{JUDET}{NNN}{CC}";
         }
 
         private void ComboBox_Luni_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -87,5 +82,35 @@ namespace WpfCNP
                 ComboBox_Zile.SelectedIndex = 0;
             }
         }
+
+        #region Butoane
+        private void Button_Creaza_CNP_Click(object sender, RoutedEventArgs e)
+        {
+            var Om = new CommonCNP.CNP
+            {
+                SEX = CommonCNP.Utilities.GetSex(ComboBox_Sex.Text, ComboBox_An.Text),
+                AN = CommonCNP.Utilities.GetYear(ComboBox_An.Text),
+                LUNA = CommonCNP.Utilities.GetMonth(ComboBox_Luni.Text),
+                ZI = CommonCNP.Utilities.GetZi(ComboBox_Zile.Text),
+                JUDET = CommonCNP.Utilities.GetJudet(ComboBox_Judete.Text),
+                NNN = CommonCNP.Utilities.GetNNN(),
+            };
+            Om.CC = CommonCNP.Utilities.GetCC(Om.SEX, Om.AN, Om.LUNA, Om.ZI, Om.JUDET, Om.NNN);
+            
+            TextBox_Creaza_CNP.Text = GetCNP(Om.SEX, Om.AN, Om.LUNA, Om.ZI, Om.JUDET, Om.NNN, Om.CC);
+        }
+        private void Button_Verifica_CNP_Click(object sender, RoutedEventArgs e)
+        {
+            if (CommonCNP.CNP.VerificaCNP(TextBox_Verifica_CNP.Text))
+            {
+                Label_VerificaCNP.Content = "CNP valid";
+            }
+            else
+            {
+                Label_VerificaCNP.Content = "CNP gresit";
+            }
+        }
+        #endregion
+
     }
 }
