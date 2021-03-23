@@ -11,7 +11,7 @@
             <ColumnDefinition Width="67*"/>
             <ColumnDefinition Width="725*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="Label_Sex" Content="Sex" HorizontalAlignment="Left" Margin="59,64,0,0" VerticalAlignment="Top" Height="31" Width="43" FontSize="14" Grid.ColumnSpan="2"/>
+        <Label x:Name="Label_Sex" Content="Sex" HorizontalAlignment="Left" Margin="32,64,0,0" VerticalAlignment="Top" Height="31" Width="43" FontSize="14" Grid.ColumnSpan="2" RenderTransformOrigin="-0.093,0.419"/>
         <Label x:Name="Label_An" Content="An" HorizontalAlignment="Left" Margin="112.286,64,0,0" VerticalAlignment="Top" Height="31" Width="43" FontSize="14" Grid.Column="1"/>
         <Label x:Name="Label_Luni" Content="Luni" HorizontalAlignment="Left" Margin="262.286,64,0,0" VerticalAlignment="Top" Height="31" Width="43" FontSize="14" RenderTransformOrigin="0.296,0.465" Grid.Column="1"/>
         <Label x:Name="Label_Zile" Content="Zile" HorizontalAlignment="Left" Margin="419.286,64,0,0" VerticalAlignment="Top" Height="31" Width="43" FontSize="14" Grid.Column="1"/>

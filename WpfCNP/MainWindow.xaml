@@ -32,6 +32,6 @@
         <TextBox 
             x:Name="textBox_Cauta" Height="23" Margin="16,31,10,0" TextWrapping="Wrap" Text="Cauta Aici" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
         <ListBox 
-            x:Name="listBox_Users" Grid.Column="3" HorizontalAlignment="Left" Height="100" Margin="208,31,0,0" VerticalAlignment="Top" Width="100" Grid.Row="1" Grid.RowSpan="2"/>
+            x:Name="listBox_Users" Grid.Column="3" HorizontalAlignment="Left" Height="152" Margin="161,0,0,0" VerticalAlignment="Top" Width="147" Grid.Row="1" Grid.RowSpan="2"/>
     </Grid>
 </Window>

@@ -38,8 +38,8 @@ namespace WpfCNP
 
         private void Buton_Detalii_Click(object sender, RoutedEventArgs e)
         {
-            //var x = UserDetails();
-            //x.Show();
+            var x = new UserDetails();
+            x.Show();
         }
     }
 }
