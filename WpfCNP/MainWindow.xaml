@@ -42,7 +42,8 @@
             Grid.Row="1"
             Content="Add User"
             Height="25"
-            Margin="10"/>
+            Margin="10" 
+            Click="Buton_AddUser_Click"/>
         <Button
             x:Name="Buton_Cauta"
             Grid.Column="2"

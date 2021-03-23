@@ -30,6 +30,7 @@ namespace WpfCNP
             InitializeComponent();
         }
 
+        #region Butoane
         private void Buton_CNP_Click(object sender, RoutedEventArgs e)
         {
             var x = new GenerateCNP();
@@ -38,8 +39,17 @@ namespace WpfCNP
 
         private void Buton_Detalii_Click(object sender, RoutedEventArgs e)
         {
+            var SelectedUser = (User)listBox_Users.SelectedItem;
+            var x = new UserDetails(SelectedUser);
+            x.Show();
+        }
+
+        private void Buton_AddUser_Click(object sender, RoutedEventArgs e)
+        {
             var x = new UserDetails();
             x.Show();
         }
+        #endregion
+
     }
 }

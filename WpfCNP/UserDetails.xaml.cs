@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CommonCNP;
 
 namespace WpfCNP
 {
@@ -19,9 +20,23 @@ namespace WpfCNP
     /// </summary>
     public partial class UserDetails : Window
     {
-        public UserDetails()
+        private readonly User _user;
+        private readonly UserDatabase _userDatabase = UserDatabase.GetInstance();
+        private readonly bool _isNewUser = false;
+
+        public UserDetails(User user)
         {
             InitializeComponent();
+            _user = user;
+            Button_Add.Visibility = Visibility.Hidden;
+        }
+
+        public UserDetails()
+        {
+            _isNewUser = true;
+            InitializeComponent();
+            Button_Delete.Visibility = Visibility.Hidden;
+            Button_Update.Visibility = Visibility.Hidden;
         }
     }
 }

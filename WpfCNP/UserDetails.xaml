@@ -113,7 +113,7 @@
             Width="90"
             Height="25"/>
         <Button
-            x:Name="Button_Delte" 
+            x:Name="Button_Delete" 
             Content="Delete User"
             HorizontalAlignment="Left"
             Margin="344,470,0,0" 
