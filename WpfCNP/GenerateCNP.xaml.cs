@@ -36,16 +36,24 @@ namespace WpfCNP
             {
                 ComboBox_An.Items.Add(i);
             }
-            for (int i = 1; i <= CommonCNP.Utilities.Zile(ComboBox_Luni.Text); i++)
-            {
-                ComboBox_Zile.Items.Add(i);
-            }
+
+
+
+
 
             ComboBox_Sex.SelectedIndex = 0;
             ComboBox_An.SelectedIndex = 0;
             ComboBox_Luni.SelectedIndex = 0;
             ComboBox_Zile.SelectedIndex = 0; //hmm
             ComboBox_Judete.SelectedIndex = 0;
+
+            for (int i = 1; i <= CommonCNP.Utilities.Zile(ComboBox_Luni.Text); i++)
+            {
+                ComboBox_Zile.Items.Add(i);
+            }
+
+
+
         }
 
         int[] Zi = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 };

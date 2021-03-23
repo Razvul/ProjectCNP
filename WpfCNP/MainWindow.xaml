@@ -9,9 +9,10 @@
     <Grid Margin="0,0,0,2">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="131"/>
-            <ColumnDefinition Width="120"/>
-            <ColumnDefinition Width="auto" MinWidth="440"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="auto" 
+                              MinWidth="440"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="75"/>
@@ -20,9 +21,21 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Button
-            x:Name="Buton_Detalii" Content="Detalii" Width="74" Margin="17,29,0,22" Grid.Column="2" Click="Buton_Detalii_Click"/>
+            x:Name="Buton_Detalii"
+            Grid.Row="0"
+            Grid.Column="2"
+            Height="25"
+            Margin="10"
+            Content="Detalii" 
+            Click="Buton_Detalii_Click"/>
         <Button 
-            x:Name="Buton_CNP" Content="CNP" Grid.Column="1" Margin="29,29,22,0" VerticalAlignment="Top" Height="25" Click="Buton_CNP_Click"/>
+            x:Name="Buton_CNP"
+            Grid.Row="0"
+            Grid.Column="1"
+            Height="25"
+            Margin="10"
+            Content="CNP" 
+            Click="Buton_CNP_Click"/>
         <Button
             x:Name="Buton_AddUser" Content="AddUser" Width="74" Margin="17,31,0,20" Grid.Column="2" Grid.Row="1"/>
         <Button
@@ -30,7 +43,15 @@
         <Button
             x:Name="Buton_Refresh" Content="Refresh" Width="76" Margin="17,38,0,-24" Grid.Column="2" Grid.Row="3"/>
         <TextBox 
-            x:Name="textBox_Cauta" Height="23" Margin="16,31,10,0" TextWrapping="Wrap" Text="Cauta Aici" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
+            x:Name="textBox_Cauta"
+            Grid.Row="0"
+            Grid.Column="3"
+            Height="25" 
+            Margin="10"
+            HorizontalContentAlignment="Left"
+            VerticalContentAlignment="Center"
+            TextWrapping="Wrap" 
+            Text="Cauta Aici" />
         <ListBox 
             x:Name="listBox_Users" Grid.Column="3" HorizontalAlignment="Left" Height="152" Margin="161,0,0,0" VerticalAlignment="Top" Width="147" Grid.Row="1" Grid.RowSpan="2"/>
     </Grid>
