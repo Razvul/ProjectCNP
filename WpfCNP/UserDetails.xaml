@@ -7,53 +7,262 @@
         mc:Ignorable="d"
         Title="UserDetails" Height="597.81" Width="800">
     <Grid Margin="0,0,0,-4">
-        <Label x:Name="Label_ID" Content="ID" HorizontalAlignment="Left" Margin="84,12,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_ID" HorizontalAlignment="Left" Height="23" Margin="181,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label 
+            x:Name="Label_ID"
+            Content="ID"
+            HorizontalAlignment="Left"
+            Margin="84,12,0,0" 
+            VerticalAlignment="Top" 
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox
+            x:Name="TextBox_ID"
+            HorizontalAlignment="Left"
+            Height="23"
+            Margin="181,12,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="120"/>
 
-        <Label x:Name="Label_Nume" Content="Nume*" HorizontalAlignment="Left" Margin="84,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_Copy" HorizontalAlignment="Left" Height="23" Margin="181,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label 
+            x:Name="Label_Nume" 
+            Content="Nume*"
+            HorizontalAlignment="Left"
+            Margin="84,53,0,0"
+            VerticalAlignment="Top" 
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox 
+            x:Name="TextBox_Copy"
+            HorizontalAlignment="Left"
+            Height="23" 
+            Margin="181,53,0,0" 
+            TextWrapping="Wrap"
+            VerticalAlignment="Top" 
+            Width="120"/>
 
-        <Label x:Name="Label_Prenume" Content="Prenume*" HorizontalAlignment="Left" Margin="84,96,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_Prenume" HorizontalAlignment="Left" Height="23" Margin="181,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label 
+            x:Name="Label_Prenume"
+            Content="Prenume*" 
+            HorizontalAlignment="Left" 
+            Margin="84,96,0,0" 
+            VerticalAlignment="Top"
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox 
+            x:Name="TextBox_Prenume" 
+            HorizontalAlignment="Left"
+            Height="23" 
+            Margin="181,96,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="120"/>
 
-        <Label x:Name="Label_Sex" Content="Sex" HorizontalAlignment="Left" Margin="84,144,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_Sex" HorizontalAlignment="Left" Height="23" Margin="181,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label 
+            x:Name="Label_Sex"
+            Content="Sex" 
+            HorizontalAlignment="Left" 
+            Margin="84,144,0,0" 
+            VerticalAlignment="Top" 
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox
+            x:Name="TextBox_Sex" 
+            HorizontalAlignment="Left"
+            Height="23" 
+            Margin="181,144,0,0" 
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="120"/>
 
-        <Label x:Name="Label_CNP" Content="CNP" HorizontalAlignment="Left" Margin="84,191,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_CNP" HorizontalAlignment="Left" Height="23" Margin="181,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label 
+            x:Name="Label_CNP" 
+            Content="CNP" 
+            HorizontalAlignment="Left"
+            Margin="84,191,0,0" 
+            VerticalAlignment="Top"
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox 
+            x:Name="TextBox_CNP" 
+            HorizontalAlignment="Left"
+            Height="23"
+            Margin="181,191,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="120"/>
 
-        <GroupBox x:Name="groupBox" Header="GroupBox" HorizontalAlignment="Left" Height="237" Margin="65,222,0,0" VerticalAlignment="Top" Width="264"/>
+        <GroupBox
+            x:Name="groupBox" 
+            Header="GroupBox" 
+            HorizontalAlignment="Left"
+            Height="237" 
+            Margin="65,222,0,0" 
+            VerticalAlignment="Top" 
+            Width="264"/>
 
-        <Button x:Name="Button_Add" Content="Add User" HorizontalAlignment="Left" Margin="41,470,0,0" VerticalAlignment="Top" Width="90" Height="25"/>
-        <Button x:Name="Button_Update" Content="Update User" HorizontalAlignment="Left" Margin="186,470,0,0" VerticalAlignment="Top" Width="90" Height="25"/>
-        <Button x:Name="Button_Delte" Content="Delete User" HorizontalAlignment="Left" Margin="344,470,0,0" VerticalAlignment="Top" Width="90" Height="25"/>
+        <Button
+            x:Name="Button_Add" 
+            Content="Add User"
+            HorizontalAlignment="Left"
+            Margin="41,470,0,0" 
+            VerticalAlignment="Top"
+            Width="90" 
+            Height="25"/>
+        <Button 
+            x:Name="Button_Update"
+            Content="Update User"
+            HorizontalAlignment="Left"
+            Margin="186,470,0,0"
+            VerticalAlignment="Top"
+            Width="90"
+            Height="25"/>
+        <Button
+            x:Name="Button_Delte" 
+            Content="Delete User"
+            HorizontalAlignment="Left"
+            Margin="344,470,0,0" 
+            VerticalAlignment="Top"
+            Width="90"
+            Height="25"/>
 
-        <Label x:Name="Label_Oras" Content="Oras" HorizontalAlignment="Left" Margin="458,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_Oras" HorizontalAlignment="Left" Height="23" Margin="555,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label 
+            x:Name="Label_Oras" 
+            Content="Oras"
+            HorizontalAlignment="Left"
+            Margin="458,15,0,0" 
+            VerticalAlignment="Top" 
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox 
+            x:Name="TextBox_Oras"
+            HorizontalAlignment="Left" 
+            Height="23"
+            Margin="555,15,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="120"/>
         
-        <Label x:Name="Label_Strada" Content="Strada" HorizontalAlignment="Left" Margin="458,56,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_Strada" HorizontalAlignment="Left" Height="23" Margin="555,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label 
+            x:Name="Label_Strada" 
+            Content="Strada"
+            HorizontalAlignment="Left" 
+            Margin="458,56,0,0" 
+            VerticalAlignment="Top" 
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox 
+            x:Name="TextBox_Strada"
+            HorizontalAlignment="Left"
+            Height="23"
+            Margin="555,56,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="120"/>
         
-        <Label x:Name="Label_Numar" Content="Numer" HorizontalAlignment="Left" Margin="458,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_Numar" HorizontalAlignment="Left" Height="23" Margin="555,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label
+            x:Name="Label_Numar"
+            Content="Numer"
+            HorizontalAlignment="Left" 
+            Margin="458,111,0,0"
+            VerticalAlignment="Top" 
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox 
+            x:Name="TextBox_Numar" 
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="555,111,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="120"/>
         
-        <Label x:Name="Label_Bloc" Content="Bloc" HorizontalAlignment="Left" Margin="458,158,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_Bloc" HorizontalAlignment="Left" Height="23" Margin="555,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label 
+            x:Name="Label_Bloc"
+            Content="Bloc" 
+            HorizontalAlignment="Left"
+            Margin="458,158,0,0" 
+            VerticalAlignment="Top" 
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox
+            x:Name="TextBox_Bloc"
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="555,158,0,0" 
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="120"/>
        
-        <Label x:Name="Label_Scara" Content="Scara" HorizontalAlignment="Left" Margin="458,212,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_Scara" HorizontalAlignment="Left" Height="23" Margin="555,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label 
+            x:Name="Label_Scara" 
+            Content="Scara" 
+            HorizontalAlignment="Left"
+            Margin="458,212,0,0"
+            VerticalAlignment="Top"
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox
+            x:Name="TextBox_Scara"
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="555,212,0,0" 
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="120"/>
        
-        <Label x:Name="Label_Etaj" Content="Eraj" HorizontalAlignment="Left" Margin="458,258,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_Etaj" HorizontalAlignment="Left" Height="23" Margin="555,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label 
+            x:Name="Label_Etaj" 
+            Content="Eraj" 
+            HorizontalAlignment="Left"
+            Margin="458,258,0,0" 
+            VerticalAlignment="Top" 
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox 
+            x:Name="TextBox_Etaj" 
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="555,258,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="120"/>
         
-        <Label x:Name="Label_Apartament" Content="Apartament" HorizontalAlignment="Left" Margin="458,297,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_Apartament" HorizontalAlignment="Left" Height="23" Margin="555,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label
+            x:Name="Label_Apartament"
+            Content="Apartament" 
+            HorizontalAlignment="Left"
+            Margin="458,297,0,0" 
+            VerticalAlignment="Top" 
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox
+            x:Name="TextBox_Apartament" 
+            HorizontalAlignment="Left" 
+            Height="23"
+            Margin="555,297,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="120"/>
 
-        <Label x:Name="Label_Judet" Content="Judet" HorizontalAlignment="Left" Margin="458,350,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_Judet" HorizontalAlignment="Left" Height="23" Margin="555,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label 
+            x:Name="Label_Judet" 
+            Content="Judet" 
+            HorizontalAlignment="Left" 
+            Margin="458,350,0,0" 
+            VerticalAlignment="Top"
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox
+            x:Name="TextBox_Judet" 
+            HorizontalAlignment="Left"
+            Height="23" 
+            Margin="555,350,0,0"
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="120"/>
 
-        <Label x:Name="Label_CodPostal" Content="Cod Postal" HorizontalAlignment="Left" Margin="458,408,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox x:Name="TextBox_CodPostal" HorizontalAlignment="Left" Height="23" Margin="555,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-
+        <Label 
+            x:Name="Label_CodPostal" 
+            Content="Cod Postal"
+            HorizontalAlignment="Left"
+            Margin="458,408,0,0" 
+            VerticalAlignment="Top" 
+            RenderTransformOrigin="-0.176,-1.006"/>
+        <TextBox 
+            x:Name="TextBox_CodPostal" 
+            HorizontalAlignment="Left"
+            Height="23" 
+            Margin="555,408,0,0"
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="120"/>
     </Grid>
 </Window>
