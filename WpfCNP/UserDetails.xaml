@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfCNP"
         mc:Ignorable="d"
-        Title="UserDetails" Height="597.81" Width="800">
+        Title="UserDetails" Height="597.81" Width="800" Loaded="Window_Loaded">
     <Grid Margin="0,0,0,-4">
         <Label 
             x:Name="Label_ID"
@@ -31,7 +31,7 @@
             VerticalAlignment="Top" 
             RenderTransformOrigin="-0.176,-1.006"/>
         <TextBox 
-            x:Name="TextBox_Copy"
+            x:Name="TextBox_Nume"
             HorizontalAlignment="Left"
             Height="23" 
             Margin="181,53,0,0" 
@@ -62,14 +62,6 @@
             Margin="84,144,0,0" 
             VerticalAlignment="Top" 
             RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox
-            x:Name="TextBox_Sex" 
-            HorizontalAlignment="Left"
-            Height="23" 
-            Margin="181,144,0,0" 
-            TextWrapping="Wrap"
-            VerticalAlignment="Top"
-            Width="120"/>
 
         <Label 
             x:Name="Label_CNP" 
@@ -103,7 +95,8 @@
             Margin="41,470,0,0" 
             VerticalAlignment="Top"
             Width="90" 
-            Height="25"/>
+            Height="25" 
+            Click="Button_Add_Click"/>
         <Button 
             x:Name="Button_Update"
             Content="Update User"
@@ -111,7 +104,8 @@
             Margin="186,470,0,0"
             VerticalAlignment="Top"
             Width="90"
-            Height="25"/>
+            Height="25" 
+            Click="Button_Update_Click"/>
         <Button
             x:Name="Button_Delete" 
             Content="Delete User"
@@ -119,7 +113,8 @@
             Margin="344,470,0,0" 
             VerticalAlignment="Top"
             Width="90"
-            Height="25"/>
+            Height="25" 
+            Click="Button_Delete_Click"/>
 
         <Label 
             x:Name="Label_Oras" 
@@ -155,7 +150,7 @@
         
         <Label
             x:Name="Label_Numar"
-            Content="Numer"
+            Content="Numar"
             HorizontalAlignment="Left" 
             Margin="458,111,0,0"
             VerticalAlignment="Top" 
@@ -264,5 +259,6 @@
             TextWrapping="Wrap" 
             VerticalAlignment="Top"
             Width="120"/>
+        <ComboBox x:Name="ComboBox_Sex" HorizontalAlignment="Left" Margin="181,148,0,0" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

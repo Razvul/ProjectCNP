@@ -46,25 +46,27 @@
             Click="Buton_AddUser_Click"/>
         <Button
             x:Name="Buton_Cauta"
-            Grid.Column="2"
-            Grid.Row="2"
+            Grid.Column="3"
             Content="Cauta" 
-            Height="25"
-            Margin="10"
-            VerticalAlignment="Center"/>
+            Height="24"
+            Margin="398,26,-38,26"
+            VerticalAlignment="Center" 
+            Click="Buton_Cauta_Click"/>
         <Button
             x:Name="Buton_Refresh" 
-            Grid.Column="2"
-            Grid.Row="3"
+            Grid.Column="3"
+            Grid.Row="1"
             Content="Refresh" 
             Height="25"
-            Margin="10"/>
+            Margin="398,26,-38,26" 
+            Click="Buton_Refresh_Click"/>
+        
         <TextBox 
             x:Name="textBox_Cauta"
             Grid.Row="0"
             Grid.Column="3"
             Height="25" 
-            Margin="10"
+            Margin="10,26,82,26"
             HorizontalContentAlignment="Left"
             VerticalContentAlignment="Center"
             TextWrapping="Wrap" 

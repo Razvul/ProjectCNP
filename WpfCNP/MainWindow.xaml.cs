@@ -49,7 +49,45 @@ namespace WpfCNP
             var x = new UserDetails();
             x.Show();
         }
+
+        private void Buton_Cauta_Click(object sender, RoutedEventArgs e)
+        {
+            var ListaNume = _userDatabase.FindUser(textBox_Cauta.Text);
+
+            if (ListaNume.Count == 0)
+            {
+                MessageBox.Show($"Nu s-a gasit niciun utilizatoru cu numele {textBox_Cauta.Text}");
+            }
+            else
+            {
+                listBox_Users.Items.Clear();
+                foreach (var user in ListaNume)
+                {
+                    listBox_Users.Items.Add(user);
+                    listBox_Users.DisplayMemberPath = "DisplayValue";
+                }
+            }
+        }
+
+        private void Buton_Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            listBox_Users.Items.Clear();
+            //listBox_Users= true;
+            Populate();
+        }
+
         #endregion
 
+        private void Populate()
+        {
+            foreach (var user in _userDatabase.GetUserList())
+            {
+                listBox_Users.Items.Add(user);
+            }
+
+            listBox_Users.DisplayMemberPath = "DisplayValue";
+            listBox_Users.SelectedItem = listBox_Users.Items[0];
+            //listBox_Users.Sorted = true;
+        }
     }
 }
