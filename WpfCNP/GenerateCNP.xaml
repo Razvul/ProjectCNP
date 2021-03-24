@@ -86,7 +86,8 @@
             Width="120" 
             RenderTransformOrigin="2.679,-5.227"
             SelectionChanged="ComboBox_Luni_SelectionChanged"
-            Grid.Column="1" />
+            Grid.Column="1" 
+            DropDownClosed="ComboBox_Luni_DropDownClosed"/>
         <ComboBox
             x:Name="ComboBox_Zile" 
             HorizontalAlignment="Left"

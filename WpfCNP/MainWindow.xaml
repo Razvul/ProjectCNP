@@ -70,7 +70,8 @@
             HorizontalContentAlignment="Left"
             VerticalContentAlignment="Center"
             TextWrapping="Wrap" 
-            Text="Cauta Aici" />
+            Text="Cauta Aici" 
+            Cursor="Hand" />
         <ListBox 
             x:Name="listBox_Users" 
             Grid.Column="3" 

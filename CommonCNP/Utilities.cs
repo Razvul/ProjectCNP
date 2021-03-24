@@ -350,6 +350,11 @@ namespace CommonCNP
             return cifraControl;
         }
 
+        public static string GetCNP(string SEX, string AN, string LUNA, string ZI, string JUDET, string NNN, string CC)
+        {
+            return $"{SEX}{AN}{LUNA}{ZI}{JUDET}{NNN}{CC}";
+        }
+
         public static Guid GetNewId()
         {
             return Guid.NewGuid();

@@ -59,13 +59,13 @@ namespace WpfCNP
             Harghita, Hunedoara, Ialomita, Iasi, Ilfov, Maramures, Mehedinti, Mures, Neamt, Olt, Prahova, SatuMare, Salaj, Sibiu, Suceava, Teleorman, Timis,
             Tulcea, Vaslui, Valcea, Vrancea, Bucuresti, Bucuresti1, Bucuresti2, Bucuresti3, Bucuresti4, Bucuresti5, Bucuresti6, Calarasi, Giurgiu
         }
-
-        public string GetCNP(string SEX, string AN, string LUNA, string ZI, string JUDET, string NNN, string CC)
+                
+        private void ComboBox_Luni_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            return $"{SEX}{AN}{LUNA}{ZI}{JUDET}{NNN}{CC}";
+            
         }
 
-        private void ComboBox_Luni_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ComboBox_Luni_DropDownClosed(object sender, EventArgs e)
         {
             var zi_selectata = ComboBox_Zile.SelectedIndex + 1;
             var zile_luna_selectata = CommonCNP.Utilities.Zile(ComboBox_Luni.Text);
@@ -80,6 +80,10 @@ namespace WpfCNP
             if (zi_selectata > zile_luna_selectata)
             {
                 ComboBox_Zile.SelectedIndex = 0;
+            }
+            else
+            {
+                ComboBox_Zile.SelectedIndex = zi_selectata - 1;
             }
         }
 
@@ -97,7 +101,7 @@ namespace WpfCNP
             };
             Om.CC = CommonCNP.Utilities.GetCC(Om.SEX, Om.AN, Om.LUNA, Om.ZI, Om.JUDET, Om.NNN);
             
-            TextBox_Creaza_CNP.Text = GetCNP(Om.SEX, Om.AN, Om.LUNA, Om.ZI, Om.JUDET, Om.NNN, Om.CC);
+            TextBox_Creaza_CNP.Text =CommonCNP.Utilities.GetCNP(Om.SEX, Om.AN, Om.LUNA, Om.ZI, Om.JUDET, Om.NNN, Om.CC);
         }
         private void Button_Verifica_CNP_Click(object sender, RoutedEventArgs e)
         {
@@ -110,7 +114,10 @@ namespace WpfCNP
                 Label_VerificaCNP.Content = "CNP gresit";
             }
         }
+
+
         #endregion
 
+       
     }
 }

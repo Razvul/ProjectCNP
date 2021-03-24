@@ -28,6 +28,7 @@ namespace WpfCNP
         public MainWindow()
         {
             InitializeComponent();
+            Populate();
         }
 
         #region Butoane
