@@ -85,7 +85,6 @@
             VerticalAlignment="Top"
             Width="120" 
             RenderTransformOrigin="2.679,-5.227"
-            SelectionChanged="ComboBox_Luni_SelectionChanged"
             Grid.Column="1" 
             DropDownClosed="ComboBox_Luni_DropDownClosed"/>
         <ComboBox
@@ -107,7 +106,7 @@
             x:Name="Label_CNP"
             Content="CNP" 
             HorizontalAlignment="Left" 
-            Margin="59,281,0,0" 
+            Margin="32,281,0,0" 
             VerticalAlignment="Top" 
             Height="31"
             Width="43" 

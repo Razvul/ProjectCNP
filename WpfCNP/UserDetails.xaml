@@ -70,14 +70,7 @@
             Margin="84,191,0,0" 
             VerticalAlignment="Top"
             RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox 
-            x:Name="TextBox_CNP" 
-            HorizontalAlignment="Left"
-            Height="23"
-            Margin="181,191,0,0" 
-            TextWrapping="Wrap" 
-            VerticalAlignment="Top"
-            Width="120"/>
+        
 
         <GroupBox
             x:Name="groupBox" 
@@ -86,7 +79,16 @@
             Height="237" 
             Margin="65,222,0,0" 
             VerticalAlignment="Top" 
-            Width="264"/>
+            Width="264">
+
+            <TextBox 
+            x:Name="TextBox_CNP" 
+            HorizontalAlignment="Left"
+            Height="23"
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="120"/>
+        </GroupBox>
 
         <Button
             x:Name="Button_Add" 

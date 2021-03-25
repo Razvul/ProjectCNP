@@ -53,11 +53,11 @@ namespace WpfCNP
 
         private void Buton_Cauta_Click(object sender, RoutedEventArgs e)
         {
-            var ListaNume = _userDatabase.FindUser(textBox_Cauta.Text);
+            var ListaNume = _userDatabase.FindUser(TextBox_Cauta.Text);
 
             if (ListaNume.Count == 0)
             {
-                MessageBox.Show($"Nu s-a gasit niciun utilizatoru cu numele {textBox_Cauta.Text}");
+                MessageBox.Show($"Nu s-a gasit niciun utilizator cu numele {TextBox_Cauta.Text}");
             }
             else
             {
@@ -73,7 +73,6 @@ namespace WpfCNP
         private void Buton_Refresh_Click(object sender, RoutedEventArgs e)
         {
             listBox_Users.Items.Clear();
-            //listBox_Users= true;
             Populate();
         }
 
@@ -81,14 +80,22 @@ namespace WpfCNP
 
         private void Populate()
         {
-            foreach (var user in _userDatabase.GetUserList())
+            var userlist = _userDatabase.GetUserList();
+            foreach (var user in userlist.OrderBy(x=>x.Person.Nume))
             {
                 listBox_Users.Items.Add(user);
             }
 
             listBox_Users.DisplayMemberPath = "DisplayValue";
             listBox_Users.SelectedItem = listBox_Users.Items[0];
-            //listBox_Users.Sorted = true;
+        }
+
+        private void TextBox_Cauta_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (TextBox_Cauta.Text.ToLower() == "cauta aici")
+            {
+                TextBox_Cauta.Text = string.Empty;
+            }
         }
     }
 }
