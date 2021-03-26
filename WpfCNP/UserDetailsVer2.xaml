@@ -210,5 +210,27 @@
                     Grid.Column="1"/>
             </Grid>
         </GroupBox>
+        <StackPanel
+            Grid.Row="2"
+            Grid.ColumnSpan="3"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <Button
+                    x:Name="Button_Add" 
+                    Content="Add User"
+                    Width="90" 
+                    Height="25"/>
+            <Button 
+                    x:Name="Button_Update"
+                    Content="Update User"
+                    Width="90"
+                    Height="25"/>
+            <Button
+                    x:Name="Button_Delete" 
+                    Content="Delete User"
+                    Width="90"
+                    Height="25"/>
+        </StackPanel>
     </Grid>
 </Window>
