@@ -5,127 +5,126 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfCNP"
         mc:Ignorable="d"
-        Title="UserDetails" Height="597.81" Width="800" Loaded="Window_Loaded">
+        Title="UserDetails" Height="600" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-      <Grid Grid.Row="0">
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="*" />
-          <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-
-        <GroupBox Grid.Column="0"
-                  Margin="10">
-          <Grid>
+        <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="100" />
-              <ColumnDefinition Width="20" />
-              <ColumnDefinition Width="*" />
-          </Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-          <Grid.RowDefinitions>
-              <RowDefinition Height="*" />
-              <RowDefinition Height="*" />
-              <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
+            <GroupBox
+                Grid.Column="0"
+                Margin="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
 
-            <Label x:Name="Label_Nume"
-                   Grid.Column="0"
-                   Grid.Row="0"
-                   Content="Nume*"
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Center"/>
-            <TextBox x:Name="TextBox_Nume"
-                     Grid.Column="2"
-                     Grid.Row="0"
-                     HorizontalAlignment="Left"
-                     Height="25"
-                     TextWrapping="Wrap"
-                     VerticalAlignment="Center"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label 
+                       x:Name="Label_ID"
+                       Content="ID"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"/>
+                    <TextBox
+                       x:Name="TextBox_ID"
+                       HorizontalAlignment="Left"
+                       Grid.Column="2"
+                       Grid.Row="0"
+                       Height="23"
+                       TextWrapping="Wrap"
+                       VerticalAlignment="Top"
+                       Width="120"/>
 
+                    <Label
+                       x:Name="Label_Nume"
+                       Grid.Column="0"
+                       Grid.Row="1"
+                       Content="Nume*"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"/>
+                    <TextBox
+                       x:Name="TextBox_Nume"
+                       Grid.Column="2"
+                       Grid.Row="1"
+                       HorizontalAlignment="Left"
+                       Height="25"
+                       Width="120"
+                       TextWrapping="Wrap"
+                       VerticalAlignment="Center"/>
+
+                    <Label 
+                        x:Name="Label_Prenume"
+                        Content="Prenume*"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top"/>
+                    <TextBox 
+                        x:Name="TextBox_Prenume" 
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        HorizontalAlignment="Left"
+                        Height="23" 
+                        TextWrapping="Wrap" 
+                        VerticalAlignment="Top"
+                        Width="120"/>
+                    <Label 
+                        x:Name="Label_Sex"
+                        Content="Sex"
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"/>
+                    <ComboBox
+                        x:Name="ComboBox_Sex"
+                        Grid.Column="2"
+                        Grid.Row="3"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Width="120"/>
+                    <Label 
+                        x:Name="Label_CNP" 
+                        Content="CNP"
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"/>
+                    <TextBox 
+                        x:Name="TextBox_CNP"
+                        Grid.Column="2"
+                        Grid.Row="4"
+                        HorizontalAlignment="Left"
+                        Height="23"
+                        Width="120"
+                        TextWrapping="Wrap" 
+                        VerticalAlignment="Top"/>
+                </Grid>
+            </GroupBox>
         </Grid>
-
-
-
-
-        </GroupBox>
-
-
-
-      </Grid>
-   
-      
-
-
-        <Label 
-            x:Name="Label_Prenume"
-            Content="Prenume*" 
-            HorizontalAlignment="Left" 
-            Margin="84,96,0,0" 
-            VerticalAlignment="Top"
-            RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox 
-            x:Name="TextBox_Prenume" 
-            HorizontalAlignment="Left"
-            Height="23" 
-            Margin="181,96,0,0" 
-            TextWrapping="Wrap" 
-            VerticalAlignment="Top"
-            Width="120"/>
-
-        <Label 
-            x:Name="Label_Sex"
-            Content="Sex" 
-            HorizontalAlignment="Left" 
-            Margin="84,144,0,0" 
-            VerticalAlignment="Top" 
-            RenderTransformOrigin="-0.176,-1.006"/>
-
-        <Label 
-            x:Name="Label_CNP" 
-            Content="CNP" 
-            HorizontalAlignment="Left"
-            Margin="84,191,0,0" 
-            VerticalAlignment="Top"
-            RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox 
-            x:Name="TextBox_CNP" 
-            HorizontalAlignment="Left"
-            Height="23"
-            TextWrapping="Wrap" 
-            VerticalAlignment="Top"
-            Width="120" Margin="181,194,0,0"/>
-
         <GroupBox
-            x:Name="GroupBox_Person" 
-            Header="Person" 
+            Grid.Column="0"
+            Margin="386,10,0,10"
+            Width="396"
             HorizontalAlignment="Left"
-            Height="237" 
-            Margin="65,222,0,0" 
-            VerticalAlignment="Top" 
-            Width="264">
-
-            <Grid>
-                <Label 
-                x:Name="Label_ID"
-            Content="ID"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"/>
-                <TextBox
-            x:Name="TextBox_ID"
-            HorizontalAlignment="Left"
-            Height="23"
-            TextWrapping="Wrap"
-            VerticalAlignment="Top"
-            Width="120"/>
-            </Grid>
+            Grid.RowSpan="2">
             
-
         </GroupBox>
 
         <Button
@@ -171,7 +170,7 @@
             TextWrapping="Wrap" 
             VerticalAlignment="Top" 
             Width="120"/>
-        
+
         <Label 
             x:Name="Label_Strada" 
             Content="Strada"
@@ -187,7 +186,7 @@
             TextWrapping="Wrap" 
             VerticalAlignment="Top"
             Width="120"/>
-        
+
         <Label
             x:Name="Label_Numar"
             Content="Numar"
@@ -203,7 +202,7 @@
             TextWrapping="Wrap" 
             VerticalAlignment="Top" 
             Width="120"/>
-        
+
         <Label 
             x:Name="Label_Bloc"
             Content="Bloc" 
@@ -219,7 +218,7 @@
             TextWrapping="Wrap"
             VerticalAlignment="Top"
             Width="120"/>
-       
+
         <Label 
             x:Name="Label_Scara" 
             Content="Scara" 
@@ -235,7 +234,7 @@
             TextWrapping="Wrap"
             VerticalAlignment="Top"
             Width="120"/>
-       
+
         <Label 
             x:Name="Label_Etaj" 
             Content="Eraj" 
@@ -251,7 +250,7 @@
             TextWrapping="Wrap" 
             VerticalAlignment="Top" 
             Width="120"/>
-        
+
         <Label
             x:Name="Label_Apartament"
             Content="Apartament" 
@@ -299,11 +298,6 @@
             TextWrapping="Wrap" 
             VerticalAlignment="Top"
             Width="120"/>
-        <ComboBox
-            x:Name="ComboBox_Sex"
-            HorizontalAlignment="Left"
-            Margin="181,148,0,0"
-            VerticalAlignment="Top"
-            Width="120"/>
+
     </Grid>
 </Window>
