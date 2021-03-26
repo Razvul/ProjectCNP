@@ -75,6 +75,11 @@ namespace WpfCNP
             listBox_Users.Items.Clear();
             Populate();
         }
+        private void Buton_Proba_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new UserDetailsVer2();
+            x.Show();
+        }
 
         #endregion
 
@@ -97,5 +102,7 @@ namespace WpfCNP
                 TextBox_Cauta.Text = string.Empty;
             }
         }
+
+        
     }
 }

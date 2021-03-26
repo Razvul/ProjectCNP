@@ -28,7 +28,12 @@
             Content="CNP" 
             Click="Buton_CNP_Click"
             VerticalAlignment="Top"/>
-                
+        <Button
+            x:Name="Buton_Proba"
+            Content="Proba"
+            Grid.Column="1"
+            Grid.Row="1"
+            VerticalAlignment="Center" Click="Buton_Proba_Click"/>
         <StackPanel
             Grid.Row="1"
             Grid.Column="2">

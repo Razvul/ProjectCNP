@@ -35,7 +35,7 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <Label 
+                    <Label
                        x:Name="Label_ID"
                        Content="ID"
                        Grid.Column="0"
