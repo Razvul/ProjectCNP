@@ -11,26 +11,164 @@
             <ColumnDefinition Width="67*"/>
             <ColumnDefinition Width="725*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="Label_Sex" Content="Sex" HorizontalAlignment="Left" Margin="59,64,0,0" VerticalAlignment="Top" Height="31" Width="43" FontSize="14" Grid.ColumnSpan="2"/>
-        <Label x:Name="Label_An" Content="An" HorizontalAlignment="Left" Margin="112.286,64,0,0" VerticalAlignment="Top" Height="31" Width="43" FontSize="14" Grid.Column="1"/>
-        <Label x:Name="Label_Luni" Content="Luni" HorizontalAlignment="Left" Margin="262.286,64,0,0" VerticalAlignment="Top" Height="31" Width="43" FontSize="14" RenderTransformOrigin="0.296,0.465" Grid.Column="1"/>
-        <Label x:Name="Label_Zile" Content="Zile" HorizontalAlignment="Left" Margin="419.286,64,0,0" VerticalAlignment="Top" Height="31" Width="43" FontSize="14" Grid.Column="1"/>
-        <Label x:Name="Label_Judete" Content="Judete" HorizontalAlignment="Left" Margin="583.286,64,0,0" VerticalAlignment="Top" Height="31" Width="43" FontSize="14" Grid.Column="1"/>
+        <Label
+            x:Name="Label_Sex"
+            Content="Sex"
+            HorizontalAlignment="Left"
+            Margin="32,64,0,0" 
+            VerticalAlignment="Top" 
+            Height="31" 
+            Width="43" 
+            FontSize="14" 
+            Grid.ColumnSpan="2" 
+            RenderTransformOrigin="-0.093,0.419"/>
+        <Label
+            x:Name="Label_An" 
+            Content="An" 
+            HorizontalAlignment="Left" 
+            Margin="112.286,64,0,0" 
+            VerticalAlignment="Top" 
+            Height="31" Width="43" 
+            FontSize="14" 
+            Grid.Column="1"/>
+        <Label 
+            x:Name="Label_Luni" 
+            Content="Luni" 
+            HorizontalAlignment="Left"
+            Margin="262.286,64,0,0" 
+            VerticalAlignment="Top"
+            Height="31"
+            Width="43" 
+            FontSize="14" 
+            RenderTransformOrigin="0.296,0.465" 
+            Grid.Column="1"/>
+        <Label 
+            x:Name="Label_Zile" 
+            Content="Zile" 
+            HorizontalAlignment="Left"
+            Margin="419.286,64,0,0" 
+            VerticalAlignment="Top" 
+            Height="31" 
+            Width="43"
+            FontSize="14" 
+            Grid.Column="1"/>
+        <Label 
+            x:Name="Label_Judete"
+            Content="Judete"
+            HorizontalAlignment="Left"
+            Margin="583.286,64,0,0" 
+            VerticalAlignment="Top"
+            Height="31" 
+            Width="43" 
+            FontSize="14" 
+            Grid.Column="1"/>
 
-        <ComboBox x:Name="ComboBox_Sex" HorizontalAlignment="Left" Margin="32,116,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
-        <ComboBox x:Name="ComboBox_An" HorizontalAlignment="Left" Margin="112.286,116,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.45,4.662" Grid.Column="1"/>
-        <ComboBox x:Name="ComboBox_Luni" HorizontalAlignment="Left" Margin="262.286,116,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="2.679,-5.227" SelectionChanged="ComboBox_Luni_SelectionChanged" Grid.Column="1" />
-        <ComboBox x:Name="ComboBox_Zile" HorizontalAlignment="Left" Margin="419.286,116,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <ComboBox x:Name="ComboBox_Judete" HorizontalAlignment="Left" Margin="583.286,116,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <ComboBox
+            x:Name="ComboBox_Sex"
+            HorizontalAlignment="Left"
+            Margin="32,116,0,0"
+            VerticalAlignment="Top" 
+            Width="120" 
+            Grid.ColumnSpan="2"/>
+        <ComboBox 
+            x:Name="ComboBox_An"
+            HorizontalAlignment="Left"
+            Margin="112.286,116,0,0" 
+            VerticalAlignment="Top" 
+            Width="120" 
+            RenderTransformOrigin="0.45,4.662"
+            Grid.Column="1"/>
+        <ComboBox 
+            x:Name="ComboBox_Luni" 
+            HorizontalAlignment="Left"
+            Margin="262.286,116,0,0"
+            VerticalAlignment="Top"
+            Width="120" 
+            RenderTransformOrigin="2.679,-5.227"
+            Grid.Column="1" 
+            DropDownClosed="ComboBox_Luni_DropDownClosed"/>
+        <ComboBox
+            x:Name="ComboBox_Zile" 
+            HorizontalAlignment="Left"
+            Margin="419.286,116,0,0"
+            VerticalAlignment="Top" 
+            Width="120"
+            Grid.Column="1"/>
+        <ComboBox 
+            x:Name="ComboBox_Judete"
+            HorizontalAlignment="Left"
+            Margin="583.286,116,0,0" 
+            VerticalAlignment="Top"
+            Width="120" 
+            Grid.Column="1"/>
 
-        <Label x:Name="Label_CNP" Content="CNP" HorizontalAlignment="Left" Margin="59,281,0,0" VerticalAlignment="Top" Height="31" Width="43" FontSize="14" RenderTransformOrigin="0.777,7.931" Grid.ColumnSpan="2"/>
-        <Label x:Name="Label_VerificaCNP" Content="Verifica CNP" HorizontalAlignment="Left" Margin="419.286,281,0,0" VerticalAlignment="Top" Height="31" Width="92" FontSize="14" RenderTransformOrigin="0.777,7.931" Grid.Column="1"/>
+        <Label 
+            x:Name="Label_CNP"
+            Content="CNP" 
+            HorizontalAlignment="Left" 
+            Margin="32,281,0,0" 
+            VerticalAlignment="Top" 
+            Height="31"
+            Width="43" 
+            FontSize="14" 
+            RenderTransformOrigin="0.777,7.931" 
+            Grid.ColumnSpan="2"/>
+        <Label 
+            x:Name="Label_VerificaCNP" 
+            Content="Verifica CNP" 
+            HorizontalAlignment="Left"
+            Margin="419.286,281,0,0" 
+            VerticalAlignment="Top"
+            Height="31"
+            Width="92"
+            FontSize="14" 
+            RenderTransformOrigin="0.777,7.931" 
+            Grid.Column="1"/>
 
-        <Button x:Name="Button_Creaza_CNP" Content="Creaza CNP" HorizontalAlignment="Left" Margin="112.286,327,0,0" VerticalAlignment="Top" Width="89" RenderTransformOrigin="0.225,0.6" Height="30" FontSize="14" Grid.Column="1"/>
-        <Button x:Name="Button_Verifica_CNP" Content="Verifica CNP" HorizontalAlignment="Left" Margin="583.286,327,0,0" VerticalAlignment="Top" Width="89" RenderTransformOrigin="0.225,0.6" Height="30" FontSize="14" Grid.Column="1"/>
+        <Button
+            x:Name="Button_Creaza_CNP" 
+            Content="Creaza CNP" 
+            HorizontalAlignment="Left"
+            Margin="112.286,327,0,0"
+            VerticalAlignment="Top" 
+            Width="89"
+            RenderTransformOrigin="0.225,0.6"
+            Height="30"
+            FontSize="14" 
+            Grid.Column="1" 
+            Click="Button_Creaza_CNP_Click"/>
+        <Button 
+            x:Name="Button_Verifica_CNP" 
+            Content="Verifica CNP"
+            HorizontalAlignment="Left" 
+            Margin="583.286,327,0,0" 
+            VerticalAlignment="Top" 
+            Width="89" 
+            RenderTransformOrigin="0.225,0.6" 
+            Height="30" 
+            FontSize="14" 
+            Grid.Column="1"
+            Click="Button_Verifica_CNP_Click"/>
 
-        <TextBox x:Name="TextBox_Creaza_CNP" HorizontalAlignment="Left" Height="23" Margin="419.286,334,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="16" Grid.Column="1"/>
-        <TextBox x:Name="TextBox_Verifica_CNP" HorizontalAlignment="Left" Height="23" Margin="32,334,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="16" Grid.ColumnSpan="2"/>
-
+        <TextBox 
+            x:Name="TextBox_Creaza_CNP"
+            HorizontalAlignment="Left"
+            Height="23" 
+            Margin="32,334,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="120" 
+            FontSize="16" 
+            Grid.ColumnSpan="2"/>
+        <TextBox
+            x:Name="TextBox_Verifica_CNP" 
+            HorizontalAlignment="Left"
+            Height="23"
+            Margin="419,334,0,0" 
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="120" 
+            FontSize="16" 
+            Grid.Column="1"/>
     </Grid>
 </Window>
