@@ -71,7 +71,6 @@
             Content="Cauta"
             Height="25"
             Width="100"
-            Margin="30,0,0,0"
             VerticalAlignment="Center"
             HorizontalAlignment="Right"
             Click="Buton_Cauta_Click"/>

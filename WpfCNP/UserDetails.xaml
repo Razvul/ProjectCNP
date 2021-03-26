@@ -6,22 +6,24 @@
         xmlns:local="clr-namespace:WpfCNP"
         mc:Ignorable="d"
         Title="UserDetails" Height="597.81" Width="800" Loaded="Window_Loaded">
-    <Grid Margin="0,0,0,-4">
-        <Label 
-            x:Name="Label_ID"
-            Content="ID"
-            HorizontalAlignment="Left"
-            Margin="84,12,0,0" 
-            VerticalAlignment="Top" 
-            RenderTransformOrigin="-0.176,-1.006"/>
-        <TextBox
-            x:Name="TextBox_ID"
-            HorizontalAlignment="Left"
-            Height="23"
-            Margin="181,12,0,0" 
-            TextWrapping="Wrap" 
-            VerticalAlignment="Top"
-            Width="120"/>
+    <Grid>
+        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            
+        </Grid.Row>
 
         <Label 
             x:Name="Label_Nume" 
@@ -70,24 +72,39 @@
             Margin="84,191,0,0" 
             VerticalAlignment="Top"
             RenderTransformOrigin="-0.176,-1.006"/>
-        
+        <TextBox 
+            x:Name="TextBox_CNP" 
+            HorizontalAlignment="Left"
+            Height="23"
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="120" Margin="181,194,0,0"/>
 
         <GroupBox
-            x:Name="groupBox" 
-            Header="GroupBox" 
+            x:Name="GroupBox_Person" 
+            Header="Person" 
             HorizontalAlignment="Left"
             Height="237" 
             Margin="65,222,0,0" 
             VerticalAlignment="Top" 
             Width="264">
 
-            <TextBox 
-            x:Name="TextBox_CNP" 
+            <Grid>
+                <Label 
+                x:Name="Label_ID"
+            Content="ID"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"/>
+                <TextBox
+            x:Name="TextBox_ID"
             HorizontalAlignment="Left"
             Height="23"
-            TextWrapping="Wrap" 
+            TextWrapping="Wrap"
             VerticalAlignment="Top"
             Width="120"/>
+            </Grid>
+            
+
         </GroupBox>
 
         <Button
