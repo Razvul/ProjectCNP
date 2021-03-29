@@ -61,9 +61,6 @@
     <Compile Include="UserDetails.xaml.cs">
       <DependentUpon>UserDetails.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserDetailsVer2.xaml.cs">
-      <DependentUpon>UserDetailsVer2.xaml</DependentUpon>
-    </Compile>
     <Page Include="GenerateCNP.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -84,10 +81,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UserDetails.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserDetailsVer2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
