@@ -97,7 +97,5 @@ namespace WpfCNP
                 TextBox_Cauta.Text = string.Empty;
             }
         }
-
-        
     }
 }

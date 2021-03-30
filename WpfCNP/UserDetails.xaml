@@ -41,7 +41,7 @@
                        x:Name="TextBox_ID"
                        Grid.Column="1"
                        Grid.Row="0"
-                       Height="23"
+                       Height="25"
                        Margin="0"
                        Width="120"/>
                 <Label
@@ -65,7 +65,7 @@
                         x:Name="TextBox_Prenume" 
                         Grid.Column="2"
                         Grid.Row="2"
-                        Height="23"
+                        Height="25"
                         Width="120"/>
                 <Label 
                         x:Name="Label_Sex"
@@ -76,7 +76,8 @@
                         x:Name="ComboBox_Sex"
                         Grid.Column="2"
                         Grid.Row="3"
-                        Width="120"/>
+                        Width="120"
+                        Height="25"/>
                 <Label 
                         x:Name="Label_CNP" 
                         Content="CNP"
@@ -86,7 +87,7 @@
                         x:Name="TextBox_CNP"
                         Grid.Column="2"
                         Grid.Row="4"
-                        Height="23"
+                        Height="25"
                         Width="120"/>
             </Grid>
         </GroupBox>
@@ -116,7 +117,7 @@
                     Grid.Column="0"/>
                 <TextBox 
                     x:Name="TextBox_Oras" 
-                    Height="23" 
+                    Height="25" 
                     Width="120"
                     Grid.Row="0"
                     Grid.Column="1"/>
@@ -127,7 +128,7 @@
                     Grid.Column="0"/>
                 <TextBox 
                     x:Name="TextBox_Strada"
-                    Height="23"
+                    Height="25"
                     Width="120"
                     Grid.Row="1"
                     Grid.Column="1"/>
@@ -138,7 +139,7 @@
                     Grid.Column="0"/>
                 <TextBox 
                     x:Name="TextBox_Numar" 
-                    Height="23"
+                    Height="25"
                     Width="120"
                     Grid.Row="2"
                     Grid.Column="1"/>
@@ -149,7 +150,7 @@
                     Grid.Column="0"/>
                 <TextBox
                     x:Name="TextBox_Bloc" 
-                    Height="23"
+                    Height="25"
                     Width="120"
                     Grid.Row="3"
                     Grid.Column="1"/>
@@ -160,7 +161,7 @@
                     Grid.Column="0"/>
                 <TextBox
                     x:Name="TextBox_Scara" 
-                    Height="23"
+                    Height="25"
                     Width="120"
                     Grid.Row="4"
                     Grid.Column="1"/>
@@ -171,7 +172,7 @@
                     Grid.Column="0"/>
                 <TextBox 
                     x:Name="TextBox_Etaj" 
-                    Height="23"
+                    Height="25"
                     Width="120"
                     Grid.Row="5"
                     Grid.Column="1"/>
@@ -182,7 +183,7 @@
                     Grid.Column="0"/>
                 <TextBox
                     x:Name="TextBox_Apartament" 
-                    Height="23" 
+                    Height="25" 
                     Width="120"
                     Grid.Row="6"
                     Grid.Column="1"/>
@@ -193,7 +194,7 @@
                     Grid.Column="0"/>
                 <TextBox
                     x:Name="TextBox_Judet"
-                    Height="23"
+                    Height="25"
                     Width="120"
                     Grid.Row="7"
                     Grid.Column="1"/>
@@ -204,7 +205,7 @@
                     Grid.Column="0"/>
                 <TextBox 
                     x:Name="TextBox_CodPostal"
-                    Height="23"
+                    Height="25"
                     Width="120"
                     Grid.Row="8"
                     Grid.Column="1"/>
@@ -235,5 +236,23 @@
                     Height="25"
                     Click="Button_Delete_Click"/>
         </StackPanel>
+        <TextBox
+            x:Name="TextBox_Numere"
+            HorizontalAlignment="Left"
+            Height="25"
+            Margin="261,38,0,0"
+            Grid.Row="1"
+            TextWrapping="Wrap"
+            Text="{Binding Value, ElementName=Slider_Numere, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            VerticalAlignment="Top"
+            Width="120"/>
+        <Slider
+            x:Name="Slider_Numere"
+            HorizontalAlignment="Left"
+            Margin="55,38,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            Width="173" Maximum="100"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="261,83,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
