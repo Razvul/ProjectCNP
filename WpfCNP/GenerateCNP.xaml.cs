@@ -26,11 +26,11 @@ namespace WpfCNP
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            ComboBox_Sex.Items.Add("Masculin");
-            ComboBox_Sex.Items.Add("Feminin");
+            //ComboBox_Sex.Items.Add("Masculin");
+            //ComboBox_Sex.Items.Add("Feminin");
 
-            ComboBox_Luni.ItemsSource = Enum.GetValues(typeof(Luni));
-            ComboBox_Judete.ItemsSource = Enum.GetValues(typeof(Judete));
+            ComboBox_Luni.ItemsSource = Enum.GetValues(typeof(CommonCNP.Enums.Luni));
+            ComboBox_Judete.ItemsSource = Enum.GetValues(typeof(CommonCNP.Enums.Judete));
 
             for (int i = 1900; i <= DateTime.Now.Year; i++)
             {
@@ -48,17 +48,7 @@ namespace WpfCNP
             }
         }
 
-        enum Luni
-        {
-            Ianuarie, Februarie, Martie, Aprilie, Mai, Iunie, Iulie, August, Septembrie, Octombrie, Noiembrie, Decembrie
-        }
-
-        enum Judete
-        {
-            Alba = 1, Arad, Arges, Bacau, Bihor, Bistrita, Botosani, Brasov, Braila, Buzau, Caras, Cluj, Constanta, Covasna, Dambovita, Dolj, Galati, Gorj,
-            Harghita, Hunedoara, Ialomita, Iasi, Ilfov, Maramures, Mehedinti, Mures, Neamt, Olt, Prahova, SatuMare, Salaj, Sibiu, Suceava, Teleorman, Timis,
-            Tulcea, Vaslui, Valcea, Vrancea, Bucuresti, Bucuresti1, Bucuresti2, Bucuresti3, Bucuresti4, Bucuresti5, Bucuresti6, Calarasi, Giurgiu
-        }
+        
 
         private void ComboBox_Luni_DropDownClosed(object sender, EventArgs e)
         {
