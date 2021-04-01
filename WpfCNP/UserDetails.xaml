@@ -5,7 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfCNP"
         mc:Ignorable="d"
-        Title="UserDetails" Height="600" Width="800" Loaded="Window_Loaded">
+        Title="UserDetails"
+        Height="600"
+        Width="800"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="Manual">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
