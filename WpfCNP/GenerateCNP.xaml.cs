@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CommonCNP;
 
 namespace WpfCNP
 {
@@ -22,15 +23,14 @@ namespace WpfCNP
         public GenerateCNP()
         {
             InitializeComponent();
+            //this.DataContext = Enums;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //ComboBox_Sex.Items.Add("Masculin");
-            //ComboBox_Sex.Items.Add("Feminin");
-
-            ComboBox_Luni.ItemsSource = Enum.GetValues(typeof(CommonCNP.Enums.Luni));
-            ComboBox_Judete.ItemsSource = Enum.GetValues(typeof(CommonCNP.Enums.Judete));
+            ComboBox_Sex.ItemsSource = Enum.GetValues(typeof(Enums.Sex));
+            ComboBox_Luni.ItemsSource = Enum.GetValues(typeof(Enums.Luni));
+            ComboBox_Judete.ItemsSource = Enum.GetValues(typeof(Enums.Judete));
 
             for (int i = 1900; i <= DateTime.Now.Year; i++)
             {
@@ -42,18 +42,16 @@ namespace WpfCNP
             ComboBox_Zile.SelectedIndex = 0;
             ComboBox_Judete.SelectedIndex = 0;
 
-            for (int i = 1; i <= CommonCNP.Utilities.Zile(ComboBox_Luni.Text); i++)
+            for (int i = 1; i <= Utilities.Zile(ComboBox_Luni.Text); i++)
             {
                 ComboBox_Zile.Items.Add(i);
             }
         }
 
-        
-
         private void ComboBox_Luni_DropDownClosed(object sender, EventArgs e)
         {
             var zi_selectata = ComboBox_Zile.SelectedIndex + 1;
-            var zile_luna_selectata = CommonCNP.Utilities.Zile(ComboBox_Luni.Text);
+            var zile_luna_selectata = Utilities.Zile(ComboBox_Luni.Text);
 
             ComboBox_Zile.Items.Clear();
 
@@ -75,18 +73,18 @@ namespace WpfCNP
         #region Butoane
         private void Button_Creaza_CNP_Click(object sender, RoutedEventArgs e)
         {
-            var Om = new CommonCNP.CNP
+            var Om = new CNP
             {
-                SEX = CommonCNP.Utilities.GetSex(ComboBox_Sex.Text, ComboBox_An.Text),
-                AN = CommonCNP.Utilities.GetYear(ComboBox_An.Text),
-                LUNA = CommonCNP.Utilities.GetMonth(ComboBox_Luni.Text),
-                ZI = CommonCNP.Utilities.GetZi(ComboBox_Zile.Text),
-                JUDET = CommonCNP.Utilities.GetJudet(ComboBox_Judete.Text),
-                NNN = CommonCNP.Utilities.GetNNN(),
+                SEX = Utilities.GetSex(ComboBox_Sex.Text, ComboBox_An.Text),
+                AN = Utilities.GetYear(ComboBox_An.Text),
+                LUNA =Utilities.GetMonth(ComboBox_Luni.Text),
+                ZI = Utilities.GetZi(ComboBox_Zile.Text),
+                JUDET = Utilities.GetJudet(ComboBox_Judete.Text),
+                NNN = Utilities.GetNNN(),
             };
-            Om.CC = CommonCNP.Utilities.GetCC(Om.SEX, Om.AN, Om.LUNA, Om.ZI, Om.JUDET, Om.NNN);
+            Om.CC = Utilities.GetCC(Om.SEX, Om.AN, Om.LUNA, Om.ZI, Om.JUDET, Om.NNN);
 
-            TextBox_Creaza_CNP.Text = CommonCNP.Utilities.GetCNP(Om.SEX, Om.AN, Om.LUNA, Om.ZI, Om.JUDET, Om.NNN, Om.CC);
+            TextBox_Creaza_CNP.Text = Utilities.GetCNP(Om.SEX, Om.AN, Om.LUNA, Om.ZI, Om.JUDET, Om.NNN, Om.CC);
         }
         private void Button_Verifica_CNP_Click(object sender, RoutedEventArgs e)
         {
