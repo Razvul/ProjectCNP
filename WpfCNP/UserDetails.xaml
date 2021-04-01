@@ -4,9 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfCNP"
+        xmlns:converters="clr-namespace:WpfCNP.Converters"
         mc:Ignorable="d"
         Title="UserDetails" Height="600" Width="800" Loaded="Window_Loaded">
-    <Grid>
+
+  <Window.Resources>
+    <converters:GenderVisibilityConverter x:Key="GenderVisibilityConverter" />
+    <converters:GenderSourceConverter x:Key="GenderSourceConverter" />
+  </Window.Resources>
+
+  <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -77,7 +84,8 @@
                         Grid.Column="2"
                         Grid.Row="3"
                         Width="120"
-                        Height="25"/>
+                        Height="25"
+                  ItemsSource="{Binding Id, Converter={StaticResource GenderSourceConverter}}"/>
                 <Label 
                         x:Name="Label_CNP" 
                         Content="CNP"
@@ -91,9 +99,9 @@
                         Width="120"/>
             </Grid>
         </GroupBox>
-        <GroupBox
-            Grid.Column="1"
-            Grid.RowSpan="2">
+        <GroupBox Grid.Row="0"
+                  Grid.Column="1"
+                  Grid.RowSpan="2">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>

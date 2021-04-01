@@ -58,6 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\GenderSourceConverter.cs" />
+    <Compile Include="Converters\GenderVisibilityConverter.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="UserDetails.xaml.cs">
       <DependentUpon>UserDetails.xaml</DependentUpon>
     </Compile>
@@ -118,5 +121,6 @@
       <Name>CommonCNP</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

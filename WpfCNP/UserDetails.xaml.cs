@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,13 +15,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CommonCNP;
+using WpfCNP.Annotations;
 
 namespace WpfCNP
 {
     /// <summary>
     /// Interaction logic for UserDetails.xaml
     /// </summary>
-    public partial class UserDetails : Window
+    public partial class UserDetails : Window, INotifyPropertyChanged
     {
         private User _user;
         private readonly UserDatabase _userDatabase = UserDatabase.GetInstance();
@@ -29,6 +33,7 @@ namespace WpfCNP
             InitializeComponent();
             _user = user;
             Button_Add.Visibility = Visibility.Hidden;
+            this.DataContext = DataContext;
         }
 
         public UserDetails()
@@ -124,16 +129,16 @@ namespace WpfCNP
         #region Functii
         private void Populate()
         {
-            ComboBox_Sex.ItemsSource = Enum.GetValues(typeof(Enums.Sex));
+            //ComboBox_Sex.ItemsSource = Enum.GetValues(typeof(Enums.Sex));
 
-            if (_user.Person.Sex == Enums.Sex.Masculin)
-            {
-                ComboBox_Sex.SelectedIndex = 0;
-            }
-            else
-            {
-                ComboBox_Sex.SelectedIndex = 1;
-            }
+            //if (_user.Person.Sex == Enums.Sex.Masculin)
+            //{
+            //    ComboBox_Sex.SelectedIndex = 0;
+            //}
+            //else
+            //{
+            //    ComboBox_Sex.SelectedIndex = 1;
+            //}
 
             TextBox_ID.Text = $"{_user.Id}";
             TextBox_Nume.Text = $"{_user.Person.Nume}";
@@ -152,8 +157,8 @@ namespace WpfCNP
 
         private void PopulateNewUser()
         {
-            ComboBox_Sex.ItemsSource = Enum.GetValues(typeof(Enums.Sex));
-            ComboBox_Sex.SelectedIndex = 0;
+            //ComboBox_Sex.ItemsSource = Enum.GetValues(typeof(Enums.Sex));
+            //ComboBox_Sex.SelectedIndex = 0;
 
             TextBox_ID.Text = $"{_user.Id}";
             TextBox_Nume.Text = string.Empty;
@@ -192,6 +197,39 @@ namespace WpfCNP
 
         #endregion
 
-        
+
+        public int Id { get; set; } = 23;
+
+
+        public ObservableCollection<string> GenderSource { get; set; } =
+            new ObservableCollection<string>()
+            {
+                "aaaa",
+                "bbbb",
+            };
+
+
+        public ObservableCollection<Enums.Sex> GenderSource1 { get; set; } =
+            new ObservableCollection<Enums.Sex>()
+            {
+                Enums.Sex.Masculin,
+                Enums.Sex.Feminin,
+            };
+
+
+
+        #region INotifyPropertyChanged implementation
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
+
+
     }
 }
