@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:WpfCNP"
         xmlns:converters="clr-namespace:WpfCNP.Converters"
         mc:Ignorable="d"
-        Title="UserDetails" Height="600" Width="800" Loaded="Window_Loaded">
+        Title="UserDetails"
+        Height="600"
+        Width="800"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="Manual">
 
   <Window.Resources>
     <converters:GenderVisibilityConverter x:Key="GenderVisibilityConverter" />
