@@ -17,6 +17,5 @@ namespace CommonCNP
         public int Apartament { get; set; }
         public string Judet { get; set; }
         public int CodPostal { get; set; }
-
     }
 }

@@ -255,7 +255,10 @@
             Margin="261,38,0,0"
             Grid.Row="1"
             TextWrapping="Wrap"
-            Text="{Binding Value, ElementName=Slider_Numere, Mode=TwoWay, StringFormat=\{0:F\}, UpdateSourceTrigger=PropertyChanged}"
+            Text="{Binding Value,
+            ElementName=Slider_Numere,
+            Mode=TwoWay, StringFormat=\{0:F\},
+            UpdateSourceTrigger=PropertyChanged}"
             VerticalAlignment="Top"
             Width="120"/>
         <Slider
@@ -280,6 +283,8 @@
             HorizontalAlignment="Left"
             Margin="150,83,0,0"
             Grid.Row="1"
-            VerticalAlignment="Top" Content="{Binding Text, ElementName=textBox, Mode=OneWay}" Width="67"/>
+            VerticalAlignment="Top"
+            Content="{Binding Text, ElementName=textBox, Mode=OneWay}"
+            Width="67"/>
     </Grid>
 </Window>

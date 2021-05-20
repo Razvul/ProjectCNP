@@ -129,16 +129,16 @@ namespace WpfCNP
         #region Functii
         private void Populate()
         {
-            //ComboBox_Sex.ItemsSource = Enum.GetValues(typeof(Enums.Sex));
+            ComboBox_Sex.ItemsSource = Enum.GetValues(typeof(Enums.Sex));
 
-            //if (_user.Person.Sex == Enums.Sex.Masculin)
-            //{
-            //    ComboBox_Sex.SelectedIndex = 0;
-            //}
-            //else
-            //{
-            //    ComboBox_Sex.SelectedIndex = 1;
-            //}
+            if (_user.Person.Sex == Enums.Sex.Masculin)
+            {
+                ComboBox_Sex.SelectedIndex = 0;
+            }
+            else
+            {
+                ComboBox_Sex.SelectedIndex = 1;
+            }
 
             TextBox_ID.Text = $"{_user.Id}";
             TextBox_Nume.Text = $"{_user.Person.Nume}";
@@ -157,8 +157,8 @@ namespace WpfCNP
 
         private void PopulateNewUser()
         {
-            //ComboBox_Sex.ItemsSource = Enum.GetValues(typeof(Enums.Sex));
-            //ComboBox_Sex.SelectedIndex = 0;
+            ComboBox_Sex.ItemsSource = Enum.GetValues(typeof(Enums.Sex));
+            ComboBox_Sex.SelectedIndex = 0;
 
             TextBox_ID.Text = $"{_user.Id}";
             TextBox_Nume.Text = string.Empty;
@@ -193,8 +193,6 @@ namespace WpfCNP
 
             _user.DisplayValue = $"{_user.Person.Nume} {_user.Person.Prenume}";
         }
-
-
         #endregion
 
 
@@ -204,8 +202,8 @@ namespace WpfCNP
         public ObservableCollection<string> GenderSource { get; set; } =
             new ObservableCollection<string>()
             {
-                "aaaa",
-                "bbbb",
+                "Masculin",
+                "Feminin",
             };
 
 
@@ -215,8 +213,6 @@ namespace WpfCNP
                 Enums.Sex.Masculin,
                 Enums.Sex.Feminin,
             };
-
-
 
         #region INotifyPropertyChanged implementation
 
@@ -229,7 +225,5 @@ namespace WpfCNP
         }
 
         #endregion
-
-
     }
 }
